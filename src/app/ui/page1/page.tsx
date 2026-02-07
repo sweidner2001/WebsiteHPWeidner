@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import Header2 from '../../components/header/Header_2';
 
@@ -50,9 +50,14 @@ const NaturheilpraxisWebsite = () => {
                 <div className="absolute left-0 top-0 h-full w-1/2 overflow-hidden">
                     <div className="absolute left-0 top-0 h-full w-full bg-green-50 rounded-r-full">
                         <div className="w-full h-full flex items-center justify-center">
-                            <div className="w-4/5 h-4/5 rounded-full bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
-                                <span className="text-green-200 text-lg">Platzhalter für ein natürliches Bild</span>
-                            </div>
+                            <Image
+                                src="/img/Zierkirsche_1_gespiegelt.jpg"
+                                alt="Naturheilpraxis"
+                                width={400}
+                                height={400}
+                                className="rounded-full object-cover w-4/5 h-4/5"
+                                priority
+                            />
                         </div>
                     </div>
                 </div>
@@ -61,10 +66,11 @@ const NaturheilpraxisWebsite = () => {
                 <div className="container mx-auto px-6 py-12 ml-auto w-full md:w-1/2 z-10">
                     <div className="max-w-md ml-auto">
                         <h1 className="text-4xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">
-                            Ganzheitliche <span className="text-green-600">Naturheilkunde</span> für nachhaltige Gesundheit
+                            Ganzheitliche <span className="text-green-600">Naturheilkunde</span> für nachhaltige
+                            Gesundheit
                         </h1>
                         <p className="text-gray-600 mb-8 leading-relaxed">
-                            Wir behandeln Ursachen, nicht Symptome. Mit natürlichen Verfahren aktivieren wir Ihre Selbstheilungskräfte für langfristige Gesundheit.
+                        Wir behandeln Ursachen, nicht Symptome. Mit natürlichen Verfahren aktivieren wir Ihre Selbstheilungskräfte für langfristige Gesundheit.
                         </p>
                         <button
                             className="px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light"
