@@ -26,4 +26,10 @@
     .image-clip img {
         object-position: center center;
     }
+
+    /* Bild-Container größer machen für Auslauf */
+    .image-container-extended {
+        /*min-height: calc(100vh + 5vh) !important;*/
+        min-height: calc(100vh + 1vh) !important;
+    }
 }

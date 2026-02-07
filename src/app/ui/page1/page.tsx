@@ -48,10 +48,11 @@ const NaturheilpraxisWebsite = () => {
                     {/*20% - Endpunkt ist 20% von links (Bogen endet am linken Rand, nicht ganz am Ende)*/}
                     {/*100% - Endpunkt ist ganz unten*/}
                     <clipPath id="curve-clip" clipPathUnits="objectBoundingBox">
-                        {/*<path d="M 0,0 L 1,0 Q 0.85,0.5 1,1 L 0,1 Z"/>*/}
-                        <path d="M 0,0   L 0.85,0   Q 1,0.5 0.8,1   L 0,1   Z"/>
+                        <path d="M 0,0 L 1,0 Q 0.85,0.5 1,1 L 0,1 Z"/>
+                        {/*<path d="M 0,0   L 0.85,0   Q 1,0.5 0.8,1   L 0,1   Z"/>*/}
                         {/*<path d="M 0,0   L 0.80,0   Q 1.1,0.5 0.2,1   L 0,1   Z"/>*/}
-                        {/*<path d="M 0,0   L 0.80,0   Q 1.1,0.5 0.2,0.85   Q 0.1,0.92 0,1   L 0,1   Z"/>*/}
+                        {/*<path d="M 0,0   L 0.80,0   Q 1.2,0.5 0,1   L 0,1   Z"/>*/}
+                        {/*<path d="M 0,0   L 0.80,0   Q 1.1,0.5 0.0.5,1      L 0,1   Z"/>*/}
                         {/*<path d="M 0,0   L 0.85,0   Q 0.8,0.5 0.99,1   L 0,1   Z"/>*/}
                     </clipPath>
                 </defs>
@@ -66,11 +67,11 @@ const NaturheilpraxisWebsite = () => {
 
 
             {/* Hero Section mit organischem Bild-Container */}
-            <section id="home" className="min-h-screen flex flex-col md:flex-row items-center relative overflow-hidden pt-16">
+            <section id="home" className="min-h-screen flex flex-col md:flex-row items-center relative md:overflow-visible overflow-hidden pt-16">
                 {/* Organischer Bildcontainer mit Bogen-Form - nur auf md+ sichtbar */}
-                <div className="w-full md:absolute md:left-0 md:top-0 md:h-full md:w-1/3 lg:w-1/2 hidden sm:block sm:h-48 md:overflow-visible relative">
+                <div className="w-full md:absolute md:left-0 md:top-0 md:h-full md:w-1/3 lg:w-1/2 hidden sm:block sm:h-48 md:overflow-visible relative image-container-extended">
                     <div
-                        className="absolute left-0 top-0 h-full w-full bg-green-50 image-clip"
+                        className="absolute left-0 top-0 h-full w-full bg-green-50 image-clip rounded-r-md"
                         style={{
                             // height: 'calc(100% + 150px)',
                         }}>
