@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import Header2 from '../../components/header/Header_2';
+import './page.css';
 
 const NaturheilpraxisWebsite = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +14,7 @@ const NaturheilpraxisWebsite = () => {
             const sections = ['home', 'philosophie', 'leistungen', 'ueber-mich', 'kontakt'];
             const current = sections.find(section => {
                 const element = document.getElementById(section);
+                // Check if we are within the section (100px from top of viewport)
                 if (element) {
                     const rect = element.getBoundingClientRect();
                     return rect.top <= 100 && rect.bottom >= 100;
@@ -35,6 +37,7 @@ const NaturheilpraxisWebsite = () => {
         }
     };
 
+
     return (
         <div className="min-h-screen bg-white font-sans text-gray-800">
             <Header2
@@ -45,19 +48,13 @@ const NaturheilpraxisWebsite = () => {
             />
 
 
-            {/*<section id="home" className="min-h-screen flex       items-center relative overflow-hidden pt-16">*/}
-            {/*    <div className="absolute left-0 top-0 h-full w-1/2 overflow-visible">*/}
             {/* Hero Section mit organischem Bild-Container */}
             <section id="home" className="min-h-screen flex flex-col md:flex-row items-center relative overflow-hidden pt-16">
                 {/* Organischer Bildcontainer mit Bogen-Form - nur auf md+ sichtbar */}
-                <div className="absolute md:block left-0 top-0 h-full md:w-1/3 lg:w-1/2 overflow-visible">
-                    {/*hidden*/}
+                {/*<div className="absolute md:block left-0 top-0 h-full md:w-1/3 lg:w-1/2 overflow-visible">*/}
+                <div className="w-full md:absolute md:left-0 md:top-0 md:h-full md:w-1/3 lg:w-1/2 hidden sm:block sm:h-48 md:overflow-visible relative">
                     <div
-                        className="absolute left-0 top-0 h-full w-full bg-green-50"
-                        style={{
-                            clipPath: 'ellipse(80% 100% at 15% 55%)',
-                            width: '100%'
-                        }}>
+                        className="absolute left-0 top-0 h-full w-full bg-green-50 image-clip">
                         <Image
                             src="/img/Zierkirsche_1_gespiegelt.jpg"
                             alt="Naturheilpraxis"
@@ -70,8 +67,8 @@ const NaturheilpraxisWebsite = () => {
                 </div>
 
                 {/* Text-Inhalt */}
-                <div className="relative flex items-center justify-end w-full md:w-3/5 lg:w-1/2
-                ml-auto px-6 lg:px-2 py-12 md:py-0 z-10">
+                {/*<div className="relative flex items-center justify-end w-full md:w-3/5 lg:w-1/2 ml-auto px-6 lg:px-2 py-12 md:py-0 z-10">*/}
+                <div className="relative flex items-center justify-end w-full md:w-3/5 lg:w-1/2 md:ml-auto px-6 lg:px-2 py-12 md:py-0 z-10">
                     <div className="max-w-2xl pr-12">
                         <h1 className="text-4xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">
                             Ganzheitliche <span className="text-green-600">Naturheilkunde</span> für nachhaltige
