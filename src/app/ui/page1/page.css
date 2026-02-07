@@ -3,6 +3,10 @@
     object-fit: cover;
 }
 
+.image-clip {
+    overflow: hidden;
+}
+
 @media (max-width: 767px) {
     .image-clip {
         clip-path: none !important;
@@ -15,7 +19,8 @@
 
 @media (min-width: 768px) {
     .image-clip {
-        clip-path: ellipse(80% 100% at 15% 55%) !important;
+        /*clip-path: ellipse(80% 100% at 15% 55%) !important;*/
+        clip-path: url(#curve-clip) !important;
     }
 
     .image-clip img {
