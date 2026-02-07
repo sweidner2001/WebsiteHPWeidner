@@ -44,10 +44,14 @@ const NaturheilpraxisWebsite = () => {
                 onSectionClick={scrollToSection}
             />
 
+
+            {/*<section id="home" className="min-h-screen flex       items-center relative overflow-hidden pt-16">*/}
+            {/*    <div className="absolute left-0 top-0 h-full w-1/2 overflow-visible">*/}
             {/* Hero Section mit organischem Bild-Container */}
-            <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-16">
-                {/* Organischer Bildcontainer mit Bogen-Form */}
-                <div className="absolute left-0 top-0 h-full w-1/2 overflow-visible">
+            <section id="home" className="min-h-screen flex flex-col md:flex-row items-center relative overflow-hidden pt-16">
+                {/* Organischer Bildcontainer mit Bogen-Form - nur auf md+ sichtbar */}
+                <div className="absolute md:block left-0 top-0 h-full md:w-1/3 lg:w-1/2 overflow-visible">
+                    {/*hidden*/}
                     <div
                         className="absolute left-0 top-0 h-full w-full bg-green-50"
                         style={{
@@ -66,9 +70,10 @@ const NaturheilpraxisWebsite = () => {
                 </div>
 
                 {/* Text-Inhalt */}
-                <div className="relative w-full md:w-2/3 ml-auto px-6 py-12 z-10 flex items-center justify-end">
+                <div className="relative flex items-center justify-end w-full md:w-3/5 lg:w-1/2
+                ml-auto px-6 lg:px-2 py-12 md:py-0 z-10">
                     <div className="max-w-2xl pr-12">
-                        <h1 className="text-5xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">
+                        <h1 className="text-4xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">
                             Ganzheitliche <span className="text-green-600">Naturheilkunde</span> für nachhaltige
                             Gesundheit
                         </h1>
