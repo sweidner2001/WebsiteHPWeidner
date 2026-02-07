@@ -53,33 +53,30 @@ const NaturheilpraxisWebsite = () => {
                         style={{
                             clipPath: 'ellipse(80% 100% at 15% 55%)',
                             width: '100%'
-                        }}
-                    >
-                        {/*<div className="w-full h-full flex items-center justify-center">*/}
-                        {/*    <Image*/}
-                        {/*        src="/img/Zierkirsche_1_gespiegelt.jpg"*/}
-                        {/*        alt="Naturheilpraxis"*/}
-                        {/*        width={400}*/}
-                        {/*        height={400}*/}
-                        {/*        className="rounded-full object-cover w-4/5 h-4/5"*/}
-                        {/*        priority*/}
-                        {/*    />*/}
-                        {/*</div>*/}
+                        }}>
+                        <Image
+                            src="/img/Zierkirsche_1_gespiegelt.jpg"
+                            alt="Naturheilpraxis"
+                            fill
+                            className="object-cover"
+                            quality={100}
+                            priority
+                        />
                     </div>
                 </div>
 
                 {/* Text-Inhalt */}
-                <div className="container mx-auto px-6 py-12 ml-auto w-full md:w-1/2 z-10">
-                    <div className="max-w-md ml-auto">
-                        <h1 className="text-4xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">
+                <div className="relative w-full md:w-2/3 ml-auto px-6 py-12 z-10 flex items-center justify-end">
+                    <div className="max-w-2xl pr-12">
+                        <h1 className="text-5xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">
                             Ganzheitliche <span className="text-green-600">Naturheilkunde</span> für nachhaltige
                             Gesundheit
                         </h1>
-                        <p className="text-gray-600 mb-8 leading-relaxed">
+                        <p className="text-base text-gray-600 mb-8 leading-relaxed">
                         Wir behandeln Ursachen, nicht Symptome. Mit natürlichen Verfahren aktivieren wir Ihre Selbstheilungskräfte für langfristige Gesundheit.
                         </p>
                         <button
-                            className="px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light"
+                            className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light"
                             onClick={() => scrollToSection('kontakt')}
                         >
                             Termin vereinbaren
