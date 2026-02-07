@@ -160,21 +160,21 @@ const NaturheilpraxisWebsite = () => {
 
                         <div className="grid md:grid-cols-2 gap-12">
                             <div>
-                                <h3 className="text-xl font-light text-gray-800 mb-6">Praxisinformationen</h3>
+                                <h3 className="text-2xl font-light text-gray-800 mb-6">Praxisinformationen</h3>
 
                                 <div className="mb-6">
-                                    <h4 className="text-green-600 font-light mb-2">Adresse</h4>
-                                    <p className="text-gray-600 font-light">Naturheilpraxis [Name]<br />Musterstraße 123<br />12345 Musterstadt</p>
+                                    <h4 className="text-xl text-green-600 font-light mb-2">Adresse</h4>
+                                    <p className="text-lg text-gray-600 font-light">Naturheilpraxis Calendula<br />Pfaffenreuth 22<br />92715 Püchersreuth</p>
                                 </div>
 
                                 <div className="mb-6">
-                                    <h4 className="text-green-600 font-light mb-2">Kontakt</h4>
-                                    <p className="text-gray-600 font-light">Telefon: 01234 / 567890<br />E-Mail: info@naturheilpraxis-beispiel.de</p>
+                                    <h4 className="text-xl text-green-600 font-light mb-2">Kontakt</h4>
+                                    <p className="text-lg text-gray-600 font-light">Telefon: 01234 / 567890<br />E-Mail: info@naturheilpraxis-beispiel.de</p>
                                 </div>
 
                                 <div>
-                                    <h4 className="text-green-600 font-light mb-2">Öffnungszeiten</h4>
-                                    <p className="text-gray-600 font-light">Montag - Freitag: 9:00 - 18:00 Uhr<br />Termine nach Vereinbarung</p>
+                                    <h4 className="text-xl text-green-600 font-light mb-2">Öffnungszeiten</h4>
+                                    <p className="text-lg text-gray-600 font-light">Montag - Freitag: 9:00 - 18:00 Uhr<br />Termine nach Vereinbarung</p>
                                 </div>
                             </div>
 
