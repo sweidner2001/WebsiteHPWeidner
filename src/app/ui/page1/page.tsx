@@ -47,18 +47,24 @@ const NaturheilpraxisWebsite = () => {
             {/* Hero Section mit organischem Bild-Container */}
             <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-16">
                 {/* Organischer Bildcontainer mit Bogen-Form */}
-                <div className="absolute left-0 top-0 h-full w-1/2 overflow-hidden">
-                    <div className="absolute left-0 top-0 h-full w-full bg-green-50 rounded-r-full">
-                        <div className="w-full h-full flex items-center justify-center">
-                            <Image
-                                src="/img/Zierkirsche_1_gespiegelt.jpg"
-                                alt="Naturheilpraxis"
-                                width={400}
-                                height={400}
-                                className="rounded-full object-cover w-4/5 h-4/5"
-                                priority
-                            />
-                        </div>
+                <div className="absolute left-0 top-0 h-full w-1/2 overflow-visible">
+                    <div
+                        className="absolute left-0 top-0 h-full w-full bg-green-50"
+                        style={{
+                            clipPath: 'ellipse(80% 100% at 15% 55%)',
+                            width: '100%'
+                        }}
+                    >
+                        {/*<div className="w-full h-full flex items-center justify-center">*/}
+                        {/*    <Image*/}
+                        {/*        src="/img/Zierkirsche_1_gespiegelt.jpg"*/}
+                        {/*        alt="Naturheilpraxis"*/}
+                        {/*        width={400}*/}
+                        {/*        height={400}*/}
+                        {/*        className="rounded-full object-cover w-4/5 h-4/5"*/}
+                        {/*        priority*/}
+                        {/*    />*/}
+                        {/*</div>*/}
                     </div>
                 </div>
 
