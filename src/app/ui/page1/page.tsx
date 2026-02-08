@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import Header2 from '../../components/header/Header_2';
 import HeroSection from '../../components/hero/HeroSection';
+import { Telephone, TelephoneFill, Phone, PhoneFill, PhoneVibrate, PhoneVibrateFill, Clock, ClockFill, Envelope, EnvelopeFill, EnvelopeAt, EnvelopeAtFill, Geo, GeoFill, GeoAlt, GeoAltFill } from 'react-bootstrap-icons';
 
 const NaturheilpraxisWebsite = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -150,52 +151,136 @@ const NaturheilpraxisWebsite = () => {
             </section>
 
             {/* Kontakt Section */}
-            <section id="kontakt" className="py-20 bg-green-50">
+            <section id="kontakt" className="py-20 bg-white">
                 <div className="container mx-auto px-6">
-                    <div className="max-w-4xl mx-auto">
+                    <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-16">
-                            <h2 className="text-3xl font-light text-gray-800 mb-4">Kontakt & Terminvereinbarung</h2>
+                            <h2 className="text-3xl font-light text-gray-800 mb-4">Kontakt & Anfahrt</h2>
                             <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-12">
+                        {/* Grid Layout: Info + Formular oben, Karte unten */}
+                        <div className="grid md:grid-cols-2 gap-12 mb-12">
+                            {/* Linke Spalte: Praxisinformationen */}
                             <div>
                                 <h3 className="text-2xl font-light text-gray-800 mb-6">Praxisinformationen</h3>
 
-                                <div className="mb-6">
-                                    <h4 className="text-xl text-green-600 font-light mb-2">Adresse</h4>
-                                    <p className="text-lg text-gray-600 font-light">Naturheilpraxis Calendula<br />Pfaffenreuth 22<br />92715 Püchersreuth</p>
+
+                                <div className="mb-8">
+                                    <h4 className="text-xl text-green-600 font-normal mb-2 flex items-center gap-2">
+                                        <GeoAltFill className="w-5 h-5 mt-0.5"/>
+                                        {/*<GeoAlt className="w-5 h-5 mt-0.5"/>*/}
+                                        {/*<Geo className="w-5 h-5 mt-0.5"/>*/}
+                                        {/*<GeoFill className="w-5 h-5 mt-0.5"/>*/}
+                                        Adresse
+                                    </h4>
+                                    <div className="flex gap-3">
+                                        {/*<Clock className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
+                                        {/*<GeoAltFill className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
+                                        {/*<GeoAlt className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
+                                        {/*<Geo className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
+                                        {/*<GeoFill className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
+                                        <p className="text-lg text-gray-600 font-light">Naturheilpraxis Calendula<br/>Pfaffenreuth
+                                            22<br/>92715 Püchersreuth</p>
+                                    </div>
                                 </div>
 
-                                <div className="mb-6">
-                                    <h4 className="text-xl text-green-600 font-light mb-2">Kontakt</h4>
-                                    <p className="text-lg text-gray-600 font-light">Telefon: 01234 / 567890<br />E-Mail: info@naturheilpraxis-beispiel.de</p>
+                                <div className="mb-8">
+                                    <h4 className="text-xl text-green-600 font-normal mb-2">Kontakt</h4>
+                                    <div className="space-y-3">
+                                        <div className="flex items-center text-lg text-gray-600 font-light">
+                                            {/*<Telephone className="w-5 h-5 text-green-600 mr-3" />*/}
+                                            <TelephoneFill className="w-5 h-5 text-green-600 mr-3"/>
+                                            {/*<PhoneVibrate className="w-5 h-5 text-green-600 mr-3" />*/}
+                                            {/*<Phone className="w-5 h-5 text-green-600 mr-3" />*/}
+                                            {/*<PhoneVibrateFill className="w-5 h-5 text-green-600 mr-3" />*/}
+                                            {/*<PhoneFill className="w-5 h-5 text-green-600 mr-3" />*/}
+                                            01234 / 567890
+                                        </div>
+                                        <div className="flex items-center text-lg text-gray-600 font-light">
+
+                                            {/*<svg className="w-5 h-5 text-green-600 mr-3" fill="currentColor"*/}
+                                            {/*     viewBox="0 0 20 20">*/}
+                                            {/*    <path*/}
+                                            {/*        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>*/}
+                                            {/*    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>*/}
+                                            {/*</svg>*/}
+                                            {/*<Envelope className="w-5 h-5 text-green-600 mr-3" />*/}
+                                            {/*<EnvelopeAt className="w-5 h-5 text-green-600 mr-3" />*/}
+                                            <EnvelopeFill className="w-5 h-5 text-green-600 mr-3"/>
+                                            {/*<EnvelopeAtFill className="w-5 h-5 text-green-600 mr-3" />*/}
+                                            info@naturheilpraxis-beispiel.de
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div>
-                                    <h4 className="text-xl text-green-600 font-light mb-2">Öffnungszeiten</h4>
-                                    <p className="text-lg text-gray-600 font-light">Montag - Freitag: 9:00 - 18:00 Uhr<br />Termine nach Vereinbarung</p>
+                                    <h4 className="text-xl font-normal text-green-600 mb-2 flex items-center gap-2">
+                                        {/*<Clock className="w-5 h-5 mt-0.5" />*/}
+                                        <ClockFill className="w-5 h-5 mt-0.5"/>
+                                        Öffnungszeiten
+                                    </h4>
+                                    <div className="flex gap-3">
+                                        {/*<Clock className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
+                                        {/*<ClockFill className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
+                                        <p className="text-lg text-gray-600 font-light">
+                                            Termine nach Vereinbarung<br/>
+                                            <span className="text-green-600 block mt-2">Reguläre Öffnungszeiten:</span>
+                                            Montag - Freitag: 9:00 - 18:00 Uhr<br/>
+                                            Samstag: Nach Vereinbarung
+                                        </p>
+                                    </div>
+
+                                    {/*<p className="text-lg text-gray-600 font-light mb-3">*/}
+                                    {/*    Termine nach Vereinbarung*/}
+                                    {/*</p>*/}
+                                    {/*<h5 className=" text-gray-600 mb-2 mt-4">Reguläre Öffnungszeiten:</h5>*/}
+                                    {/*<ul className="text-lg text-gray-600 font-light space-y-1">*/}
+                                    {/*    <li className="flex items-center">*/}
+                                    {/*        <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>*/}
+                                    {/*        Montag - Freitag: 9:00 - 18:00 Uhr*/}
+                                    {/*    </li>*/}
+                                    {/*    <li className="flex items-center">*/}
+                                    {/*        <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>*/}
+                                    {/*        Samstag: Nach Vereinbarung*/}
+                                    {/*    </li>*/}
+                                    {/*</ul>*/}
                                 </div>
                             </div>
 
+
+                            {/* Rechte Spalte: Terminformular */}
                             <div>
-                                <h3 className="text-xl font-light text-gray-800 mb-6">Termin anfragen</h3>
-                                <form className="space-y-4">
+                                <h3 className="text-2xl font-light text-gray-800 mb-6">Termin anfragen</h3>
+                                <form className="space-y-4 bg-white p-8 rounded-xl shadow-sm">
                                     <div>
-                                        <label htmlFor="name" className="block text-gray-700 mb-2 font-light">Name</label>
+                                        <label htmlFor="name"
+                                               className="block text-gray-700 mb-2 font-light">Name</label>
                                         <input
                                             type="text"
                                             id="name"
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-500 font-light"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 font-light"
+                                            placeholder="Ihr Name"
                                         />
                                     </div>
 
                                     <div>
-                                        <label htmlFor="email" className="block text-gray-700 mb-2 font-light">E-Mail</label>
+                                    <label htmlFor="email" className="block text-gray-700 mb-2 font-light">E-Mail</label>
                                         <input
                                             type="email"
                                             id="email"
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-500 font-light"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 font-light"
+                                            placeholder="Ihre E-Mail"
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="phone" className="block text-gray-700 mb-2 font-light">Telefon</label>
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 font-light"
+                                            placeholder="Ihre Telefonnummer"
                                         />
                                     </div>
 
@@ -204,22 +289,73 @@ const NaturheilpraxisWebsite = () => {
                                         <textarea
                                             id="message"
                                             rows={4}
-                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-500 font-light"
+                                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 font-light"
+                                            placeholder="Ihre Nachricht oder Terminwunsch"
                                         ></textarea>
                                     </div>
 
                                     <button
                                         type="submit"
-                                        className="px-6 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light"
+                                        className="w-full px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-300 font-light"
                                     >
                                         Anfrage senden
                                     </button>
                                 </form>
                             </div>
                         </div>
+
+                        {/* Google Maps - Zentriert */}
+                        <div className="flex flex-col items-center">
+                            <h3 className="text-2xl font-light text-gray-800 mb-6">Standort</h3>
+                            <div className="rounded-xl overflow-hidden shadow-lg">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.147456789!2d11.6398!3d49.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1d8c8c8c8c8c9%3A0xaabbccddee!2sPfaffenreuth%2022%2C%2092715%20P%C3%BCchersreuth!5e0!3m2!1sde!2sde!4v1234567890"
+                                    width="600"
+                                    height="380"
+                                    style={{ border: 0 }}
+                                    allowFullScreen={true}
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
+
+
+            {/*<section id="kontakt" className="py-20 bg-white">*/}
+            {/*    <div className="container mx-auto px-6">*/}
+            {/*        <div className="max-w-5xl mx-auto">*/}
+            {/*            /!* Praxisinformationen darunter - Full Width *!/*/}
+            {/*            <div className="mt-16 pt-12 border-t border-gray-200">*/}
+            {/*                <h3 className="text-2xl font-light text-gray-800 mb-8">Praxisinformationen</h3>*/}
+            {/*                <div className="grid md:grid-cols-3 gap-12">*/}
+            {/*                    <div>*/}
+            {/*                        <h4 className="text-xl text-green-600 font-normal mb-3">Adresse</h4>*/}
+            {/*                        <p className="text-lg text-gray-600 font-light">Naturheilpraxis Calendula<br/>Pfaffenreuth*/}
+            {/*                            22<br/>92715 Püchersreuth</p>*/}
+            {/*                    </div>*/}
+
+            {/*                    <div>*/}
+            {/*                        <h4 className="text-xl text-green-600 font-normal mb-3">Kontakt</h4>*/}
+            {/*                        <p className="text-lg text-gray-600 font-light">Telefon: 01234 / 567890<br/>E-Mail:*/}
+            {/*                            info@naturheilpraxis-beispiel.de</p>*/}
+            {/*                    </div>*/}
+
+            {/*                    <div>*/}
+            {/*                        <h4 className="text-xl font-normal text-green-600 mb-3">Öffnungszeiten</h4>*/}
+            {/*                        <p className="text-lg text-gray-600 font-light">*/}
+            {/*                            Montag - Donnerstag: 9:00 - 18:00 Uhr<br/>*/}
+            {/*                            Freitag: 9:00 - 16:00 Uhr<br/>*/}
+            {/*                            Samstag: Nach Vereinbarung*/}
+            {/*                        </p>*/}
+            {/*                    </div>*/}
+            {/*                </div>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
 
             {/* Footer */}
             <footer className="bg-white py-8 border-t border-gray-100">
