@@ -31,6 +31,8 @@ interface ContactTextProps {
 interface ContactProps {
     propsText?: ContactTextProps;
     propsIcons?: ContactIconProps;
+    className?: string;
+    distributeEvenly?: boolean;
 }
 
 // Default-Werte
@@ -75,7 +77,7 @@ const renderList = (list?: string[], asBulletPoints: boolean = false) => {
 
 
 
-const Contact: React.FC<ContactProps> = ({ propsText, propsIcons }) => {
+const Contact: React.FC<ContactProps> = ({ propsText, propsIcons, className, distributeEvenly = false }) => {
     // Merge mit Default-Werten
     const text = { ...defaultText, ...propsText };
     const icons = {...propsIcons};
@@ -83,68 +85,73 @@ const Contact: React.FC<ContactProps> = ({ propsText, propsIcons }) => {
 
     return (
         <div>
-            <h3 className="text-2xl font-light text-gray-800 mb-6">{text.title}</h3>
-
-            {/* Adresse */}
-            <div className="mb-8">
-                <h4 className="text-xl text-green-600 font-normal mb-2 flex items-center gap-2">
-                    {icons.addressIconHeading}
-                    {text.addressHeading}
-                </h4>
-                <div className="flex gap-3">
-                    {icons.addressIconContent}
-                    <p className="text-lg text-gray-600 font-light">
-                        {renderList(text.lst_address)}
-                    </p>
-                </div>
-            </div>
-
-            {/* Kontakt */}
-            <div className="mb-8">
-                <h4 className="text-xl text-green-600 font-normal mb-2 flex items-center gap-2">
-                    {icons.contactIconHeading}
-                    {text.contactHeading}
-                    {/*<svg className="w-5 h-5 text-green-600 mr-3" fill="currentColor"*/}
-                    {/*     viewBox="0 0 20 20">*/}
-                    {/*    <path*/}
-                    {/*        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>*/}
-                    {/*    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>*/}
-                    {/*</svg>*/}
-                </h4>
-                <div className="space-y-3">
-                    <div className="flex items-center text-lg text-gray-600 font-light">
-                        {icons.phoneIcon}
-                        {text.phone}
-                    </div>
-                    <div className="flex items-center text-lg text-gray-600 font-light">
-                        {icons.emailIcon}
-                        {text.email}
+            <h3 className="text-2xl font-light text-gray-800 mb-6 justify-self-start">{text.title}</h3>
+            <div className={className || ''}>
+            {/*<div>*/}
+                {/* Adresse */}
+                <div className={`mb-8 ${distributeEvenly ? 'justify-self-start' : ''}`}>
+                    <h4 className="text-xl text-green-600 font-normal mb-2 flex items-center gap-2">
+                        {icons.addressIconHeading}
+                        {text.addressHeading}
+                    </h4>
+                    <div className="flex gap-3">
+                        {icons.addressIconContent}
+                        <p className="text-lg text-gray-600 font-light">
+                            {renderList(text.lst_address)}
+                        </p>
                     </div>
                 </div>
-            </div>
 
-            {/* Öffnungszeiten */}
-            <div>
-                <h4 className="text-xl font-normal text-green-600 mb-2 flex items-center gap-2">
-                    {icons.hoursIconHeading}
-                    {text.openingHeading}
-                </h4>
-                <div className="flex gap-3">
-                    {icons.hoursIconContent}
-                    <p className="text-lg text-gray-600 font-light">
-                        {renderList(text.openingHours1, text.openingHours1_asBulletPoints)}
-                        {/*text-lg text-gray-600 font-light*/}
-                        <span className="text-green-600 block mt-2">{text.openingHours2Heading}</span>
-                        {renderList(text.openingHours2, text.openingHours2_asBulletPoints)}
-                    </p>
+                {/* Kontakt */}
+                <div className={`mb-8 ${distributeEvenly ? 'justify-self-center' : ''}`}>
+                    <h4 className="text-xl text-green-600 font-normal mb-2 flex items-center gap-2">
+                        {icons.contactIconHeading}
+                        {text.contactHeading}
+                        {/*<svg className="w-5 h-5 text-green-600 mr-3" fill="currentColor"*/}
+                        {/*     viewBox="0 0 20 20">*/}
+                        {/*    <path*/}
+                        {/*        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>*/}
+                        {/*    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>*/}
+                        {/*</svg>*/}
+                    </h4>
+                    <div className="space-y-3">
+                        <div className="flex items-center text-lg text-gray-600 font-light">
+                            {icons.phoneIcon}
+                            {text.phone}
+                        </div>
+                        <div className="flex items-center text-lg text-gray-600 font-light">
+                            {icons.emailIcon}
+                            {text.email}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Öffnungszeiten */}
+                <div className={distributeEvenly ? 'justify-self-end' : ''}>
+                    <h4 className="text-xl font-normal text-green-600 mb-2 flex items-center gap-2">
+                        {icons.hoursIconHeading}
+                        {text.openingHeading}
+                    </h4>
+                    <div className="flex gap-3">
+                        {icons.hoursIconContent}
+                        <p className="text-lg text-gray-600 font-light">
+                            {renderList(text.openingHours1, text.openingHours1_asBulletPoints)}
+                            {/*text-lg text-gray-600 font-light*/}
+                            <span className="text-green-600 block mt-2">{text.openingHours2Heading}</span>
+                            {renderList(text.openingHours2, text.openingHours2_asBulletPoints)}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
+
+
+
 export {
-    Contact
+    Contact,
 }
 
 export type {

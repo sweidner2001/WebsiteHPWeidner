@@ -286,35 +286,18 @@ const NaturheilpraxisWebsite = () => {
             {/*<section id="kontakt" className="py-20 bg-white">*/}
             {/*    <div className="container mx-auto px-6">*/}
             {/*        <div className="max-w-5xl mx-auto">*/}
-            {/*            /!* Praxisinformationen darunter - Full Width *!/*/}
             {/*            <div className="mt-16 pt-12 border-t border-gray-200">*/}
-            {/*                <h3 className="text-2xl font-light text-gray-800 mb-8">Praxisinformationen</h3>*/}
-            {/*                <div className="grid md:grid-cols-3 gap-12">*/}
-            {/*                    <div>*/}
-            {/*                        <h4 className="text-xl text-green-600 font-normal mb-3">Adresse</h4>*/}
-            {/*                        <p className="text-lg text-gray-600 font-light">Naturheilpraxis Calendula<br/>Pfaffenreuth*/}
-            {/*                            22<br/>92715 Püchersreuth</p>*/}
-            {/*                    </div>*/}
-
-            {/*                    <div>*/}
-            {/*                        <h4 className="text-xl text-green-600 font-normal mb-3">Kontakt</h4>*/}
-            {/*                        <p className="text-lg text-gray-600 font-light">Telefon: 01234 / 567890<br/>E-Mail:*/}
-            {/*                            info@naturheilpraxis-beispiel.de</p>*/}
-            {/*                    </div>*/}
-
-            {/*                    <div>*/}
-            {/*                        <h4 className="text-xl font-normal text-green-600 mb-3">Öffnungszeiten</h4>*/}
-            {/*                        <p className="text-lg text-gray-600 font-light">*/}
-            {/*                            Montag - Donnerstag: 9:00 - 18:00 Uhr<br/>*/}
-            {/*                            Freitag: 9:00 - 16:00 Uhr<br/>*/}
-            {/*                            Samstag: Nach Vereinbarung*/}
-            {/*                        </p>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
+            {/*                <Contact*/}
+            {/*                    propsText={contactText}*/}
+            {/*                    propsIcons={contactIcons}*/}
+            {/*                    className='grid md:grid-cols-3 gap-12'*/}
+            {/*                    distributeEvenly={true}*/}
+            {/*                />*/}
             {/*            </div>*/}
             {/*        </div>*/}
             {/*    </div>*/}
             {/*</section>*/}
+
 
             {/* Footer */}
             <footer className="bg-white py-8 border-t border-gray-100">
