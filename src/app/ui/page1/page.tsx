@@ -1,13 +1,48 @@
 'use client';
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, type ReactNode} from 'react';
 import Header2 from '../../components/header/Header_2';
 import HeroSection from '../../components/hero/HeroSection';
+import {Contact, ContactTextProps, ContactIconProps} from '../../components/contact/Contact';
 import { Telephone, TelephoneFill, Phone, PhoneFill, PhoneVibrate, PhoneVibrateFill, Clock, ClockFill, Envelope, EnvelopeFill, EnvelopeAt, EnvelopeAtFill, Geo, GeoFill, GeoAlt, GeoAltFill } from 'react-bootstrap-icons';
 
 const NaturheilpraxisWebsite = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
+
+
+
+    // Kontakt-Daten
+    const contactText: ContactTextProps = {
+        title: 'Praxisinformationen',
+        addressHeading: 'Adresse',
+        lst_address: ['Naturheilpraxis Calendula', 'Pfaffenreuth 22', '92715 Püchersreuth'],
+        contactHeading: 'Kontakt',
+        phone: '01234 / 567890',
+        email: 'info@naturheilpraxis-beispiel.de',
+        openingHeading: 'Öffnungszeiten',
+        openingHours1: ['Termine nach Vereinbarung'],
+        openingHours1_asBulletPoints: false,
+        openingHours2Heading: 'Reguläre Öffnungszeiten:',
+        openingHours2: ['Montag - Freitag: 9:00 - 18:00 Uhr', 'Samstag: Nach Vereinbarung'],
+        openingHours2_asBulletPoints: false
+    };
+
+    const contactIcons: ContactIconProps = {
+        addressIconHeading: <GeoAltFill className="w-5 h-5 mt-0.5"/>,
+        // addressIconContent: <Geo className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />,
+        // contactIconHeading: <Telephone className="w-5 h-5 mt-0.5" />,
+        phoneIcon: <TelephoneFill className="w-5 h-5 text-green-600 mr-3"/>,
+        emailIcon: <EnvelopeFill className="w-5 h-5 text-green-600 mr-3"/>,
+        hoursIconHeading: <ClockFill className="w-5 h-5 mt-0.5"/>,
+        // hoursIconContent: <Clock className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />
+    };
+
+
+
+
+
+
 
     // Scroll-Funktionalität
     useEffect(() => {
@@ -150,6 +185,11 @@ const NaturheilpraxisWebsite = () => {
                 </div>
             </section>
 
+
+
+
+
+
             {/* Kontakt Section */}
             <section id="kontakt" className="py-20 bg-white">
                 <div className="container mx-auto px-6">
@@ -162,91 +202,10 @@ const NaturheilpraxisWebsite = () => {
                         {/* Grid Layout: Info + Formular oben, Karte unten */}
                         <div className="grid md:grid-cols-2 gap-12 mb-12">
                             {/* Linke Spalte: Praxisinformationen */}
-                            <div>
-                                <h3 className="text-2xl font-light text-gray-800 mb-6">Praxisinformationen</h3>
-
-
-                                <div className="mb-8">
-                                    <h4 className="text-xl text-green-600 font-normal mb-2 flex items-center gap-2">
-                                        <GeoAltFill className="w-5 h-5 mt-0.5"/>
-                                        {/*<GeoAlt className="w-5 h-5 mt-0.5"/>*/}
-                                        {/*<Geo className="w-5 h-5 mt-0.5"/>*/}
-                                        {/*<GeoFill className="w-5 h-5 mt-0.5"/>*/}
-                                        Adresse
-                                    </h4>
-                                    <div className="flex gap-3">
-                                        {/*<Clock className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
-                                        {/*<GeoAltFill className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
-                                        {/*<GeoAlt className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
-                                        {/*<Geo className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
-                                        {/*<GeoFill className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
-                                        <p className="text-lg text-gray-600 font-light">Naturheilpraxis Calendula<br/>Pfaffenreuth
-                                            22<br/>92715 Püchersreuth</p>
-                                    </div>
-                                </div>
-
-                                <div className="mb-8">
-                                    <h4 className="text-xl text-green-600 font-normal mb-2">Kontakt</h4>
-                                    <div className="space-y-3">
-                                        <div className="flex items-center text-lg text-gray-600 font-light">
-                                            {/*<Telephone className="w-5 h-5 text-green-600 mr-3" />*/}
-                                            <TelephoneFill className="w-5 h-5 text-green-600 mr-3"/>
-                                            {/*<PhoneVibrate className="w-5 h-5 text-green-600 mr-3" />*/}
-                                            {/*<Phone className="w-5 h-5 text-green-600 mr-3" />*/}
-                                            {/*<PhoneVibrateFill className="w-5 h-5 text-green-600 mr-3" />*/}
-                                            {/*<PhoneFill className="w-5 h-5 text-green-600 mr-3" />*/}
-                                            01234 / 567890
-                                        </div>
-                                        <div className="flex items-center text-lg text-gray-600 font-light">
-
-                                            {/*<svg className="w-5 h-5 text-green-600 mr-3" fill="currentColor"*/}
-                                            {/*     viewBox="0 0 20 20">*/}
-                                            {/*    <path*/}
-                                            {/*        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>*/}
-                                            {/*    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>*/}
-                                            {/*</svg>*/}
-                                            {/*<Envelope className="w-5 h-5 text-green-600 mr-3" />*/}
-                                            {/*<EnvelopeAt className="w-5 h-5 text-green-600 mr-3" />*/}
-                                            <EnvelopeFill className="w-5 h-5 text-green-600 mr-3"/>
-                                            {/*<EnvelopeAtFill className="w-5 h-5 text-green-600 mr-3" />*/}
-                                            info@naturheilpraxis-beispiel.de
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <h4 className="text-xl font-normal text-green-600 mb-2 flex items-center gap-2">
-                                        {/*<Clock className="w-5 h-5 mt-0.5" />*/}
-                                        <ClockFill className="w-5 h-5 mt-0.5"/>
-                                        Öffnungszeiten
-                                    </h4>
-                                    <div className="flex gap-3">
-                                        {/*<Clock className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
-                                        {/*<ClockFill className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />*/}
-                                        <p className="text-lg text-gray-600 font-light">
-                                            Termine nach Vereinbarung<br/>
-                                            <span className="text-green-600 block mt-2">Reguläre Öffnungszeiten:</span>
-                                            Montag - Freitag: 9:00 - 18:00 Uhr<br/>
-                                            Samstag: Nach Vereinbarung
-                                        </p>
-                                    </div>
-
-                                    {/*<p className="text-lg text-gray-600 font-light mb-3">*/}
-                                    {/*    Termine nach Vereinbarung*/}
-                                    {/*</p>*/}
-                                    {/*<h5 className=" text-gray-600 mb-2 mt-4">Reguläre Öffnungszeiten:</h5>*/}
-                                    {/*<ul className="text-lg text-gray-600 font-light space-y-1">*/}
-                                    {/*    <li className="flex items-center">*/}
-                                    {/*        <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>*/}
-                                    {/*        Montag - Freitag: 9:00 - 18:00 Uhr*/}
-                                    {/*    </li>*/}
-                                    {/*    <li className="flex items-center">*/}
-                                    {/*        <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>*/}
-                                    {/*        Samstag: Nach Vereinbarung*/}
-                                    {/*    </li>*/}
-                                    {/*</ul>*/}
-                                </div>
-                            </div>
+                            <Contact
+                                propsText={contactText}
+                                propsIcons={contactIcons}
+                            />
 
 
                             {/* Rechte Spalte: Terminformular */}
