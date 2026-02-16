@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, {useState, useEffect, type ReactNode} from 'react';
 import Header2 from '../../components/header/Header_2';
 import HeroSection from '../../components/hero/HeroSection';
-import {Contact, ContactTextProps, ContactIconProps} from '../../components/contact/Contact';
+import {Contact, IContactTextProps, IContactIconProps} from '../../components/contact/Contact';
 import TerminForm from '../../components/termin/TerminForm';
 import { Telephone, TelephoneFill, Phone, PhoneFill, PhoneVibrate, PhoneVibrateFill, Clock, ClockFill, Envelope, EnvelopeFill, EnvelopeAt, EnvelopeAtFill, Geo, GeoFill, GeoAlt, GeoAltFill } from 'react-bootstrap-icons';
 
@@ -14,7 +14,7 @@ const NaturheilpraxisWebsite = () => {
 
 
     // Kontakt-Daten
-    const contactText: ContactTextProps = {
+    const contactText: IContactTextProps = {
         title: 'Praxisinformationen',
         addressHeading: 'Adresse',
         lst_address: ['Naturheilpraxis Calendula', 'Pfaffenreuth 22', '92715 Püchersreuth'],
@@ -29,7 +29,7 @@ const NaturheilpraxisWebsite = () => {
         openingHours2_asBulletPoints: false
     };
 
-    const contactIcons: ContactIconProps = {
+    const contactIcons: IContactIconProps = {
         addressIconHeading: <GeoAltFill className="w-5 h-5 mt-0.5"/>,
         // addressIconContent: <Geo className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />,
         // contactIconHeading: <Telephone className="w-5 h-5 mt-0.5" />,
@@ -227,7 +227,7 @@ const NaturheilpraxisWebsite = () => {
 
                         {/* Terminformular - Zentriert oben */}
                         <div className="flex justify-center mb-12">
-                            <TerminForm className="w-full max-w-lg"/>
+                            <TerminForm/>
                         </div>
 
                         {/* Contact + Google Maps - In einem gemeinsamen Container */}

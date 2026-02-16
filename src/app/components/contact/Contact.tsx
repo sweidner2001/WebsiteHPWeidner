@@ -2,7 +2,7 @@
 import React from 'react';
 import type { ReactNode } from 'react';
 
-interface ContactIconProps {
+interface IContactIconProps {
     addressIconHeading?: ReactNode;
     addressIconContent?: ReactNode;
     contactIconHeading?: ReactNode;
@@ -12,7 +12,7 @@ interface ContactIconProps {
     hoursIconContent?: ReactNode;
 }
 
-interface ContactTextProps {
+interface IContactTextProps {
     title?: string;
     addressHeading?: string
     lst_address?: string[];
@@ -28,15 +28,15 @@ interface ContactTextProps {
 }
 
 // Kombiniertes Interface mit beiden als separate Objekte
-interface ContactProps {
-    propsText?: ContactTextProps;
-    propsIcons?: ContactIconProps;
+interface IContactProps {
+    propsText?: IContactTextProps;
+    propsIcons?: IContactIconProps;
     className?: string;
     distributeEvenly?: boolean;
 }
 
 // Default-Werte
-const defaultText: ContactTextProps = {
+const defaultText: IContactTextProps = {
     title: 'Praxisinformationen',
     addressHeading: 'Adresse',
     lst_address: ['Naturheilpraxis Calendula', 'Pfaffenreuth 22', '92715 Püchersreuth'],
@@ -77,7 +77,7 @@ const renderList = (list?: string[], asBulletPoints: boolean = false) => {
 
 
 
-const Contact: React.FC<ContactProps> = ({ propsText, propsIcons, className, distributeEvenly = false }) => {
+const Contact: React.FC<IContactProps> = ({ propsText, propsIcons, className, distributeEvenly = false }) => {
     // Merge mit Default-Werten
     const text = { ...defaultText, ...propsText };
     const icons = {...propsIcons};
@@ -155,7 +155,7 @@ export {
 }
 
 export type {
-    ContactTextProps,
-    ContactIconProps,
-    ContactProps
+    IContactTextProps,
+    IContactIconProps,
+    IContactProps
 }
