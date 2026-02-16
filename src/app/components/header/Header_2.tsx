@@ -25,7 +25,7 @@ export default function Header2({ activeSection, isMenuOpen, onMenuToggle, onSec
                     {['home', 'philosophie', 'leistungen', 'ueber-mich', 'kontakt'].map((item) => (
                         <button
                             key={item}
-                            className={`capitalize transition-all duration-0 ${
+                            className={`capitalize transition-all duration-0 cursor-pointer ${
                                 activeSection === item
                                     ? 'text-green-600 font-medium border-b-2 border-green-600'
                                     : 'text-gray-600 hover:text-green-500'

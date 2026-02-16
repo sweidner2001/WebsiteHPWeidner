@@ -171,7 +171,7 @@ const TerminForm: React.FC<TerminFormProps> = ({
                     disabled={submitStatus === 'loading'}
                     className={`w-full text-white font-medium text-lg px-12 py-3 text-center
                                transform hover:scale-101 transition-transform cursor-pointer
-                               shadow-lg rounded-lg transition-colors duration-300
+                               shadow-lg rounded-full transition-colors duration-300
                                focus:outline-none
                                ${submitStatus === 'loading'
                         ? 'bg-gray-400 cursor-not-allowed'

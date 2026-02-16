@@ -59,7 +59,7 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
                         Wir behandeln Ursachen, nicht Symptome. Mit natürlichen Verfahren aktivieren wir Ihre Selbstheilungskräfte für langfristige Gesundheit.
                         </p>
                         <button
-                            className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light"
+                            className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer"
                             onClick={() => onSectionClick('kontakt')}>
                             Termin vereinbaren
                         </button>

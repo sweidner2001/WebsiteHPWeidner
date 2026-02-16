@@ -226,7 +226,7 @@ const NaturheilpraxisWebsite = () => {
                         </div>
 
                         {/* Terminformular - Zentriert oben */}
-                        <div className="flex justify-center mb-12">
+                        <div className="flex justify-center mb-12 ">
                             <TerminForm/>
                         </div>
 
@@ -313,27 +313,29 @@ const NaturheilpraxisWebsite = () => {
             {/*        </div>*/}
             {/*    </div>*/}
             {/*</section>*/}
-            {/*<div className="rounded-2xl overflow-hidden shadow-sm mt-12 mb-5 mx-8">*/}
-            {/*    <div className="grid md:grid-cols-2">*/}
-            {/*        /!* Linke Spalte: Praxisinformationen *!/*/}
-            {/*        <div className="bg-white p-8 justify-self-center">*/}
-            {/*            <Contact propsText={contactText} propsIcons={contactIcons}/>*/}
-            {/*        </div>*/}
+            <div className='bg-green-50'>
+                <div className="rounded-2xl overflow-hidden mt-12 mb-5 mx-8 mr-0">
+                    <div className="grid md:grid-cols-2">
+                        {/* Linke Spalte: Praxisinformationen */}
+                        <div className="p-8 justify-self-center">
+                            <Contact propsText={contactText} propsIcons={contactIcons}/>
+                        </div>
 
-            {/*        /!* Rechte Spalte: Google Maps *!/*/}
-            {/*        <div className="h-full min-h-[400px]">*/}
-            {/*            <iframe*/}
-            {/*                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.147456789!2d11.6398!3d49.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1d8c8c8c8c8c9%3A0xaabbccddee!2sPfaffenreuth%2022%2C%2092715%20P%C3%BCchersreuth!5e0!3m2!1sde!2sde!4v1234567890"*/}
-            {/*                width="100%"*/}
-            {/*                height="100%"*/}
-            {/*                style={{border: 0}}*/}
-            {/*                allowFullScreen={true}*/}
-            {/*                loading="lazy"*/}
-            {/*                referrerPolicy="no-referrer-when-downgrade"*/}
-            {/*            ></iframe>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
+                        {/* Rechte Spalte: Google Maps */}
+                        <div className="h-full min-h-[400px]">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.147456789!2d11.6398!3d49.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1d8c8c8c8c8c9%3A0xaabbccddee!2sPfaffenreuth%2022%2C%2092715%20P%C3%BCchersreuth!5e0!3m2!1sde!2sde!4v1234567890"
+                                width="100%"
+                                height="100%"
+                                style={{border: 0}}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
             {/*<section id="kontakt" className="py-20 bg-white">*/}
