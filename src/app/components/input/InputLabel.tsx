@@ -13,7 +13,8 @@ import React from "react";
  */
 export default function InputLabel({htmlFor, label, onClick} : {htmlFor?:string, label:string, onClick?:(...args: any[]) => void}) {
     return (
-        <label htmlFor={htmlFor} onClick={onClick} className="block text-sm font-medium leading-6 text-gray-900">{label}</label>
+        // <label htmlFor={htmlFor} onClick={onClick} className="block text-sm font-medium leading-6 text-gray-900">{label}</label>
+        <label htmlFor={htmlFor} onClick={onClick} className="block text-gray-600 mb-2">{label}</label>
     );
 };
 

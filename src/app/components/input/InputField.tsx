@@ -49,10 +49,15 @@ const InputField: React.FC<InputFieldProps> = ({...probs}) => {
             <div className="mt-2">
                 <input type={probs.type} id={probs.id} autoComplete={probs.autoComplete} placeholder={probs.label}
                        {...probs.register}
+                       // className='px-4 py-2 rounded-lg block w-full
+                       //        text-gray-900 placeholder:text-gray-400
+                       //        border-0 ring-1 ring-inset ring-gray-300
+                       //        focus:outline-none focus:ring-1 focus:ring-green-500'
                        className='px-4 py-2 rounded-lg block w-full
-                              text-gray-900 placeholder:text-gray-400
-                              border-0 shadow-sm ring-1 ring-inset ring-gray-300
-                              focus:outline-none focus:ring-1 focus:ring-indigo-700'/>
+                       font-light text-gray-700 placeholder:text-gray-400
+                       border-0 ring-1 ring-gray-300
+                       focus:outline-none focus:ring-1 focus:ring-green-500'
+                />
                 <ErrorField errorMessage={probs.error}/>
             </div>
         </div>
