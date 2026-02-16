@@ -262,7 +262,7 @@ const NaturheilpraxisWebsite = () => {
                                 {/* Rechte Spalte: Google Maps */}
                                 <div className="h-full min-h-[400px]">
                                     <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.147456789!2d11.6398!3d49.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1d8c8c8c8c8c9%3A0xaabbccddee!2sPfaffenreuth%2022%2C%2092715%20P%C3%BCchersreuth!5e0!3m2!1sde!2sde!4v1234567890"
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2557.8!2d12.17898!3d49.78684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0473dec3bbf67%3A0x30a75ff91af09795!2sNaturheilpraxis%20Carola%20Weidner!5e0!3m2!1sde!2sde!4v1708099200000!5m2!1sde!2sde"
                                         width="100%"
                                         height="100%"
                                         style={{border: 0}}
