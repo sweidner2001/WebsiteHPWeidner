@@ -185,6 +185,43 @@ const NaturheilpraxisWebsite = () => {
                 </div>
             </section>
 
+            {/* Trenn-Abschnitt mit Hintergrundbild */}
+            <section className="relative h-80 md:h-125 w-full overflow-hidden">
+                <Image
+                    src="/img/Blumenwiese_1_zg.jpg"
+                    alt="Naturheilpraxis"
+                    fill
+                    className="object-cover object-[50%_90%]"
+                    quality={100}
+                />
+                {/* Text-Inhalt */}
+                {/*bg-black/20*/}
+                <div className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex py-12 md:py-10 justify-end px-6 lg:px-2 z-10">
+                    <div className="max-w-2xl pr-12">
+                        <h3 className="text-4xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">
+                            Ganzheitliche <span className="text-green-600">Naturheilkunde</span> für nachhaltige
+                            Gesundheit
+                        </h3>
+                        <p className="text-base text-gray-600 mb-8 leading-relaxed">
+                            Wir behandeln Ursachen, nicht Symptome. Mit natürlichen Verfahren aktivieren wir Ihre Selbstheilungskräfte für langfristige Gesundheit.
+                        </p>
+                        {/*<button*/}
+                        {/*    className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer"*/}
+                        {/*    onClick={() => onSectionClick('kontakt')}>*/}
+                        {/*    Termin vereinbaren*/}
+                        {/*</button>*/}
+                    </div>
+                </div>
+                {/* Optionaler Text-Overlay */}
+                {/*<div className="absolute inset-0 flex items-center justify-center">*/}
+                {/*    <h2 className="text-3xl md:text-4xl font-light text-white text-center px-6">*/}
+                {/*        Ihr Zitat oder Text hier*/}
+                {/*    </h2>*/}
+                {/*</div>*/}
+            </section>
+
+
+
             {/* Über mich Section */}
             <section id="ueber-mich" className="py-20 bg-white">
                 <div className="container mx-auto px-6">

@@ -34,9 +34,7 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
             <section id="home" className="min-h-screen flex flex-col md:flex-row items-center relative md:overflow-visible overflow-hidden pt-16">
                 {/* Organischer Bildcontainer mit Bogen-Form - nur auf md+ sichtbar */}
                 <div className="w-full md:absolute md:left-0 md:top-0 md:h-full md:w-1/3 lg:w-1/2 hidden sm:block sm:h-48 md:overflow-visible relative image-container-extended">
-                    <div
-                        className="absolute left-0 top-0 h-full w-full bg-green-50 image-clip rounded-r-md"
-                    >
+                    <div className="absolute left-0 top-0 h-full w-full bg-green-50 image-clip rounded-r-md">
                         <Image
                             src="/img/Zierkirsche_1_gespiegelt.jpg"
                             alt="Naturheilpraxis"
