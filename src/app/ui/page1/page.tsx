@@ -338,10 +338,10 @@ const NaturheilpraxisWebsite = () => {
             </div>
 
 
-            {/*<section id="kontakt" className="py-20 bg-white">*/}
-            {/*    <div className="container mx-auto px-6">*/}
-            {/*        <div className="max-w-5xl mx-auto">*/}
-            {/*            <div className="mt-16 pt-12 border-t border-gray-200">*/}
+            {/*<section id="kontakt" className="py-10 bg-green-50  border-t border-gray-200">*/}
+            {/*    <div className="container mx-auto">*/}
+            {/*        <div className="w-full max-w-6xl mx-auto">*/}
+            {/*            <div className=" border-gray-200">*/}
             {/*                <Contact*/}
             {/*                    propsText={contactText}*/}
             {/*                    propsIcons={contactIcons}*/}
