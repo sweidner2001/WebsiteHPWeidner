@@ -6,6 +6,7 @@ import HeroSection from '../../components/hero/HeroSection';
 import {Contact, IContactTextProps, IContactIconProps} from '../../components/contact/Contact';
 import TerminForm from '../../components/termin/TerminForm';
 import { Telephone, TelephoneFill, Phone, PhoneFill, PhoneVibrate, PhoneVibrateFill, Clock, ClockFill, Envelope, EnvelopeFill, EnvelopeAt, EnvelopeAtFill, Geo, GeoFill, GeoAlt, GeoAltFill } from 'react-bootstrap-icons';
+import './page.css';
 
 const NaturheilpraxisWebsite = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -185,31 +186,67 @@ const NaturheilpraxisWebsite = () => {
                 </div>
             </section>
 
+            {/* SVG clip-path Definition für elegante Bögen oben und unten */}
+            {/*<svg width="0" height="0">*/}
+            {/*    <defs>*/}
+            {/*        /!* Bogen für oberen und unteren Rand des Bildes *!/*/}
+            {/*        /!**/}
+            {/*            M 0,0.05 - Start links bei 5% von oben*/}
+            {/*            Q 0.5,-0.02 1,0.05 - Bogen nach oben (Kontrollpunkt bei -2% = über dem Bild)*/}
+            {/*            L 1,0.95 - Linie nach rechts unten*/}
+            {/*            Q 0.5,1.02 0,0.95 - Bogen nach unten (Kontrollpunkt bei 102% = unter dem Bild)*/}
+            {/*        *!/*/}
+            {/*        <clipPath id="curve-clip-horizontal" clipPathUnits="objectBoundingBox">*/}
+            {/*            <path d="M 0,0.06 Q 0.5,-0.02 1,0.06 L 1,0.94 Q 0.5,1.02 0,0.94 Z"/>*/}
+            {/*        </clipPath>*/}
+            {/*    </defs>*/}
+            {/*</svg>*/}
+
+            <svg width="0" height="0">
+                <defs>
+                    {/* Nur oben ein Bogen, unten gerade */}
+                    {/*
+                        M 0,0.06 - Start links oben bei 6% von oben
+                        Q 0.5,-0.02 1,0.06 - Bogen nach oben in der Mitte
+                        L 1,1 - Gerade Linie nach rechts unten (100%)
+                        L 0,1 - Gerade Linie nach links unten
+                        Z - Pfad schließen
+                    */}
+                    <clipPath id="curve-clip-horizontal" clipPathUnits="objectBoundingBox">
+                        {/*<path d="M 0,0.06 Q 0.5,-0.02 1,0.06 L 1,1 L 0,1 Z"/>*/}
+                        {/*<path d="M 0,0.06 Q 0.5,-0.02 1,0.06 L 1,0.94 Q 0.5,1.02 0,0.94 Z"/>*/}
+                        <path d="M 0,0.06 Q 0.5,-0.0 1,0.0 L 1,0.94 Q 0.5,1.02 0,0.94 Z"/>
+                        {/*<path d="M 0,0.00 Q 0.5,-0.0 1,0.0 L 1,0.94 Q 0.5,1.02 0,0.94 Z"/>*/}
+                    </clipPath>
+                </defs>
+            </svg>
+
             {/* Trenn-Abschnitt mit Hintergrundbild */}
-            <section className="relative h-80 md:h-125 w-full overflow-hidden">
-                <Image
-                    src="/img/Blumenwiese_1_zg.jpg"
-                    alt="Naturheilpraxis"
-                    fill
-                    className="object-cover object-[50%_90%]"
-                    quality={100}
-                />
-                {/* Text-Inhalt */}
-                {/*bg-black/20*/}
-                <div className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex py-12 md:py-10 justify-end px-6 lg:px-2 z-10">
-                    <div className="max-w-2xl pr-12">
-                        <h3 className="text-4xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">
-                            Ganzheitliche <span className="text-green-600">Naturheilkunde</span> für nachhaltige
-                            Gesundheit
-                        </h3>
-                        <p className="text-base text-gray-600 mb-8 leading-relaxed">
-                            Wir behandeln Ursachen, nicht Symptome. Mit natürlichen Verfahren aktivieren wir Ihre Selbstheilungskräfte für langfristige Gesundheit.
-                        </p>
-                        {/*<button*/}
-                        {/*    className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer"*/}
-                        {/*    onClick={() => onSectionClick('kontakt')}>*/}
-                        {/*    Termin vereinbaren*/}
-                        {/*</button>*/}
+            <section className="relative h-80 md:h-130 w-full overflow-visible">
+                {/* Bild-Container mit clip-path für abgerundete Kanten */}
+                <div className="absolute inset-0 image-clip-horizontal bg-green-500">
+                    <Image
+                        src="/img/Blumenwiese_1_zg.jpg"
+                        alt="Naturheilpraxis"
+                        fill
+                        className="object-cover object-[50%_90%]"
+                        quality={100}
+                    />
+
+
+                    {/* Text-Inhalt */}
+                    {/*bg-black/20*/}
+                    <div className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex py-12 md:py-10 justify-end px-6 lg:px-2  z-10">
+                        <div className="max-w-2xl pr-12">
+                            <h3 className="text-4xl md:text-5xl font-light text-gray-800  mb-6 leading-tight">
+                                Ganzheitliche <span className="text-green-600">Naturheilkunde</span> für nachhaltige
+                                Gesundheit
+                            </h3>
+                            <p className="text-base text-gray-600 mb-8 leading-relaxed">
+                                Wir behandeln Ursachen, nicht Symptome. Mit natürlichen Verfahren aktivieren wir Ihre
+                                Selbstheilungskräfte für langfristige Gesundheit.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 {/* Optionaler Text-Overlay */}
@@ -219,7 +256,6 @@ const NaturheilpraxisWebsite = () => {
                 {/*    </h2>*/}
                 {/*</div>*/}
             </section>
-
 
 
             {/* Über mich Section */}
@@ -261,7 +297,6 @@ const NaturheilpraxisWebsite = () => {
                             <h2 className="text-3xl font-light text-gray-800 mb-4">Kontakt & Anfahrt</h2>
                             <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
                         </div>
-
 
 
                         {/* Contact + Google Maps - In einem gemeinsamen Container */}
