@@ -225,10 +225,7 @@ const NaturheilpraxisWebsite = () => {
                             <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
                         </div>
 
-                        {/* Terminformular - Zentriert oben */}
-                        <div className="flex justify-center mb-12 ">
-                            <TerminForm/>
-                        </div>
+
 
                         {/* Contact + Google Maps - In einem gemeinsamen Container */}
                         {/*<div className="bg-white rounded-2xl p-6 pl-8 pr-8 shadow-sm">*/}
@@ -274,7 +271,10 @@ const NaturheilpraxisWebsite = () => {
                             </div>
                         </div>
 
-
+                        {/* Terminformular - Zentriert oben */}
+                        <div className="flex justify-center mt-12 ">
+                            <TerminForm/>
+                        </div>
                     </div>
                 </div>
             </section>
