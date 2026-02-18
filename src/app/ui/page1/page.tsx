@@ -261,18 +261,29 @@ const NaturheilpraxisWebsite = () => {
             {/* Über mich Section */}
             <section id="ueber-mich" className="py-20 bg-white">
                 <div className="container mx-auto px-6">
-                    <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center">
-                        <div className="md:w-2/5 mb-10 md:mb-0 flex justify-center">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl font-light text-gray-800 mb-4">Über mich</h2>
+                        <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
+                    </div>
+                    <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-14">
+                        <div className="lg:flex-1 flex justify-center items-center">
                             <div
-                                className="w-64 h-64 rounded-full bg-green-50 flex items-center justify-center overflow-hidden">
+                                className="px-8 py-8 w-90 h-90 sm:w-96 sm:h-96 md:w-100 md:h-100 lg:w-120 lg:h-120 rounded-full flex items-center justify-center overflow-hidden aspect-square flex-shrink-0">
                                 <div
-                                    className="w-56 h-56 rounded-full bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
-                                    <span className="text-green-200">Porträtfoto</span>
+                                    className="w-full h-full rounded-full bg-gradient-to-br from-green-100 to-green-100 flex items-center justify-center relative overflow-hidden">
+                                    <Image
+                                        src="/img/Carola_2_zg.jpg"
+                                        alt="Naturheilpraxis"
+                                        fill
+                                        className="object-cover object-[35%_70%]"
+                                        quality={100}
+                                    />
                                 </div>
                             </div>
                         </div>
-                        <div className="md:w-3/5 md:pl-12">
-                            <h2 className="text-3xl font-light text-gray-800 mb-6">Über mich</h2>
+                        <div className="lg:flex-1">
+                            {/*<h2 className="text-3xl font-light text-gray-800 mb-6">Über mich</h2>*/}
+                            <h2 className="text-3xl font-light text-gray-800 mb-6">Carola Weidner</h2>
                             <p className="text-gray-600 mb-4 font-light">
                                 Mein Name ist [Name] und ich bin seit [Jahren] als Heilpraktiker tätig. Meine
                                 Leidenschaft für die Naturheilkunde begann, als ich die heilende Kraft der Natur am

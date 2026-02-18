@@ -48,8 +48,7 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
 
 
             {/* Hero Section mit organischem Bild-Container */}
-            <section id="home"
-                     className="min-h-screen flex flex-col md:flex-row items-center relative md:overflow-visible overflow-hidden pt-16">
+            <section id="home" className="min-h-screen flex flex-col md:flex-row items-center relative md:overflow-visible overflow-hidden pt-16">
                 {/* Organischer Bildcontainer mit Bogen-Form - nur auf md+ sichtbar */}
                 <div
                     className="w-full md:absolute md:left-0 md:top-0 md:h-full md:w-1/3 lg:w-1/2 hidden sm:block sm:h-48 md:overflow-visible relative image-container-extended">
