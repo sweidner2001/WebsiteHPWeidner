@@ -61,5 +61,29 @@
     }
 }
 
+/* Styles für "Über mich" Section mit clipPath */
+.image-clip-about img {
+    object-fit: cover;
+}
+
+.image-clip-about {
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .image-clip-about {
+        clip-path: url(#curve-clip-about) !important;
+    }
+
+    .image-clip-about img {
+        object-position: center center;
+    }
+
+    /* Bild-Container größer machen für Auslauf */
+    .image-container-extended {
+        min-height: calc(100vh + 1vh) !important;
+    }
+}
+
 
 

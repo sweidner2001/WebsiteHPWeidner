@@ -187,20 +187,6 @@ const NaturheilpraxisWebsite = () => {
             </section>
 
             {/* SVG clip-path Definition für elegante Bögen oben und unten */}
-            {/*<svg width="0" height="0">*/}
-            {/*    <defs>*/}
-            {/*        /!* Bogen für oberen und unteren Rand des Bildes *!/*/}
-            {/*        /!**/}
-            {/*            M 0,0.05 - Start links bei 5% von oben*/}
-            {/*            Q 0.5,-0.02 1,0.05 - Bogen nach oben (Kontrollpunkt bei -2% = über dem Bild)*/}
-            {/*            L 1,0.95 - Linie nach rechts unten*/}
-            {/*            Q 0.5,1.02 0,0.95 - Bogen nach unten (Kontrollpunkt bei 102% = unter dem Bild)*/}
-            {/*        *!/*/}
-            {/*        <clipPath id="curve-clip-horizontal" clipPathUnits="objectBoundingBox">*/}
-            {/*            <path d="M 0,0.06 Q 0.5,-0.02 1,0.06 L 1,0.94 Q 0.5,1.02 0,0.94 Z"/>*/}
-            {/*        </clipPath>*/}
-            {/*    </defs>*/}
-            {/*</svg>*/}
 
             <svg width="0" height="0">
                 <defs>
@@ -236,7 +222,8 @@ const NaturheilpraxisWebsite = () => {
 
                     {/* Text-Inhalt */}
                     {/*bg-black/20*/}
-                    <div className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex py-12 md:py-10 justify-end px-6 lg:px-2  z-10">
+                    <div
+                        className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex py-12 md:py-10 justify-end px-6 lg:px-2  z-10">
                         <div className="max-w-2xl pr-12">
                             <h3 className="text-4xl md:text-5xl font-light text-gray-800  mb-6 leading-tight">
                                 Ganzheitliche <span className="text-green-600">Naturheilkunde</span> für nachhaltige
@@ -257,6 +244,24 @@ const NaturheilpraxisWebsite = () => {
                 {/*</div>*/}
             </section>
 
+            {/* SVG clip-path Definition für "Über mich" Section */}
+            <svg width="0" height="0">
+                <defs>
+                    {/* Ovale/Elliptische Form */}
+                    <clipPath id="curve-clip-about" clipPathUnits="objectBoundingBox">
+                        {/*
+                            Ellipse mit smooth Kurven für ein Oval
+                            M 0.5,0 - Start oben in der Mitte
+                            Q 1,0 1,0.5 - Kurve nach rechts oben
+                            Q 1,1 0.5,1 - Kurve nach rechts unten
+                            Q 0,1 0,0.5 - Kurve nach links unten
+                            Q 0,0 0.5,0 - Kurve nach links oben
+                            Z - Pfad schließen
+                        */}
+                        <path d="M 0.5,0 Q 1,0 1,0.5 Q 1,1 0.5,1 Q 0,1 0,0.5 Q 0,0 0.5,0 Z"/>
+                    </clipPath>
+                </defs>
+            </svg>
 
             {/* Über mich Section */}
             <section id="ueber-mich" className="py-20 bg-white">
@@ -265,10 +270,11 @@ const NaturheilpraxisWebsite = () => {
                         <h2 className="text-3xl font-light text-gray-800 mb-4">Über mich</h2>
                         <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
                     </div>
-                    <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-14">
-                        <div className="lg:flex-1 flex justify-center items-center">
+                    <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:gap-14 gap-4">
+                        {/*/!* Runder Kreis kleiner als lg Breakpoint *!/*/}
+                        <div className="lg:hidden lg:flex-1 flex justify-center items-center">
                             <div
-                                className="px-8 py-8 w-90 h-90 sm:w-96 sm:h-96 md:w-100 md:h-100 lg:w-120 lg:h-120 rounded-full flex items-center justify-center overflow-hidden aspect-square flex-shrink-0">
+                                className="px-8 py-8 w-96 h-96 lg:w-120 lg:h-120 md:w-110 md:h-110 rounded-full flex items-center justify-center overflow-hidden aspect-square flex-shrink-0">
                                 <div
                                     className="w-full h-full rounded-full bg-gradient-to-br from-green-100 to-green-100 flex items-center justify-center relative overflow-hidden">
                                     <Image
@@ -276,28 +282,102 @@ const NaturheilpraxisWebsite = () => {
                                         alt="Naturheilpraxis"
                                         fill
                                         className="object-cover object-[35%_70%]"
-                                        quality={100}
-                                    />
+                                        quality={100}/>
                                 </div>
+                            </div>
+                        </div>
+
+                        {/* Ovales Bild ab lg Breakpoint */}
+                        <div className="hidden lg:flex lg:flex-1 justify-center items-center">
+                            <div
+                                className="relative h-96 md:h-120 w-96 md:w-120 bg-green-50 image-clip-about overflow-hidden">
+                                <Image
+                                    src="/img/Carola_2_zg.jpg"
+                                    alt="Naturheilpraxis"
+                                    fill
+                                    className="object-cover object-[35%_70%]"
+                                    quality={100}/>
                             </div>
                         </div>
                         <div className="lg:flex-1">
                             {/*<h2 className="text-3xl font-light text-gray-800 mb-6">Über mich</h2>*/}
+                            {/*<h2 className="text-3xl md:text-3xl font-light text-gray-800 mb-6 leading-tight">*/}
+                            {/*    Über <span className="text-green-600">Carola Weidner</span>*/}
+                            {/*</h2>*/}
                             <h2 className="text-3xl font-light text-gray-800 mb-6">Carola Weidner</h2>
                             <p className="text-gray-600 mb-4 font-light">
                                 Mein Name ist [Name] und ich bin seit [Jahren] als Heilpraktiker tätig. Meine
                                 Leidenschaft für die Naturheilkunde begann, als ich die heilende Kraft der Natur am
                                 eigenen Leib erfahren durfte.
                             </p>
-                            <p className="text-gray-600 font-light">
+                            <p className="text-gray-600 font-light mb-8">
                                 In meiner Praxis lege ich großen Wert auf eine vertrauensvolle Beziehung zu meinen
                                 Patienten und eine individuelle, ganzheitliche Behandlung, die auf Ihre persönlichen
                                 Bedürfnisse abgestimmt ist.
                             </p>
+                            <button
+                                className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer">
+                                Mehr erfahren
+                            </button>
+
                         </div>
                     </div>
                 </div>
             </section>
+
+
+            {/* Über mich Section */}
+            {/*<section id="ueber-mich"*/}
+            {/*         className="relative flex flex-col md:flex-row items-center bg-white md:overflow-visible overflow-hidden py-20">*/}
+            {/*    /!* Bild-Container mit clipPath - ganz links am Rand *!/*/}
+            {/*    <div className="hidden md:block md:absolute md:left-0 md:top-1/2 md:transform md:-translate-y-1/2 md:h-96 md:w-auto lg:h-[500px] relative image-container-extended">*/}
+            {/*        <div className="absolute left-0 top-0 h-96 lg:h-[500px] w-96 lg:w-[500px] bg-green-50 image-clip-about">*/}
+            {/*            <Image*/}
+            {/*                src="/img/Carola_2_zg.jpg"*/}
+            {/*                alt="Carola Weidner"*/}
+            {/*                fill*/}
+            {/*                className="object-cover object-[35%_70%]"*/}
+            {/*                quality={100}*/}
+            {/*            />*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+
+            {/*    /!* Text-Inhalt - rechts positioniert *!/*/}
+            {/*    <div className="relative flex items-center justify-end w-full md:w-2/3 md:ml-auto px-6 lg:px-12 py-12 md:py-0 z-10">*/}
+            {/*        <div className="max-w-2xl">*/}
+            {/*            <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">*/}
+            {/*                Über <span className="text-green-600">mich</span>*/}
+            {/*            </h2>*/}
+            {/*            <p className="text-base text-gray-600 mb-6 font-light leading-relaxed">*/}
+            {/*                Mein Name ist [Name] und ich bin seit [Jahren] als Heilpraktiker tätig. Meine*/}
+            {/*                Leidenschaft für die Naturheilkunde begann, als ich die heilende Kraft der Natur am*/}
+            {/*                eigenen Leib erfahren durfte.*/}
+            {/*            </p>*/}
+            {/*            <p className="text-base text-gray-600 mb-8 font-light leading-relaxed">*/}
+            {/*                In meiner Praxis lege ich großen Wert auf eine vertrauensvolle Beziehung zu meinen*/}
+            {/*                Patienten und eine individuelle, ganzheitliche Behandlung, die auf Ihre persönlichen*/}
+            {/*                Bedürfnisse abgestimmt ist.*/}
+            {/*            </p>*/}
+            {/*            <button className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer">*/}
+            {/*                Mehr erfahren*/}
+            {/*            </button>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+
+            {/*    /!* Mobile Bild-Anzeige *!/*/}
+            {/*    <div className="md:hidden w-full px-6 py-8">*/}
+            {/*        <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-green-100 flex items-center justify-center overflow-hidden mx-auto">*/}
+            {/*            <Image*/}
+            {/*                src="/img/Carola_2_zg.jpg"*/}
+            {/*                alt="Carola Weidner"*/}
+            {/*                fill*/}
+            {/*                className="object-cover object-[35%_70%]"*/}
+            {/*                quality={100}*/}
+            {/*            />*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
+
 
 
             {/* Kontakt Section */}

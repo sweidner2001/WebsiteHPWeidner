@@ -29,22 +29,22 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
                 </defs>
             </svg>
 
-            <svg width="0" height="0">
-                <defs>
-                    {/*115% - Kontrollpunkt ist rechts außerhalb des Bildes (erzeugt Krümmung nach außen)*/}
-                    {/*50% - Vertikal in der Mitte*/}
-                    {/*20% - Endpunkt ist 20% von links (Bogen endet am linken Rand, nicht ganz am Ende)*/}
-                    {/*100% - Endpunkt ist ganz unten*/}
-                    <clipPath id="curve-clip-hor" clipPathUnits="objectBoundingBox">
-                        <path d="M 0,0 L 1,0 Q 0.85,0.5 1,1 L 0,1 Z"/>
-                        {/*<path d="M 0,0   L 0.85,0   Q 1,0.5 0.8,1   L 0,1   Z"/>*/}
-                        {/*<path d="M 0,0   L 0.80,0   Q 1.1,0.5 0.2,1   L 0,1   Z"/>*/}
-                        {/*<path d="M 0,0   L 0.80,0   Q 1.2,0.5 0,1   L 0,1   Z"/>*/}
-                        {/*<path d="M 0,0   L 0.80,0   Q 1.1,0.5 0.0.5,1      L 0,1   Z"/>*/}
-                        {/*<path d="M 0,0   L 0.85,0   Q 0.8,0.5 0.99,1   L 0,1   Z"/>*/}
-                    </clipPath>
-                </defs>
-            </svg>
+            {/*<svg width="0" height="0">*/}
+            {/*    <defs>*/}
+            {/*        /!*115% - Kontrollpunkt ist rechts außerhalb des Bildes (erzeugt Krümmung nach außen)*!/*/}
+            {/*        /!*50% - Vertikal in der Mitte*!/*/}
+            {/*        /!*20% - Endpunkt ist 20% von links (Bogen endet am linken Rand, nicht ganz am Ende)*!/*/}
+            {/*        /!*100% - Endpunkt ist ganz unten*!/*/}
+            {/*        <clipPath id="curve-clip-hor" clipPathUnits="objectBoundingBox">*/}
+            {/*            <path d="M 0,0 L 1,0 Q 0.85,0.5 1,1 L 0,1 Z"/>*/}
+            {/*            /!*<path d="M 0,0   L 0.85,0   Q 1,0.5 0.8,1   L 0,1   Z"/>*!/*/}
+            {/*            /!*<path d="M 0,0   L 0.80,0   Q 1.1,0.5 0.2,1   L 0,1   Z"/>*!/*/}
+            {/*            /!*<path d="M 0,0   L 0.80,0   Q 1.2,0.5 0,1   L 0,1   Z"/>*!/*/}
+            {/*            /!*<path d="M 0,0   L 0.80,0   Q 1.1,0.5 0.0.5,1      L 0,1   Z"/>*!/*/}
+            {/*            /!*<path d="M 0,0   L 0.85,0   Q 0.8,0.5 0.99,1   L 0,1   Z"/>*!/*/}
+            {/*        </clipPath>*/}
+            {/*    </defs>*/}
+            {/*</svg>*/}
 
 
             {/* Hero Section mit organischem Bild-Container */}
