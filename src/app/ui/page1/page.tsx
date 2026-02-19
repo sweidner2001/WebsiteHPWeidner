@@ -21,7 +21,7 @@ const NaturheilpraxisWebsite = () => {
         description2: "In meiner Praxis lege ich großen Wert auf eine vertrauensvolle Beziehung zu meinen Patienten und eine individuelle, ganzheitliche Behandlung, die auf Ihre persönlichen Bedürfnisse abgestimmt ist.",
         imageSrc:"/img/Carola_2_zg.jpg",
         onlyRoundImage: true,
-        // onButtonClick:{() => scrollToSection('kontakt')}
+        // onButtonClick:() => scrollToSection('kontakt')
     };
 
 
@@ -234,9 +234,9 @@ const NaturheilpraxisWebsite = () => {
                     {/* Text-Inhalt */}
                     {/*bg-black/20*/}
                     <div
-                        className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex py-12 md:py-10 justify-end px-6 lg:px-2  z-10">
+                        className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex py-12 md:py-10 justify-end px-6 lg:px-2 bg-black/20 z-10">
                         <div className="max-w-2xl pr-12">
-                            <h3 className="text-4xl md:text-5xl font-light text-gray-800  mb-6 leading-tight">
+                            <h3 className="text-4xl md:text-5xl font-light text-white  mb-6 leading-tight">
                                 Ganzheitliche <span className="text-green-600">Naturheilkunde</span> für nachhaltige
                                 Gesundheit
                             </h3>
@@ -430,7 +430,7 @@ const NaturheilpraxisWebsite = () => {
                 {/*    </div>*/}
                 {/*</section>*/}
                 <div className='bg-green-50'>
-                    <div className="rounded-2xl overflow-hidden mt-12 mb-5 mx-8 mr-0">
+                    <div className="overflow-hidden mt-12 md:pb-0 pb-6">
                         <div className="grid md:grid-cols-2">
                             {/* Linke Spalte: Praxisinformationen */}
                             <div className="p-8 justify-self-center">
@@ -438,7 +438,7 @@ const NaturheilpraxisWebsite = () => {
                             </div>
 
                             {/* Rechte Spalte: Google Maps */}
-                            <div className="h-full min-h-[400px]">
+                            <div className="h-full min-h-[400px] rounded-2xl md:rounded-none md:mx-0 mx-8 overflow-hidden">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.147456789!2d11.6398!3d49.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1d8c8c8c8c8c9%3A0xaabbccddee!2sPfaffenreuth%2022%2C%2092715%20P%C3%BCchersreuth!5e0!3m2!1sde!2sde!4v1234567890"
                                     width="100%"
@@ -471,7 +471,7 @@ const NaturheilpraxisWebsite = () => {
 
 
                 {/* Footer */}
-                <footer className="bg-white py-8 border-t border-gray-100">
+                <footer className="bg-green-50 py-8 border-t border-gray-200">
                     <div className="container mx-auto px-6 text-center">
                         <p className="text-gray-600 font-light">&copy; {new Date().getFullYear()} Naturheilpraxis
                             [Name].

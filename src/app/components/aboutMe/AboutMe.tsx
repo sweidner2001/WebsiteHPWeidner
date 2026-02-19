@@ -36,7 +36,7 @@ const AboutMe: React.FC<IAboutProps> = ({...aboutProbs}) => {
         <div className="container mx-auto px-6">
             {/* Header */}
             {showHeading &&
-            <div className="text-center mb-16">
+            <div className="text-center mb-10">
                 <h2 className="text-3xl font-light text-gray-800 mb-4">{title}</h2>
                 <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
             </div>
