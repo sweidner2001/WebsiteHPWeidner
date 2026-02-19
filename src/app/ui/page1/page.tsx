@@ -5,6 +5,7 @@ import Header2 from '../../components/header/Header_2';
 import HeroSection from '../../components/hero/HeroSection';
 import {Contact, IContactTextProps, IContactIconProps} from '../../components/contact/Contact';
 import {AboutMe, IAboutProps} from '@/app/components/aboutMe/AboutMe';
+import GoogleMap, {IGoogleMapProps} from '@/app/components/map/GoogleMap';
 import TerminForm from '../../components/termin/TerminForm';
 import { Telephone, TelephoneFill, Phone, PhoneFill, PhoneVibrate, PhoneVibrateFill, Clock, ClockFill, Envelope, EnvelopeFill, EnvelopeAt, EnvelopeAtFill, Geo, GeoFill, GeoAlt, GeoAltFill } from 'react-bootstrap-icons';
 import './page.css';
@@ -51,6 +52,10 @@ const NaturheilpraxisWebsite = () => {
         // hoursIconContent: <Clock className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />
     };
 
+    const googleMapProps: IGoogleMapProps = {
+        src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35671.625057047895!2d12.153830278827233!3d49.794229273857394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0473dec3bbf67%3A0x30a75ff91af09795!2sNaturheilpraxis%20Carola%20Weidner!5e0!3m2!1sde!2sde!4v1771507812972!5m2!1sde!2sde",
+        minHeight: "400px"
+    };
 
 
 
@@ -280,157 +285,156 @@ const NaturheilpraxisWebsite = () => {
             </section>
 
 
-                {/* Über mich Section */}
-                {/*<section id="ueber-mich"*/}
-                {/*         className="relative flex flex-col md:flex-row items-center bg-white md:overflow-visible overflow-hidden py-20">*/}
-                {/*    /!* Bild-Container mit clipPath - ganz links am Rand *!/*/}
-                {/*    <div className="hidden md:block md:absolute md:left-0 md:top-1/2 md:transform md:-translate-y-1/2 md:h-96 md:w-auto lg:h-[500px] relative image-container-extended">*/}
-                {/*        <div className="absolute left-0 top-0 h-96 lg:h-[500px] w-96 lg:w-[500px] bg-green-50 image-clip-aboutMe">*/}
-                {/*            <Image*/}
-                {/*                src="/img/Carola_2_zg.jpg"*/}
-                {/*                alt="Carola Weidner"*/}
-                {/*                fill*/}
-                {/*                className="object-cover object-[35%_70%]"*/}
-                {/*                quality={100}*/}
-                {/*            />*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
+            {/* Über mich Section */}
+            {/*<section id="ueber-mich"*/}
+            {/*         className="relative flex flex-col md:flex-row items-center bg-white md:overflow-visible overflow-hidden py-20">*/}
+            {/*    /!* Bild-Container mit clipPath - ganz links am Rand *!/*/}
+            {/*    <div className="hidden md:block md:absolute md:left-0 md:top-1/2 md:transform md:-translate-y-1/2 md:h-96 md:w-auto lg:h-[500px] relative image-container-extended">*/}
+            {/*        <div className="absolute left-0 top-0 h-96 lg:h-[500px] w-96 lg:w-[500px] bg-green-50 image-clip-aboutMe">*/}
+            {/*            <Image*/}
+            {/*                src="/img/Carola_2_zg.jpg"*/}
+            {/*                alt="Carola Weidner"*/}
+            {/*                fill*/}
+            {/*                className="object-cover object-[35%_70%]"*/}
+            {/*                quality={100}*/}
+            {/*            />*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
 
-                {/*    /!* Text-Inhalt - rechts positioniert *!/*/}
-                {/*    <div className="relative flex items-center justify-end w-full md:w-2/3 md:ml-auto px-6 lg:px-12 py-12 md:py-0 z-10">*/}
-                {/*        <div className="max-w-2xl">*/}
-                {/*            <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">*/}
-                {/*                Über <span className="text-green-600">mich</span>*/}
-                {/*            </h2>*/}
-                {/*            <p className="text-base text-gray-600 mb-6 font-light leading-relaxed">*/}
-                {/*                Mein Name ist [Name] und ich bin seit [Jahren] als Heilpraktiker tätig. Meine*/}
-                {/*                Leidenschaft für die Naturheilkunde begann, als ich die heilende Kraft der Natur am*/}
-                {/*                eigenen Leib erfahren durfte.*/}
-                {/*            </p>*/}
-                {/*            <p className="text-base text-gray-600 mb-8 font-light leading-relaxed">*/}
-                {/*                In meiner Praxis lege ich großen Wert auf eine vertrauensvolle Beziehung zu meinen*/}
-                {/*                Patienten und eine individuelle, ganzheitliche Behandlung, die auf Ihre persönlichen*/}
-                {/*                Bedürfnisse abgestimmt ist.*/}
-                {/*            </p>*/}
-                {/*            <button className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer">*/}
-                {/*                Mehr erfahren*/}
-                {/*            </button>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
+            {/*    /!* Text-Inhalt - rechts positioniert *!/*/}
+            {/*    <div className="relative flex items-center justify-end w-full md:w-2/3 md:ml-auto px-6 lg:px-12 py-12 md:py-0 z-10">*/}
+            {/*        <div className="max-w-2xl">*/}
+            {/*            <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">*/}
+            {/*                Über <span className="text-green-600">mich</span>*/}
+            {/*            </h2>*/}
+            {/*            <p className="text-base text-gray-600 mb-6 font-light leading-relaxed">*/}
+            {/*                Mein Name ist [Name] und ich bin seit [Jahren] als Heilpraktiker tätig. Meine*/}
+            {/*                Leidenschaft für die Naturheilkunde begann, als ich die heilende Kraft der Natur am*/}
+            {/*                eigenen Leib erfahren durfte.*/}
+            {/*            </p>*/}
+            {/*            <p className="text-base text-gray-600 mb-8 font-light leading-relaxed">*/}
+            {/*                In meiner Praxis lege ich großen Wert auf eine vertrauensvolle Beziehung zu meinen*/}
+            {/*                Patienten und eine individuelle, ganzheitliche Behandlung, die auf Ihre persönlichen*/}
+            {/*                Bedürfnisse abgestimmt ist.*/}
+            {/*            </p>*/}
+            {/*            <button className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer">*/}
+            {/*                Mehr erfahren*/}
+            {/*            </button>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
 
-                {/*    /!* Mobile Bild-Anzeige *!/*/}
-                {/*    <div className="md:hidden w-full px-6 py-8">*/}
-                {/*        <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-green-100 flex items-center justify-center overflow-hidden mx-auto">*/}
-                {/*            <Image*/}
-                {/*                src="/img/Carola_2_zg.jpg"*/}
-                {/*                alt="Carola Weidner"*/}
-                {/*                fill*/}
-                {/*                className="object-cover object-[35%_70%]"*/}
-                {/*                quality={100}*/}
-                {/*            />*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</section>*/}
-
-
-                {/* Kontakt Section */}
-                <section id="kontakt" className="py-20 bg-white">
-                    <div className="container mx-auto px-6">
-                        <div className="max-w-5xl mx-auto">
-                            <div className="text-center mb-16">
-                                <h2 className="text-3xl font-light text-gray-800 mb-4">Kontakt & Anfahrt</h2>
-                                <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
-                            </div>
+            {/*    /!* Mobile Bild-Anzeige *!/*/}
+            {/*    <div className="md:hidden w-full px-6 py-8">*/}
+            {/*        <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-green-100 flex items-center justify-center overflow-hidden mx-auto">*/}
+            {/*            <Image*/}
+            {/*                src="/img/Carola_2_zg.jpg"*/}
+            {/*                alt="Carola Weidner"*/}
+            {/*                fill*/}
+            {/*                className="object-cover object-[35%_70%]"*/}
+            {/*                quality={100}*/}
+            {/*            />*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
 
 
-                            {/* Contact + Google Maps - In einem gemeinsamen Container */}
-                            {/*<div className="bg-white rounded-2xl p-6 pl-8 pr-8 shadow-sm">*/}
-                            {/*    /!*<h3 className="text-2xl font-light text-gray-800 mb-6 text-center">Praxisinformationen</h3>*!/*/}
-                            {/*    <div className="grid md:grid-cols-2 gap-8 items-start">*/}
-                            {/*        /!* Linke Spalte: Praxisinformationen *!/*/}
-                            {/*        <Contact propsText={contactText} propsIcons={contactIcons}/>*/}
+            {/* Kontakt Section */}
+            {/*<section id="kontakt" className="py-20 bg-white">*/}
+            {/*    <div className="container mx-auto px-6">*/}
+            {/*        <div className="max-w-5xl mx-auto">*/}
+            {/*            <div className="text-center mb-16">*/}
+            {/*                <h2 className="text-3xl font-light text-gray-800 mb-4">Kontakt & Anfahrt</h2>*/}
+            {/*                <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>*/}
+            {/*            </div>*/}
 
-                            {/*        /!* Rechte Spalte: Google Maps *!/*/}
-                            {/*        <div className="rounded-xl overflow-hidden shadow-lg h-full">*/}
-                            {/*            <iframe*/}
-                            {/*                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.147456789!2d11.6398!3d49.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1d8c8c8c8c8c9%3A0xaabbccddee!2sPfaffenreuth%2022%2C%2092715%20P%C3%BCchersreuth!5e0!3m2!1sde!2sde!4v1234567890"*/}
-                            {/*                width="100%"*/}
-                            {/*                height="100%"*/}
-                            {/*                style={{border: 0, minHeight: '300px'}}*/}
-                            {/*                allowFullScreen={true}*/}
-                            {/*                loading="lazy"*/}
-                            {/*                referrerPolicy="no-referrer-when-downgrade"*/}
-                            {/*            ></iframe>*/}
-                            {/*        </div>*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
 
-                            <div className="rounded-2xl overflow-hidden shadow-sm mt-12">
-                                <div className="grid md:grid-cols-2">
-                                    {/* Linke Spalte: Praxisinformationen */}
-                                    <div className="bg-white p-8">
-                                        <Contact propsText={contactText} propsIcons={contactIcons}/>
-                                    </div>
+                        {/* Contact + Google Maps - In einem gemeinsamen Container */}
+                        {/*<div className="bg-white rounded-2xl p-6 pl-8 pr-8 shadow-sm">*/}
+                        {/*    /!*<h3 className="text-2xl font-light text-gray-800 mb-6 text-center">Praxisinformationen</h3>*!/*/}
+                        {/*    <div className="grid md:grid-cols-2 gap-8 items-start">*/}
+                        {/*        /!* Linke Spalte: Praxisinformationen *!/*/}
+                        {/*        <Contact propsText={contactText} propsIcons={contactIcons}/>*/}
 
-                                    {/* Rechte Spalte: Google Maps */}
-                                    <div className="h-full min-h-[400px]">
-                                        <iframe
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2557.8!2d12.17898!3d49.78684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0473dec3bbf67%3A0x30a75ff91af09795!2sNaturheilpraxis%20Carola%20Weidner!5e0!3m2!1sde!2sde!4v1708099200000!5m2!1sde!2sde"
-                                            width="100%"
-                                            height="100%"
-                                            style={{border: 0}}
-                                            allowFullScreen={true}
-                                            loading="lazy"
-                                            referrerPolicy="no-referrer-when-downgrade"
-                                        ></iframe>
-                                    </div>
-                                </div>
-                            </div>
+                        {/*        /!* Rechte Spalte: Google Maps *!/*/}
+                        {/*        <div className="rounded-xl overflow-hidden shadow-lg h-full">*/}
+                        {/*            <iframe*/}
+                        {/*                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.147456789!2d11.6398!3d49.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1d8c8c8c8c8c9%3A0xaabbccddee!2sPfaffenreuth%2022%2C%2092715%20P%C3%BCchersreuth!5e0!3m2!1sde!2sde!4v1234567890"*/}
+                        {/*                width="100%"*/}
+                        {/*                height="100%"*/}
+                        {/*                style={{border: 0, minHeight: '300px'}}*/}
+                        {/*                allowFullScreen={true}*/}
+                        {/*                loading="lazy"*/}
+                        {/*                referrerPolicy="no-referrer-when-downgrade"*/}
+                        {/*            ></iframe>*/}
+                        {/*        </div>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
 
-                            {/* Terminformular - Zentriert oben */}
-                            <div className="flex justify-center mt-12 ">
-                                <TerminForm/>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/*<section id="kontakt" className="py-20 bg-white">*/}
-                {/*    <div className="container mx-auto px-6">*/}
-                {/*        <div className="max-w-5xl mx-auto">*/}
-                {/*            <div className="text-center mb-16">*/}
-                {/*                <h2 className="text-3xl font-light text-gray-800 mb-4">Kontakt & Anfahrt</h2>*/}
-                {/*                <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>*/}
-                {/*            </div>*/}
+                        {/*<div className="rounded-2xl overflow-hidden shadow-sm mt-12">*/}
+                        {/*    <div className="grid md:grid-cols-2">*/}
+                        {/*        /!* Linke Spalte: Praxisinformationen *!/*/}
+                        {/*        <div className="bg-white p-8">*/}
+                        {/*            <Contact propsText={contactText} propsIcons={contactIcons}/>*/}
+                        {/*        </div>*/}
 
-                {/*            /!* Grid Layout: Info + Formular oben, Karte unten *!/*/}
-                {/*            <div className="grid md:grid-cols-2 gap-12 mb-12">*/}
-                {/*                /!* Linke Spalte: Praxisinformationen *!/*/}
-                {/*                <Contact propsText={contactText} propsIcons={contactIcons}/>*/}
+                        {/*        /!* Rechte Spalte: Google Maps *!/*/}
+                        {/*        <GoogleMap {...googleMapProps} />*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
 
-                {/*                /!* Rechte Spalte: Terminformular *!/*/}
-                {/*                <TerminForm/>*/}
-                {/*            </div>*/}
+                        {/* Terminformular - Zentriert oben */}
+            {/*            <div className="flex justify-center mt-12 ">*/}
+            {/*                <TerminForm/>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
+            {/*<section id="kontakt" className="py-20 bg-white">*/}
+            {/*    <div className="container mx-auto px-6">*/}
+            {/*        <div className="max-w-5xl mx-auto">*/}
+            {/*            <div className="text-center mb-16">*/}
+            {/*                <h2 className="text-3xl font-light text-gray-800 mb-4">Kontakt & Anfahrt</h2>*/}
+            {/*                <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>*/}
+            {/*            </div>*/}
 
-                {/*            /!* Google Maps - Zentriert *!/*/}
-                {/*            <div className="flex flex-col items-center">*/}
-                {/*                <h3 className="text-2xl font-light text-gray-800 mb-6">Standort</h3>*/}
-                {/*                <div className="rounded-xl overflow-hidden shadow-lg">*/}
-                {/*                    <iframe*/}
-                {/*                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.147456789!2d11.6398!3d49.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1d8c8c8c8c8c9%3A0xaabbccddee!2sPfaffenreuth%2022%2C%2092715%20P%C3%BCchersreuth!5e0!3m2!1sde!2sde!4v1234567890"*/}
-                {/*                        width="600"*/}
-                {/*                        height="380"*/}
-                {/*                        style={{border: 0}}*/}
-                {/*                        allowFullScreen={true}*/}
-                {/*                        loading="lazy"*/}
-                {/*                        referrerPolicy="no-referrer-when-downgrade"*/}
-                {/*                    ></iframe>*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</section>*/}
-                <div className='bg-green-50'>
-                    <div className="overflow-hidden mt-12 md:pb-0 pb-6">
+            {/*            /!* Grid Layout: Info + Formular oben, Karte unten *!/*/}
+            {/*            <div className="grid md:grid-cols-2 gap-12 mb-12">*/}
+            {/*                /!* Linke Spalte: Praxisinformationen *!/*/}
+            {/*                <Contact propsText={contactText} propsIcons={contactIcons}/>*/}
+
+            {/*                /!* Rechte Spalte: Terminformular *!/*/}
+            {/*                <TerminForm/>*/}
+            {/*            </div>*/}
+
+            {/*            /!* Google Maps - Zentriert *!/*/}
+            {/*            <div className="flex flex-col items-center">*/}
+            {/*                <h3 className="text-2xl font-light text-gray-800 mb-6">Standort</h3>*/}
+            {/*                <div className="rounded-xl overflow-hidden shadow-lg">*/}
+            {/*                    <iframe*/}
+            {/*                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.147456789!2d11.6398!3d49.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1d8c8c8c8c8c9%3A0xaabbccddee!2sPfaffenreuth%2022%2C%2092715%20P%C3%BCchersreuth!5e0!3m2!1sde!2sde!4v1234567890"*/}
+            {/*                        width="600"*/}
+            {/*                        height="380"*/}
+            {/*                        style={{border: 0}}*/}
+            {/*                        allowFullScreen={true}*/}
+            {/*                        loading="lazy"*/}
+            {/*                        referrerPolicy="no-referrer-when-downgrade"*/}
+            {/*                    ></iframe>*/}
+            {/*                </div>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
+
+            {/*<div className='bg-green-50'>*/}
+            <section id="kontakt" className="pt-20 ">
+                <div className="mx-auto text-center mb-16">
+                    <h2 className="text-3xl font-light text-gray-800 mb-4">Kontakt & Anfahrt</h2>
+                    <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
+                </div>
+                <div className='md:bg-green-50 container md:max-w-none mx-auto px-6 md:px-0'>
+                    <div className="bg-green-50 overflow-hidden mt-12 md:rounded-none rounded-2xl md:shadow-none shadow-sm">
+
+                {/*    <div className="overflow-hidden mt-12 md:pb-0 pb-6">*/}
                         <div className="grid md:grid-cols-2">
                             {/* Linke Spalte: Praxisinformationen */}
                             <div className="p-8 justify-self-center">
@@ -438,54 +442,65 @@ const NaturheilpraxisWebsite = () => {
                             </div>
 
                             {/* Rechte Spalte: Google Maps */}
-                            <div className="h-full min-h-[400px] rounded-2xl md:rounded-none md:mx-0 mx-8 overflow-hidden">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.147456789!2d11.6398!3d49.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1d8c8c8c8c8c9%3A0xaabbccddee!2sPfaffenreuth%2022%2C%2092715%20P%C3%BCchersreuth!5e0!3m2!1sde!2sde!4v1234567890"
-                                    width="100%"
-                                    height="100%"
-                                    style={{border: 0}}
-                                    allowFullScreen={true}
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                ></iframe>
-                            </div>
+                            <GoogleMap {...googleMapProps} />
                         </div>
                     </div>
                 </div>
 
 
-                {/*<section id="kontakt" className="py-10 bg-green-50  border-t border-gray-200">*/}
-                {/*    <div className="container mx-auto">*/}
-                {/*        <div className="w-full max-w-6xl mx-auto">*/}
-                {/*            <div className=" border-gray-200">*/}
-                {/*                <Contact*/}
-                {/*                    propsText={contactText}*/}
-                {/*                    propsIcons={contactIcons}*/}
-                {/*                    className='grid md:grid-cols-3 gap-12'*/}
-                {/*                    distributeEvenly={true}*/}
-                {/*                />*/}
+                {/*<div className='bg-green-50'>*/}
+                {/*    <div className="overflow-hidden mt-12 md:pb-0 pb-6">*/}
+                {/*        <div className="grid md:grid-cols-2">*/}
+                {/*            /!* Linke Spalte: Praxisinformationen *!/*/}
+                {/*            <div className="p-8 justify-self-center">*/}
+                {/*                <Contact propsText={contactText} propsIcons={contactIcons}/>*/}
                 {/*            </div>*/}
+
+                {/*            /!* Rechte Spalte: Google Maps *!/*/}
+                {/*            <GoogleMap {...googleMapProps}*/}
+                {/*                       className="rounded-2xl md:rounded-none md:mx-0 mx-8 overflow-hidden"/>*/}
                 {/*        </div>*/}
                 {/*    </div>*/}
-                {/*</section>*/}
+                {/*</div>*/}
+                <div className="flex justify-center pt-2 my-16 ">
+                    <TerminForm/>
+                </div>
+
+            </section>
 
 
-                {/* Footer */}
-                <footer className="bg-green-50 py-8 border-t border-gray-200">
-                    <div className="container mx-auto px-6 text-center">
-                        <p className="text-gray-600 font-light">&copy; {new Date().getFullYear()} Naturheilpraxis
-                            [Name].
-                            Alle Rechte vorbehalten.</p>
-                        <div className="mt-2">
-                            <a href="#"
-                               className="text-gray-500 hover:text-green-600 text-sm font-light mx-2">Datenschutz</a>
-                            <a href="#"
-                               className="text-gray-500 hover:text-green-600 text-sm font-light mx-2">Impressum</a>
-                        </div>
+            {/*<section id="kontakt" className="py-10 bg-green-50  border-t border-gray-200">*/}
+            {/*    <div className="container mx-auto">*/}
+            {/*        <div className="w-full max-w-6xl mx-auto">*/}
+            {/*            <div className=" border-gray-200">*/}
+            {/*                <Contact*/}
+            {/*                    propsText={contactText}*/}
+            {/*                    propsIcons={contactIcons}*/}
+            {/*                    className='grid md:grid-cols-3 gap-12'*/}
+            {/*                    distributeEvenly={true}*/}
+            {/*                />*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
+
+
+            {/* Footer */}
+            <footer className="bg-green-50 py-8 border-t border-gray-200">
+                <div className="container mx-auto px-6 text-center">
+                    <p className="text-gray-600 font-light">&copy; {new Date().getFullYear()} Naturheilpraxis
+                        [Name].
+                        Alle Rechte vorbehalten.</p>
+                    <div className="mt-2">
+                        <a href="#"
+                           className="text-gray-500 hover:text-green-600 text-sm font-light mx-2">Datenschutz</a>
+                        <a href="#"
+                           className="text-gray-500 hover:text-green-600 text-sm font-light mx-2">Impressum</a>
                     </div>
-                </footer>
+                </div>
+            </footer>
         </div>
-);
+    );
 };
 
 export default NaturheilpraxisWebsite;

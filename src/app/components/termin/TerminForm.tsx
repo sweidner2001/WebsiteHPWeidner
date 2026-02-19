@@ -112,10 +112,10 @@ const TerminForm: React.FC<TerminFormProps> = ({
 
 
     return (
-        <div className="w-full max-w-lg">
-            <h3 className="text-2xl font-light text-gray-800 mb-6">{title}</h3>
+        <div className="w-full max-w-lg mx-3">
+            <h3 className="text-2xl font-light text-gray-800 mb-6 text-center">{title}</h3>
             <form onSubmit={terminForm.handleSubmit(onSubmit)}
-                  className="space-y-4 bg-white p-8 rounded-xl shadow-sm">
+                  className="space-y-4 p-7 sm:p-8 rounded-xl shadow-sm bg-white">
 
                 {/* Honeypot-Feld - versteckt für Benutzer, aber sichtbar für Bots */}
                 <div className="hidden" aria-hidden="true">
