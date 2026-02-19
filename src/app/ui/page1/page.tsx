@@ -16,12 +16,16 @@ const NaturheilpraxisWebsite = () => {
 
 
     const aboutText: IAboutProps = {
+        title: 'Über mich',
         name: "Carola Weidner",
         // subtitle="Test wie geht es dir",
         description1: "Mein Name ist [Name] und ich bin seit [Jahren] als Heilpraktiker tätig. Meine Leidenschaft für die Naturheilkunde begann, als ich die heilende Kraft der Natur am eigenen Leib erfahren durfte.",
         description2: "In meiner Praxis lege ich großen Wert auf eine vertrauensvolle Beziehung zu meinen Patienten und eine individuelle, ganzheitliche Behandlung, die auf Ihre persönlichen Bedürfnisse abgestimmt ist.",
         imageSrc:"/img/Carola_2_zg.jpg",
+        imageAlt: 'Naturheilpraxis',
         onlyRoundImage: true,
+        showHeading: true,
+        buttonText: 'Mehr erfahren',
         // onButtonClick:() => scrollToSection('kontakt')
     };
 
