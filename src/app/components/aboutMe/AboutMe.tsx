@@ -6,8 +6,7 @@ interface IAboutProps {
     title?: string;
     subtitle?: string;
     name: string;
-    description1: string;
-    description2: string;
+    description?: (string | string[])[];
     imageSrc: string;
     imageAlt: string;
     onlyRoundImage?: boolean;
@@ -15,6 +14,67 @@ interface IAboutProps {
     buttonText?: string;
     onButtonClick?: () => void;
 }
+
+
+// Hilfsfunktion für List-Rendering mit <br /> zwischen den Einträgen oder als Stichpunkte
+const renderList = (list?: (string | string[])[], asBulletPoints: boolean = false) => {
+    if (asBulletPoints) {
+        return (
+            <ul className="text-lg text-gray-600 font-light space-y-1">
+                {list?.map((line, index) => {
+                    // Wenn line ein Array ist, rendere es als verschachtelte Bullet-Points
+                    if (Array.isArray(line)) {
+                        return (
+                            <li key={index}>
+                                <ul className="ml-5 space-y-2">
+                                    {line.map((subItem, subIndex) => (
+                                        <li key={`${index}-${subIndex}`} className="flex items-center">
+                                            <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
+                                            {subItem}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </li>
+                        );
+                    }
+
+                    // Normales Rendering für strings
+                    return (
+                        <li key={index} className="flex items-center">
+                            <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
+                            {line}
+                        </li>
+                    );
+                })}
+            </ul>
+        );
+    }
+
+    return list?.map((line, index) => {
+        // Wenn line ein Array ist, rendere es als Bullet-Points
+        if (Array.isArray(line)) {
+            return (
+                <div key={index} className="mb-4">
+                    <ul className="ml-5 space-y-1">
+                        {line.map((subItem, subIndex) => (
+                            <li key={`${index}-${subIndex}`} className="flex items-center text-gray-600 font-light">
+                                <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
+                                {subItem}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            );
+        }
+
+        // Normales Rendering für strings
+        return (
+            <p key={index} className="text-gray-600 mt-4 mb-1 font-light">
+                {line}
+            </p>
+        );
+    });
+};
 
 const AboutMe: React.FC<IAboutProps> = ({...aboutProbs}) => {
     return (
@@ -62,16 +122,12 @@ const AboutMe: React.FC<IAboutProps> = ({...aboutProbs}) => {
                 <div className="lg:flex-1">
                     <h2 className="text-3xl font-light text-gray-800 mb-6">{aboutProbs.name}</h2>
                     {aboutProbs.subtitle && <p className="text-sm text-green-600 mb-4 font-light">{aboutProbs.subtitle}</p>}
-                    <p className="text-gray-600 mb-4 font-light">
-                        {aboutProbs.description1}
-                    </p>
-                    <p className="text-gray-600 font-light mb-8">
-                        {aboutProbs.description2}
-                    </p>
+
+                    {aboutProbs.description && renderList(aboutProbs.description)}
                     {aboutProbs.onButtonClick &&
                     <button
                         onClick={aboutProbs.onButtonClick}
-                        className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer"
+                        className="text-base px-8 mt-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer"
                     >
                         {aboutProbs.buttonText}
                     </button>
