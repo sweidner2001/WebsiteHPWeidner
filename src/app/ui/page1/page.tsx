@@ -19,8 +19,9 @@ const NaturheilpraxisWebsite = () => {
         title: 'Über mich',
         name: "Carola Weidner",
         // subtitle="Test wie geht es dir",
-        description: ["Mein Name ist [Name] und ich bin seit [Jahren] als Heilpraktiker tätig. Meine Leidenschaft für die Naturheilkunde begann, als ich die heilende Kraft der Natur am eigenen Leib erfahren durfte.",
-            "In meiner Praxis lege ich großen Wert auf eine vertrauensvolle Beziehung zu meinen Patienten und eine individuelle, ganzheitliche Behandlung, die auf Ihre persönlichen Bedürfnisse abgestimmt ist.", ["Bullet 1", "Bullet 2"]],
+        description: ["Mein Name ist Carola Weidner und ich bin seit dem Jahr 2017 als Heilpraktikerin in eigener Praxis tätig. Meine Leidenschaft für die Naturheilkunde begann, als ich die heilende Kraft der Natur in der eigenen Familie erfahren durfte.",
+            "In meiner Praxis lege ich großen Wert auf eine vertrauensvolle Beziehung zu meinen Patienten und eine ganzheitliche Behandlung, die individuell auf Ihre persönlichen Bedürfnisse abgestimmt ist.",
+            "Durch regelmäßige Fortbildungen erweitere ich mein umfängliches Fachwissen fortlaufend um Ihnen stets die bestmögliche Behandlung bieten zu können."],
         imageSrc:"/img/Carola_2_zg.jpg",
         imageAlt: 'Naturheilpraxis',
         onlyRoundImage: true,
@@ -432,7 +433,7 @@ const NaturheilpraxisWebsite = () => {
             {/*</section>*/}
 
             {/*<div className='bg-green-50'>*/}
-            <section id="kontakt" className="pt-20 ">
+            <section id="kontakt" className="pt-20 pb-12 md:pb-0">
                 <div className="mx-auto text-center mb-16">
                     <h2 className="text-3xl font-light text-gray-800 mb-4">Kontakt & Anfahrt</h2>
                     <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
@@ -468,9 +469,9 @@ const NaturheilpraxisWebsite = () => {
                 {/*        </div>*/}
                 {/*    </div>*/}
                 {/*</div>*/}
-                <div className="flex justify-center pt-2 my-16 ">
-                    <TerminForm/>
-                </div>
+                {/*<div className="flex justify-center pt-2 my-16 ">*/}
+                {/*    <TerminForm/>*/}
+                {/*</div>*/}
 
             </section>
 
@@ -492,7 +493,7 @@ const NaturheilpraxisWebsite = () => {
 
 
             {/* Footer */}
-            <footer className="bg-green-50 py-8 border-t border-gray-200">
+            <footer className="bg-green-100 py-8 border-t border-gray-200">
                 <div className="container mx-auto px-6 text-center">
                     <p className="text-gray-600 font-light">&copy; {new Date().getFullYear()} Naturheilpraxis
                         [Name].

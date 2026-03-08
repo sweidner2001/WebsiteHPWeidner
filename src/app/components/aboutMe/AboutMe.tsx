@@ -6,7 +6,7 @@ interface IAboutProps {
     title?: string;
     subtitle?: string;
     name: string;
-    description?: (string | string[])[];
+    description?: (string | string[])[];        // wird ein Array im Array übergeben, werden die Texte als Bullet-Points gerendert
     imageSrc: string;
     imageAlt: string;
     onlyRoundImage?: boolean;
