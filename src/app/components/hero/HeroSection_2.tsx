@@ -53,8 +53,11 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
             </svg>
 
             {/* Trenn-Abschnitt mit Hintergrundbild */}
-            <section id="home">
-                <div className="relative h-80 md:h-130 w-full overflow-visible">
+            {/*<section id="home" className="">*/}
+            {/*    <div className="relative h-80 md:h-130 w-full overflow-visible">*/}
+            <section id="home" className="md:h-screen md:flex md:flex-col">
+                <div className="relative h-80 md:h-[calc(100vh-150px)] w-full overflow-visible">
+                {/*<div className="relative h-80  w-full overflow-visible">*/}
                     {/* Bild-Container mit clip-path für abgerundete Kanten */}
                     <div className="absolute inset-0 image-clip-horizontal bg-green-500">
                         <Image
@@ -93,13 +96,14 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
                     {/*</div>*/}
                 </div>
 
-                <div className="mt-10 md:mt-3 flex justify-center">
+                <div className="mt-10 md:my-3 flex justify-center">
                     <button
                         className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer ring-1 ring-green-500"
                         onClick={() => onSectionClick('kontakt')}>
                         Termin anfragen
                     </button>
                 </div >
+                {/*</div>*/}
             </section>
         </>
     );
