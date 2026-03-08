@@ -53,40 +53,53 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
             </svg>
 
             {/* Trenn-Abschnitt mit Hintergrundbild */}
-            <section id="home" className="relative h-80 md:h-130 w-full overflow-visible">
-                {/* Bild-Container mit clip-path für abgerundete Kanten */}
-                <div className="absolute inset-0 image-clip-horizontal bg-green-500">
-                    <Image
-                        src="/img/Blumenwiese_1_zg.jpg"
-                        alt="Naturheilpraxis"
-                        fill
-                        className="object-cover object-[50%_90%]"
-                        quality={100}
-                    />
+            <section id="home">
+                <div className="relative h-80 md:h-130 w-full overflow-visible">
+                    {/* Bild-Container mit clip-path für abgerundete Kanten */}
+                    <div className="absolute inset-0 image-clip-horizontal bg-green-500">
+                        <Image
+                            src="/img/Blumenwiese_1_zg.jpg"
+                            alt="Naturheilpraxis"
+                            fill
+                            className="object-cover object-[50%_90%]"
+                            quality={100}
+                        />
 
 
-                    {/* Text-Inhalt */}
-                    {/*bg-black/20*/}
-                    <div
-                        className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex items-center pb-8 justify-center px-6  lg:px-12 bg-black/25 z-10">
-                        {/* text-center*/}
-                        <div className="max-w-2xl text-white lg:ml-0 sm:ml-4 ml-2">
-                            <div className="text-4xl md:text-4xl font-normal md:font-medium leading-tight hanging-quote mb-0">
-                                Gesundheit ist nicht alles,<br className="hidden md:block"/> aber ohne Gesundheit ist alles nichts
+                        {/* Text-Inhalt */}
+                        {/*bg-black/20*/}
+                        <div
+                            className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex items-center pb-8 justify-center px-6  lg:px-12 bg-black/25 z-10">
+                            {/* text-center*/}
+                            <div className="max-w-2xl text-white lg:ml-0 sm:ml-4 ml-2">
+                                <div
+                                    className="text-4xl md:text-4xl font-normal md:font-medium leading-tight hanging-quote mb-0">
+                                    Gesundheit ist nicht alles,<br className="hidden md:block"/> aber ohne Gesundheit ist
+                                    alles nichts
+                                </div>
+                                {/*text-gray-600*/}
+                                <p className="text-normal mb-6 leading-relaxed mt-2">
+                                    - Arthur Schopenhauer (1788-1860) -
+                                </p>
+
                             </div>
-                            {/*text-gray-600*/}
-                            <p className="text-normal mb-0 leading-relaxed mt-2">
-                                - Arthur Schopenhauer (1788-1860) -
-                            </p>
                         </div>
                     </div>
+                    {/* Optionaler Text-Overlay */}
+                    {/*<div className="absolute inset-0 flex items-center justify-center">*/}
+                    {/*    <h2 className="text-3xl md:text-4xl font-light text-white text-center px-6">*/}
+                    {/*        Ihr Zitat oder Text hier*/}
+                    {/*    </h2>*/}
+                    {/*</div>*/}
                 </div>
-                {/* Optionaler Text-Overlay */}
-                {/*<div className="absolute inset-0 flex items-center justify-center">*/}
-                {/*    <h2 className="text-3xl md:text-4xl font-light text-white text-center px-6">*/}
-                {/*        Ihr Zitat oder Text hier*/}
-                {/*    </h2>*/}
-                {/*</div>*/}
+
+                <div className="mt-10 md:mt-3 flex justify-center">
+                    <button
+                        className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer ring-1 ring-green-500"
+                        onClick={() => onSectionClick('kontakt')}>
+                        Termin anfragen
+                    </button>
+                </div >
             </section>
         </>
     );
