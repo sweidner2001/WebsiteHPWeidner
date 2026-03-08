@@ -5,8 +5,16 @@ const Philosophie = () => {
         <section id="philosophie" className="py-20 bg-white">
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl font-light text-gray-800 mb-4">Unsere Philosophie</h2>
+                    <h2 className="text-3xl font-light text-gray-800 mb-4">Meine Philosophie</h2>
                     <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
+                </div>
+                <div className="flex flex-col items-center text-center text-gray-600 font-light mb-16 max-w-2xl mx-auto">
+                    <p className="font-normal">
+                        Ganzheitliche Naturheilkunde für nachhaltige Gesundheit:
+                    </p>
+                    <p>
+                        Ich behandle neben Symptomen auch die Ursachen Ihrer Beschwerden. Mit natürlichen Verfahren aktiviere ich Ihre Selbstheilungskräfte für langfristige Gesundheit.
+                    </p>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
