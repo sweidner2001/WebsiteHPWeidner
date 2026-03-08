@@ -148,7 +148,7 @@ const themeClasses: Record<IService['theme'], { card: string; icon: string; titl
 const Services_2 = () => {
     return (
         <section id="leistungen" className="py-24 bg-stone-100">
-            <div className="container mx-auto px-6 max-w-6xl">
+            <div className="container mx-auto px-16 max-w-6xl">
 
                 {/* Heading */}
                 <div className="text-center mb-16">
