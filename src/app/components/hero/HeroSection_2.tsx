@@ -55,11 +55,10 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
             {/* Trenn-Abschnitt mit Hintergrundbild */}
             {/*<section id="home" className="">*/}
             {/*    <div className="relative h-80 md:h-130 w-full overflow-visible">*/}
-            <section id="home" className="md:h-screen md:flex md:flex-col">
-                <div className="relative h-80 md:h-[calc(100vh-150px)] w-full overflow-visible">
-                {/*<div className="relative h-80  w-full overflow-visible">*/}
+            <section id="home" className="md:flex md:flex-col">
+                <div className="relative h-80 md:h-[calc(100vh-150px)] max-h-[650px] w-full overflow-visible">
                     {/* Bild-Container mit clip-path für abgerundete Kanten */}
-                    <div className="absolute inset-0 image-clip-horizontal bg-green-500">
+                    <div className="absolute inset-0 image-clip-horizontal bg-green-500 ">
                         <Image
                             src="/img/Blumenwiese_1_zg.jpg"
                             alt="Naturheilpraxis"
@@ -103,7 +102,6 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
                         Termin anfragen
                     </button>
                 </div >
-                {/*</div>*/}
             </section>
         </>
     );
