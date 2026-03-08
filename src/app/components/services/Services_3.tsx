@@ -86,7 +86,7 @@ const services: IService[] = [
         theme: 'light',
         // col 5–7 (3 von 12), row 4
         // grid: 'md:col-start-9 md:col-span-3 md:row-start-5 md:row-span-1',
-        grid: 'md:col-start-10 md:col-span-3 md:row-start-5 md:row-span-1',
+        grid: 'md:col-start-10 md:col-span-3 md:row-start-5 md:row-span-2 md:self-start',
         size: 'small',
     },
     {
@@ -96,7 +96,7 @@ const services: IService[] = [
         theme: 'earth',
         // col 1–3 (3 von 12), row 6
         // grid: 'md:col-start-2 md:col-span-3 md:row-start-5 md:row-span-2 md:self-start',
-        grid: 'md:col-start-1 md:col-span-3 md:row-start-5 md:row-span-2 md:self-start',
+        grid: 'md:col-start-1 md:col-span-3 md:row-start-5 md:row-span-1 md:self-start',
         size: 'small',
     },
 ];
@@ -157,7 +157,7 @@ const Services_3 = () => {
                         return (
                             <div
                                 key={index}
-                                className={`group rounded-2xl p-6 flex flex-col justify-between
+                                className={`group rounded-2xl p-7 flex flex-col justify-between
                                     transition-all duration-500 cursor-default min-h-[180px]
                                     ${service.grid} ${t.card}`}
                             >
