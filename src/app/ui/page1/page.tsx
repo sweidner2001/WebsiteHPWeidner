@@ -11,6 +11,7 @@ import TerminForm from '../../components/termin/TerminForm';
 import Philosophie from '../../components/philosophie/Philosophie';
 import Services from '../../components/services/Services';
 import Services_2 from '../../components/services/Services_2';
+import Services_3 from '../../components/services/Services_3';
 import { Telephone, TelephoneFill, Phone, PhoneFill, PhoneVibrate, PhoneVibrateFill, Clock, ClockFill, Envelope, EnvelopeFill, EnvelopeAt, EnvelopeAtFill, Geo, GeoFill, GeoAlt, GeoAltFill } from 'react-bootstrap-icons';
 import './page.css';
 
@@ -122,6 +123,7 @@ const NaturheilpraxisWebsite = () => {
             {/* Leistungen Section */}
             <Services />
             <Services_2 />
+            <Services_3 />
 
 
 
