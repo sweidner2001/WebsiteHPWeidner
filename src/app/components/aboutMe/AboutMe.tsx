@@ -80,6 +80,26 @@ const AboutMe: React.FC<IAboutProps> = ({...aboutProbs}) => {
     return (
 
         <div className="container mx-auto px-6">
+            {/* SVG clip-path Definition für "Über mich" Section */}
+            <svg width="0" height="0">
+                <defs>
+                    {/* Ovale/Elliptische Form */}
+                    <clipPath id="curve-clip-about" clipPathUnits="objectBoundingBox">
+                        {/*
+                            Ellipse mit smooth Kurven für ein Oval
+                            M 0.5,0 - Start oben in der Mitte
+                            Q 1,0 1,0.5 - Kurve nach rechts oben
+                            Q 1,1 0.5,1 - Kurve nach rechts unten
+                            Q 0,1 0,0.5 - Kurve nach links unten
+                            Q 0,0 0.5,0 - Kurve nach links oben
+                            Z - Pfad schließen
+                        */}
+                        <path d="M 0.5,0 Q 1,0 1,0.5 Q 1,1 0.5,1 Q 0,1 0,0.5 Q 0,0 0.5,0 Z"/>
+                    </clipPath>
+                </defs>
+            </svg>
+
+
             {/* Header */}
             {aboutProbs.showHeading &&
             <div className="text-center mb-10">

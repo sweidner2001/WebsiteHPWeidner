@@ -7,7 +7,7 @@ interface HeroSectionProps {
     onSectionClick: (sectionId: string) => void;
 }
 
-const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
+const HeroSection_2 = ({ onSectionClick }: HeroSectionProps) => {
     return (
         <>
 
@@ -88,4 +88,4 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
     );
 };
 
-export default HeroSection;
+export default HeroSection_2;
