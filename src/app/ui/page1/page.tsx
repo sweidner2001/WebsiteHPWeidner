@@ -10,6 +10,7 @@ import GoogleMap, {IGoogleMapProps} from '@/app/components/map/GoogleMap';
 import TerminForm from '../../components/termin/TerminForm';
 import Philosophie from '../../components/philosophie/Philosophie';
 import Services from '../../components/services/Services';
+import Services_2 from '../../components/services/Services_2';
 import { Telephone, TelephoneFill, Phone, PhoneFill, PhoneVibrate, PhoneVibrateFill, Clock, ClockFill, Envelope, EnvelopeFill, EnvelopeAt, EnvelopeAtFill, Geo, GeoFill, GeoAlt, GeoAltFill } from 'react-bootstrap-icons';
 import './page.css';
 
@@ -120,6 +121,7 @@ const NaturheilpraxisWebsite = () => {
 
             {/* Leistungen Section */}
             <Services />
+            <Services_2 />
 
 
 
