@@ -21,3 +21,19 @@
     /*    object-position: center center;*/
     /*}*/
 }
+
+/* Elegante Lösung für hängende Anführungszeichen mit ::before */
+.hanging-quote {
+    display: block;
+}
+
+.hanging-quote::before {
+    content: '"';
+    margin-left: -0.35em;
+}
+
+.hanging-quote::after {
+    content: '"';
+}
+
+

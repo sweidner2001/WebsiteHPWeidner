@@ -68,17 +68,14 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
                     {/* Text-Inhalt */}
                     {/*bg-black/20*/}
                     <div
-                        className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex py-12 md:py-10 justify-end px-6 lg:px-2 bg-black/0 z-10">
-                        <div className="max-w-2xl pr-12">
-                            <div className="text-4xl md:text-4xl font-light text-grey-700  mb-0 leading-tight">
-                                <p>
-                                    &#34;Gesundheit ist nicht alles, </p>
-                                <p>
-                                    aber ohne Gesundheit ist alles nichts&#34;<span className="text-green-600"></span>
-                                </p>
+                        className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex py-12 md:py-10 justify-end px-6 lg:px-2 bg-black/25 z-10">
+                        <div className="max-w-2xl pr-12 text-white sm:mt-8 md:ml-6 sm:ml-8 ml-4">
+                            <div className="text-4xl md:text-4xl font-light leading-tight hanging-quote mb-0">
+                                Gesundheit ist nicht alles,<br className="hidden sm:block"/> aber ohne Gesundheit ist alles nichts
                             </div>
-                            <p className="text-base text-gray-600 mb-8 leading-relaxed">
-                                - Arthur Schopenhauer -
+                            {/*text-gray-600*/}
+                            <p className="text-base mb-8 leading-relaxed mt-2">
+                                - Arthur Schopenhauer (1788-1860) -
                             </p>
                         </div>
                     </div>
