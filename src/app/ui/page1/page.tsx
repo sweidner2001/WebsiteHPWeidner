@@ -277,8 +277,8 @@ const NaturheilpraxisWebsite = () => {
                     <h2 className="text-3xl font-light text-gray-800 mb-4">Kontakt & Anfahrt</h2>
                     <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
                 </div>
-                <div className='md:bg-green-50 container md:max-w-none mx-auto px-6 md:px-0'>
-                    <div className="bg-green-50 overflow-hidden mt-12 md:rounded-none rounded-2xl md:shadow-none shadow-sm">
+                <div className='md:bg-stone-50 container md:max-w-none mx-auto px-6 md:px-0'>
+                    <div className="bg-stone-50 overflow-hidden mt-12 md:rounded-none rounded-2xl md:shadow-none shadow-sm">
 
                 {/*    <div className="overflow-hidden mt-12 md:pb-0 pb-6">*/}
                         <div className="grid md:grid-cols-2">
@@ -332,7 +332,7 @@ const NaturheilpraxisWebsite = () => {
 
 
             {/* Footer */}
-            <footer className="bg-green-100 py-8 border-t border-gray-200">
+            <footer className="bg-green-50 py-8 border-t border-gray-200">
                 <div className="container mx-auto px-6 text-center">
                     <p className="text-gray-600 font-light">&copy; {new Date().getFullYear()} Naturheilpraxis
                         [Name].

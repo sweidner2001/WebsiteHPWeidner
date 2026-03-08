@@ -129,22 +129,22 @@ const Services = () => {
                             className={`group bg-stone-50 hover:bg-white transition-colors duration-500 p-8 lg:p-10 ${sizeClasses[service.size]}`}
                         >
                             {/* Icon + Nummer */}
-                            <div className="flex items-start justify-between mb-6">
-                                <div className="w-10 h-10 rounded-full border border-green-200 flex items-center justify-center text-green-700 group-hover:border-green-500 group-hover:bg-green-50 transition-all duration-300">
-                                    {service.icon}
-                                </div>
-                                <span className="text-xs text-stone-300 font-light tracking-widest mt-1">
-                                    {String(index + 1).padStart(2, '0')}
-                                </span>
-                            </div>
+                            {/*<div className="flex items-start justify-between mb-6">*/}
+                            {/*    <div className="w-10 h-10 rounded-full border border-green-200 flex items-center justify-center text-green-700 group-hover:border-green-500 group-hover:bg-green-50 transition-all duration-300">*/}
+                            {/*        {service.icon}*/}
+                            {/*    </div>*/}
+                            {/*    <span className="text-xs text-stone-300 font-light tracking-widest mt-1">*/}
+                            {/*        {String(index + 1).padStart(2, '0')}*/}
+                            {/*    </span>*/}
+                            {/*</div>*/}
 
-                            {/* Trennlinie */}
-                            <div className="w-8 h-px bg-green-300 mb-5 group-hover:w-14 transition-all duration-500"></div>
 
                             {/* Titel */}
                             <h3 className="text-lg font-light text-gray-800 mb-3 tracking-wide">
                                 {service.title}
                             </h3>
+                            {/* Trennlinie */}
+                            <div className="w-8 h-px bg-green-300 mb-5 group-hover:w-14 transition-all duration-500"></div>
 
                             {/* Beschreibung */}
                             <p className="text-sm text-gray-500 font-light leading-relaxed">
