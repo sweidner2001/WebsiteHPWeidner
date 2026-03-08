@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 interface Header2Props {
     activeSection: string;
@@ -11,8 +11,9 @@ interface Header2Props {
 
 export default function Header2({ activeSection, isMenuOpen, onMenuToggle, onSectionClick }: Header2Props) {
     return (
-        <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-sm">
-            <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        <>
+            <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-sm">
+                <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                 <div className="flex items-center space-x-2">
                     <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
                         <span className="text-green-600 font-semibold">NH</span>
@@ -67,5 +68,9 @@ export default function Header2({ activeSection, isMenuOpen, onMenuToggle, onSec
                 </div>
             </div>
         </nav>
+
+        {/* Spacer-Element: Reserviert Platz für die fixed Navigation */}
+        <div className="py-9" aria-hidden="true"></div>
+        </>
     );
 }

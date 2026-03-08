@@ -6,6 +6,7 @@
   --font-geist-mono: monospace;             /* Dummy fallback */
   --background: #ffffff;
   --foreground: #171717;
+  --header-height: 72px; /* Header Höhe - zentral änderbar */
 }
 
 /*@theme {*/

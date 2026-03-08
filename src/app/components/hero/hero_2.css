@@ -1,0 +1,23 @@
+
+.image-clip-horizontal img {
+    /*object-position: center center;*/
+    object-fit: cover;
+}
+
+.image-clip-horizontal {
+    overflow: hidden;
+}
+
+.image-clip-horizontal {
+    clip-path: url(#curve-clip-horizontal-mobile) !important;
+}
+
+@media (min-width: 768px) {
+    .image-clip-horizontal {
+        clip-path: url(#curve-clip-horizontal) !important;
+    }
+
+    /*.image-clip-horizontal img {*/
+    /*    object-position: center center;*/
+    /*}*/
+}
