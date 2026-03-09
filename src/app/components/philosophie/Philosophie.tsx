@@ -1,13 +1,11 @@
 import React from 'react';
+import {SectionHeading} from "@/app/components/ui/SectionHeading";
 
 const Philosophie = () => {
     return (
         <section id="philosophie" className="py-20 bg-white">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl font-light text-gray-800 mb-4">Meine Philosophie</h2>
-                    <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
-                </div>
+                <SectionHeading title="Meine Philosophie" />
                 <div className="flex flex-col items-center text-center text-gray-600 font-light mb-16 max-w-2xl mx-auto">
                     <p className="font-normal">
                         Ganzheitliche Naturheilkunde für nachhaltige Gesundheit:

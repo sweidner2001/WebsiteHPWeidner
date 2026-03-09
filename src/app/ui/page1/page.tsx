@@ -14,6 +14,7 @@ import Services_2 from '../../components/services/Services_2';
 import Services_3 from '../../components/services/Services_3';
 import { Telephone, TelephoneFill, Phone, PhoneFill, PhoneVibrate, PhoneVibrateFill, Clock, ClockFill, Envelope, EnvelopeFill, EnvelopeAt, EnvelopeAtFill, Geo, GeoFill, GeoAlt, GeoAltFill } from 'react-bootstrap-icons';
 import './page.css';
+import {SectionHeading} from "@/app/components/ui/SectionHeading";
 
 const NaturheilpraxisWebsite = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -277,10 +278,7 @@ const NaturheilpraxisWebsite = () => {
 
             {/*<div className='bg-green-50'>*/}
             <section id="kontakt" className="pt-20 pb-12 md:pb-0">
-                <div className="mx-auto text-center mb-16">
-                    <h2 className="text-3xl font-light text-gray-800 mb-4">Kontakt & Anfahrt</h2>
-                    <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
-                </div>
+                <SectionHeading title="Kontakt & Anfahrt" />
                 <div className='md:bg-stone-50 container md:max-w-none mx-auto px-6 md:px-0'>
                     <div className="bg-stone-50 overflow-hidden mt-12 md:rounded-none rounded-2xl md:shadow-none shadow-sm">
 
@@ -336,7 +334,7 @@ const NaturheilpraxisWebsite = () => {
 
 
             {/* Footer */}
-            <footer className="bg-green-600/40 py-8 border-t border-gray-200">
+            <footer className="bg-green-700/40 py-8 border-t border-gray-200">
                 <div className="container mx-auto px-6 text-center">
                     <p className="text-gray-600 font-light">&copy; {new Date().getFullYear()} Naturheilpraxis
                         [Name].

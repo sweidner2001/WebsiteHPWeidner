@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import React from 'react';
+import { SectionHeading } from '@/app/components/ui/SectionHeading';
 
 interface IAboutProps {
     title?: string;
@@ -101,11 +102,8 @@ const AboutMe: React.FC<IAboutProps> = ({...aboutProbs}) => {
 
 
             {/* Header */}
-            {aboutProbs.showHeading &&
-            <div className="text-center mb-10">
-                <h2 className="text-3xl font-light text-gray-800 mb-4">{aboutProbs.title}</h2>
-                <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>
-            </div>
+            {aboutProbs.showHeading && aboutProbs.title &&
+                <SectionHeading title={aboutProbs.title} />
             }
 
             {/* Content */}
