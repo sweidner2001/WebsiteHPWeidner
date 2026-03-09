@@ -101,36 +101,112 @@ const services: IService[] = [
     },
 ];
 
+// ╔══════════════════════════════════════════════════════════════╗
+// ║  FARBPALETTEN – nur eine aktiv lassen, die anderen auskomm. ║
+// ╚══════════════════════════════════════════════════════════════╝
+
+// ── Option 1: Dunkelgrün & Erdbraun (aktuell aktiv) ───────────
+// const themeClasses: Record<IService['theme'], { card: string; title: string; text: string; line: string; icon: string }> = {
+//     'dark-green': {
+//         card: 'bg-[#1f4535] hover:bg-[#1f4135]',
+//         title: 'text-white',
+//         text: 'text-emerald-100/60',
+//         line: 'bg-emerald-500',
+//         icon: 'border-emerald-700 text-emerald-300',
+//     },
+//     'earth': {
+//         card: 'bg-[#8B5E3C] hover:bg-[#9d6b46]',
+//         title: 'text-white',
+//         text: 'text-amber-100/70',
+//         line: 'bg-amber-300',
+//         icon: 'border-amber-600 text-amber-100',
+//     },
+//     'light': {
+//         card: 'bg-stone-50 hover:bg-white border border-stone-200',
+//         title: 'text-gray-800',
+//         text: 'text-gray-400',
+//         line: 'bg-[#1a3a2e]',
+//         icon: 'border-stone-300 text-[#1a3a2e]',
+//     },
+//     'dark': {
+//         card: 'bg-[#252523] hover:bg-[#252c23]',
+//         title: 'text-white',
+//         text: 'text-stone-400',
+//         line: 'bg-stone-600',
+//         icon: 'border-stone-700 text-stone-300',
+//     },
+// };
+
+// ── Option 2: Salbei & Leinen ─────────────────────────────────
 const themeClasses: Record<IService['theme'], { card: string; title: string; text: string; line: string; icon: string }> = {
     'dark-green': {
-        card: 'bg-[#1a3a2e] hover:bg-[#1f4535]',
+        card: 'bg-[#4a6741] hover:bg-[#567a4c]',
         title: 'text-white',
-        text: 'text-emerald-100/60',
-        line: 'bg-emerald-500',
-        icon: 'border-emerald-700 text-emerald-300',
+        text: 'text-green-100/60',
+        line: 'bg-green-300',
+        icon: 'border-green-700 text-green-200',
     },
     'earth': {
-        card: 'bg-[#8B5E3C] hover:bg-[#9d6b46]',
-        title: 'text-white',
-        text: 'text-amber-100/70',
-        line: 'bg-amber-300',
-        icon: 'border-amber-600 text-amber-100',
+        card: 'bg-[#c8b89a] hover:bg-[#d4c6ab]',
+        title: 'text-stone-800',
+        text: 'text-stone-700/80',
+        line: 'bg-stone-600',
+        icon: 'border-stone-500 text-stone-700',
     },
     'light': {
-        card: 'bg-stone-50 hover:bg-white border border-stone-200',
+        card: 'bg-[#f5f0e8] hover:bg-white border border-stone-200',
         title: 'text-gray-800',
-        text: 'text-gray-400',
-        line: 'bg-[#1a3a2e]',
-        icon: 'border-stone-300 text-[#1a3a2e]',
+        text: 'text-gray-500',
+        line: 'bg-[#4a6741]',
+        icon: 'border-stone-300 text-[#4a6741]',
     },
+    // 'light': {
+    //     card: 'bg-stone-50 hover:bg-white border border-stone-200',
+    //     title: 'text-gray-800',
+    //     text: 'text-gray-400',
+    //     line: 'bg-[#1a3a2e]',
+    //     icon: 'border-stone-300 text-[#1a3a2e]',
+    // },
     'dark': {
-        card: 'bg-[#1c1c1b] hover:bg-[#252523]',
+        card: 'bg-[#2c2c2a] hover:bg-[#363633]',
         title: 'text-white',
         text: 'text-stone-400',
-        line: 'bg-stone-600',
-        icon: 'border-stone-700 text-stone-300',
+        line: 'bg-stone-500',
+        icon: 'border-stone-600 text-stone-300',
     },
 };
+
+// ── Option 4: Olive & Rost ────────────────────────────────────
+// const themeClasses: Record<IService['theme'], { card: string; title: string; text: string; line: string; icon: string }> = {
+//     'dark-green': {
+//         card: 'bg-[#5c6b3a] hover:bg-[#697c43]',
+//         title: 'text-white',
+//         text: 'text-lime-100/60',
+//         line: 'bg-lime-400',
+//         icon: 'border-lime-700 text-lime-300',
+//     },
+//     'earth': {
+//         card: 'bg-[#b5622a] hover:bg-[#c97030]',
+//         title: 'text-white',
+//         text: 'text-orange-100/70',
+//         line: 'bg-orange-300',
+//         icon: 'border-orange-600 text-orange-100',
+//     },
+//     'light': {
+//         card: 'bg-[#f2ede4] hover:bg-white border border-stone-200',
+//         title: 'text-gray-800',
+//         text: 'text-gray-500',
+//         line: 'bg-[#5c6b3a]',
+//         icon: 'border-stone-300 text-[#5c6b3a]',
+//     },
+//     'dark': {
+//         card: 'bg-[#23201c] hover:bg-[#2c2925]',
+//         title: 'text-white',
+//         text: 'text-stone-400',
+//         line: 'bg-stone-600',
+//         icon: 'border-stone-700 text-stone-300',
+//     },
+// };
 
 const Services_3 = () => {
     return (

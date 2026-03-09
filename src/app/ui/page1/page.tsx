@@ -121,9 +121,9 @@ const NaturheilpraxisWebsite = () => {
             <Philosophie />
 
             {/* Leistungen Section */}
-            <Services />
+            {/*<Services />*/}
             <Services_2 />
-            <Services_3 />
+            {/*<Services_3 />*/}
 
 
 
@@ -336,7 +336,7 @@ const NaturheilpraxisWebsite = () => {
 
 
             {/* Footer */}
-            <footer className="bg-green-50 py-8 border-t border-gray-200">
+            <footer className="bg-green-600/40 py-8 border-t border-gray-200">
                 <div className="container mx-auto px-6 text-center">
                     <p className="text-gray-600 font-light">&copy; {new Date().getFullYear()} Naturheilpraxis
                         [Name].

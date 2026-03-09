@@ -4,58 +4,58 @@ interface IService {
     title: string;
     description: string;
     icon: React.ReactNode;
-    theme: 'dark-green' | 'earth' | 'light' | 'dark';
+    theme: 'dark-green' | 'earth' | 'light' | 'dark' | 'light_2' | 'rose' | 'rose_2';
     span: string; // tailwind col/row span classes
 }
 
 const services: IService[] = [
     {
-        title: 'Pflanzenheilkunde',
-        description: 'Heilpflanzen begleiten die Menschheit seit Jahrtausenden. In meiner Praxis setze ich gezielt pflanzliche Wirkstoffe ein – als Tees, Tinkturen oder Extrakte – um die natürlichen Heilungsprozesse Ihres Körpers sanft zu unterstützen. Jede Anwendung wird individuell auf Ihre Konstitution und Beschwerden abgestimmt. Dabei greife ich auf ein umfassendes Wissen klassischer und moderner Phytotherapie zurück.',
+        title: 'Akkupunktur',
+        description: 'Traditionelle chinesische Medizin zur Harmonisierung des Energieflusses. Schmerz ist der Schrei nach fließender Energie. Akkupunktur trägt damit zur und Linderung verschiedener Beschwerden bei.',
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-        ),
-        theme: 'earth',
-        span: 'md:col-span-1 md:row-span-1',
-    },
-    {
-        title: 'Homöopathie',
-        description: 'Die klassische Homöopathie behandelt den Menschen in seiner Gesamtheit – körperlich, geistig und seelisch. Nach einer ausführlichen Anamnese wähle ich das individuell passende Mittel aus, das Ihre Selbstheilungskräfte gezielt aktiviert. Die sanfte Wirkweise eignet sich für alle Altersgruppen, vom Kleinkind bis ins hohe Alter. Besonders bei chronischen Beschwerden zeigt die Homöopathie beeindruckende Ergebnisse.',
-        icon: (
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-            </svg>
-        ),
-        theme: 'dark-green',
-        span: 'md:col-span-2 md:row-span-1',
-    },
-    {
-        title: 'Akupunktur',
-        description: 'Die traditionelle chinesische Akupunktur setzt feine Nadeln an definierten Punkten, um den Energiefluss im Körper zu harmonisieren.',
-        icon: (
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M12 3v18M9 6l3-3 3 3M9 18l3 3 3-3" />
-            </svg>
-        ),
-        theme: 'light',
-        span: 'md:col-span-1 md:row-span-1',
-    },
-    {
-        title: 'Ernährungsberatung',
-        description: 'Eine ausgewogene, auf Ihre persönlichen Bedürfnisse abgestimmte Ernährung ist die Basis für Ihre Gesundheit. Ich erstelle individuelle Ernährungskonzepte, die wissenschaftliche Erkenntnisse mit naturheilkundlichen Prinzipien verbinden. Gemeinsam erarbeiten wir praxisnahe Lösungen für Ihren Alltag.',
-        icon: (
-            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
         ),
         theme: 'dark',
         span: 'md:col-span-1 md:row-span-1',
     },
     {
-        title: 'Ausleitende Verfahren',
-        description: 'Schröpfen, Cantharidenpflaster und weitere klassische Ausleitungsverfahren helfen dem Körper, Stoffwechselprodukte und Belastungen gezielt abzubauen. Diese bewährten Methoden regen Durchblutung und Lymphfluss an und fördern die körpereigene Entgiftung nachhaltig.',
+        title: 'Cranio-Sakrale-Osteopathie',
+        description: 'Die Cranio-Sakrale-Osteopathie ist ein Teilgebiet der Osteopathie. Diese sanfte Behandlungsform wirkt sehr tief auf Körper und Seele, Sie eignet sich folglich zur Behandlung einer Vielzahl an Beschwerden wie beispielsweise Schlafstörungen, Kopfschmerzen, Bandscheibenproblemen, Gelenkbeschwerden und Konzentrationsschwierigkeiten. Es wird eine tiefe Entspannung gefördert. -—> Wenn die Gelenke frei sind-macht der Körper den Rest!',
+        icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+        ),
+        theme: 'light',
+        span: 'md:col-span-2 md:row-span-1',
+    },
+    {
+        title: 'Dorn-und Breusstherapie',
+        description: 'Eine schonende Wirbelsäulen- und Gelenkbehandlung zur Korrektur von Fehlstellungen und Entlastung des Bewegungsapparates nach ihrem Begründer Dieter Dorn.',
+        icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+        ),
+        theme: 'light',
+        span: 'md:col-span-1 md:row-span-1',
+    },
+    {
+        title: 'Schröpfkopfbehandlung',
+        description: 'Schröpfen zählt zu den traditionellen Ausleitungsverfahren in der Naturheilkunde. Durch Unterdruck lösen sich Muskelverspannungen und Verklebungen der Faszien. Die Durchblutung des Körpers wird gefördert und damit der Abtransport von Schlacken begünstigt.',
+        icon: (
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M12 3v18M9 6l3-3 3 3M9 18l3 3 3-3" />
+            </svg>
+        ),
+        theme: 'dark-green',
+        span: 'md:col-span-2 md:row-span-1',
+    },
+    {
+        title: 'Phytotherapie',
+        description: 'Die Pflanzenheilkunde ist so alt wie die Menschheit und hat einen hohen Stellenwert in der Medizin. Der Einsatz von Heilpflanzen bewirkt eine natürliche Unterstützung von körperlichen und seelischen Prozessen.',
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -65,19 +65,19 @@ const services: IService[] = [
         span: 'md:col-span-1 md:row-span-1',
     },
     {
-        title: 'Neuraltherapie',
-        description: 'Durch gezielte Injektionen von Lokalanästhetika werden Störfelder im Körper behandelt und das vegetative Nervensystem reguliert. Besonders bei chronischen Schmerzen zeigt diese Methode schnelle und nachhaltige Wirkung.',
+        title: 'Homöopathie',
+        description: 'Durch natürliche Wirkstoffe in homöopathischen Verdünnungen - den sogenannten Potenzen - wird neben Symptomen und akuten Beschwerden auch der Mensch als Ganzes behandelt. Durch Individuell abgestimmte homöopathische Mittel werden dabei die körpereigenen Selbstheilungskräfte aktiviert.',
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
         ),
-        theme: 'dark-green',
-        span: 'md:col-span-1 md:row-span-1',
+        theme: 'light',
+        span: 'md:col-span-2 md:row-span-1',
     },
     {
-        title: 'Infusionstherapie',
-        description: 'Hochdosierte Vitamin- und Mineralstoffinfusionen stärken das Immunsystem und fördern die Regeneration.',
+        title: 'Spagyrik',
+        description: 'Speziell aufbereitete Essenzen aus Pflanzen, die Körper, Geist und Seele ansprechen und das natürliche Gleichgewicht wieder herstellen.',
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -87,8 +87,8 @@ const services: IService[] = [
         span: 'md:col-span-1 md:row-span-1',
     },
     {
-        title: 'Eigenbluttherapie',
-        description: 'Die Eigenbluttherapie nutzt körpereigene Substanzen zur gezielten Immunstimulation und Selbstheilung.',
+        title: 'Kinderheilkunde',
+        description: 'Sanfte naturheilkundliche Begleitung von Kindern zur Förderung einer gesunden Entwicklung.',
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -98,14 +98,14 @@ const services: IService[] = [
         span: 'md:col-span-1 md:row-span-1',
     },
     {
-        title: 'Darmgesundheit',
-        description: 'Ein gesunder Darm ist die Grundlage für das gesamte Wohlbefinden und ein starkes Immunsystem.',
+        title: 'Frauenheilkunde',
+        description: 'Natürliche Unterstützung für hormonelle Balance und Wohlbefinden in allen Lebensphasen der Frau.',
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
             </svg>
         ),
-        theme: 'earth',
+        theme: 'rose',
         span: 'md:col-span-1 md:row-span-1',
     },
 ];
@@ -125,7 +125,7 @@ const themeClasses: Record<IService['theme'], { card: string; icon: string; titl
         title: 'text-white',
         text: 'text-amber-100/70',
         line: 'bg-amber-400',
-        num: 'text-amber-800',
+        num: 'text-amber-200/50',
     },
     'light': {
         card: 'bg-stone-100 hover:bg-white',
@@ -141,7 +141,40 @@ const themeClasses: Record<IService['theme'], { card: string; icon: string; titl
         title: 'text-white',
         text: 'text-stone-400',
         line: 'bg-stone-500',
-        num: 'text-stone-700',
+        num: 'text-stone-600',
+    },
+    // 'dark': {
+    //     card: 'bg-[#2c2c2a] hover:bg-[#363633]',
+    //     title: 'text-white',
+    //     text: 'text-stone-300/73',
+    //     // text: 'text-stone-400',
+    //     line: 'bg-stone-500',
+    //     icon: 'border-stone-600 text-stone-300',
+    //     num: 'text-stone-600',
+    // },
+    'light_2': {
+        card: 'bg-[#f5f0e8] hover:bg-white border border-stone-200',
+        title: 'text-gray-800',
+        text: 'text-gray-500',
+        line: 'bg-[#4a6741]',
+        icon: 'border-stone-300 text-[#4a6741]',
+        num: 'text-stone-300',
+    },
+    'rose': {
+        card: 'bg-[#6b3a4a] hover:bg-[#7d4458]',
+        icon: 'border-[#9d6070] text-rose-100',
+        title: 'text-white',
+        text: 'text-rose-100/70',
+        line: 'bg-rose-300',
+        num: 'text-rose-800',
+    },
+    'rose_2': {
+        card: 'bg-[#f3e0e6] hover:bg-[#FFEBF1] border border-rose-100',
+        icon: 'border-rose-300 text-rose-500',
+        title: 'text-rose-900',
+        text: 'text-rose-700/70',
+        line: 'bg-rose-400',
+        num: 'text-rose-200',
     },
 };
 
@@ -155,13 +188,13 @@ const Services_2 = () => {
                     <p className="text-xs tracking-[0.3em] uppercase text-[#2d6a4f] mb-4 font-light">Naturheilkunde</p>
                     <h2 className="text-4xl font-light text-gray-800 mb-5 tracking-wide">Meine Leistungen</h2>
                     <div className="w-12 h-px bg-[#2d6a4f] mx-auto mb-6"></div>
-                    <p className="text-gray-500 font-light max-w-xl mx-auto text-sm leading-relaxed">
+                    <p className="text-gray-500 font-light max-w-2xl mx-auto text-sm leading-relaxed">
                         Jede Behandlung ist individuell auf Sie abgestimmt – für nachhaltige Gesundheit auf natürlichem Weg.
                     </p>
                 </div>
 
                 {/* Mosaic Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[200px] gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[220px] gap-3">
                     {services.map((service, index) => {
                         const t = themeClasses[service.theme];
                         return (
@@ -174,18 +207,18 @@ const Services_2 = () => {
                                 {/*    /!*<div className={`w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-300 ${t.icon}`}>*!/*/}
                                 {/*    /!*    {service.icon}*!/*/}
                                 {/*    /!*</div>*!/*/}
-                                {/*    /!*<span className={`text-xs font-light tracking-widest ${t.num}`}>*!/*/}
-                                {/*    /!*    {String(index + 1).padStart(2, '0')}*!/*/}
-                                {/*    /!*</span>*!/*/}
+                                {/*    <span className={`text-xs font-light tracking-widest ${t.num}`}>*/}
+                                {/*        {String(index + 1).padStart(2, '0')}*/}
+                                {/*    </span>*/}
                                 {/*</div>*/}
 
                                 {/* Bottom: line + title + description */}
                                 <div>
-                                    <h3 className={`text-lg font-light mb-2 tracking-wide ${t.title}`}>
+                                    <h3 className={`text-xl font-light mb-2.5 tracking-wide ${t.title}`}>
                                         {service.title}
                                     </h3>
                                     <div className={`w-8 h-px mb-4 group-hover:w-14 transition-all duration-500 ${t.line}`}></div>
-                                    <p className={`text-xs font-light leading-relaxed line-clamp-3 ${t.text}`}>
+                                    <p className={`text-sm font-light leading-relaxed line-clamp-8 ${t.text}`}>
                                         {service.description}
                                     </p>
                                 </div>

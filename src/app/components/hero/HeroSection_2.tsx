@@ -58,7 +58,7 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
             <section id="home" className="md:flex md:flex-col">
                 <div className="relative h-80 md:h-[calc(100vh-150px)] max-h-[650px] w-full overflow-visible">
                     {/* Bild-Container mit clip-path für abgerundete Kanten */}
-                    <div className="absolute inset-0 image-clip-horizontal bg-green-500 ">
+                    <div className="absolute inset-0 image-clip-horizontal bg-green-100 ">
                         <Image
                             src="/img/Blumenwiese_1_zg.jpg"
                             alt="Naturheilpraxis"
