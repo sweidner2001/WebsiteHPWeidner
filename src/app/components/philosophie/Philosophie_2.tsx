@@ -3,7 +3,7 @@ import React from 'react';
 
 const Philosophie_2 = () => {
     return (
-        <section id="leistungen" className="py-24 bg-gradient-to-b from-white to-stone-50">
+        <section id="leistungen" className="py-20 ">
             <div className="container mx-auto px-16 max-w-6xl">
 
                 {/* Heading */}

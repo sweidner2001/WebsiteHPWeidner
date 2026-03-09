@@ -11,7 +11,7 @@ const SectionHeading: React.FC<ISectionHeadingProps> = ({
     accentColor = 'bg-green-600',
 }) => {
     return (
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
             <h2 className="text-3xl font-light text-gray-800 mb-4">{title}</h2>
             <div className={`w-20 h-0.5 ${accentColor} mx-auto`}></div>
         </div>

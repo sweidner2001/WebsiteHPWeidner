@@ -195,7 +195,7 @@ const Services_2 = () => {
                 </div>
 
                 {/* Mosaic Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[220px] gap-3">
+                <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[220px] gap-3.5">
                     {services.map((service, index) => {
                         const t = themeClasses[service.theme];
                         return (

@@ -13,6 +13,8 @@ import Philosophie_2 from '../../components/philosophie/Philosophie_2';
 import Services from '../../components/services/Services';
 import Services_2 from '../../components/services/Services_2';
 import Services_3 from '../../components/services/Services_3';
+import Symptoms from '../../components/symptoms/Symptoms';
+import Symptoms_2 from '../../components/symptoms/Symptoms_2';
 import { Telephone, TelephoneFill, Phone, PhoneFill, PhoneVibrate, PhoneVibrateFill, Clock, ClockFill, Envelope, EnvelopeFill, EnvelopeAt, EnvelopeAtFill, Geo, GeoFill, GeoAlt, GeoAltFill } from 'react-bootstrap-icons';
 import './page.css';
 import {SectionHeading} from "@/app/components/ui/SectionHeading";
@@ -123,10 +125,16 @@ const NaturheilpraxisWebsite = () => {
             {/*<Philosophie />*/}
             <Philosophie_2 />
 
+
+            {/* Beschwerden Section */}
+            {/*<Symptoms />*/}
+            <Symptoms_2 />
+
             {/* Leistungen Section */}
             {/*<Services />*/}
             <Services_2 />
-            {/*<Services_3 />*/}
+            <Services_3 />
+
 
 
 
