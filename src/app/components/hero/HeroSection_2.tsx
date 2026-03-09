@@ -71,17 +71,17 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
                         {/* Text-Inhalt */}
                         {/*bg-black/20*/}
                         <div
-                            className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex items-center pb-8 justify-center px-6  lg:px-12 bg-black/25 z-10">
+                            className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex items-center pb-8 justify-center px-6 lg:px-10 bg-black/25 z-10">
                             {/* text-center*/}
                             <div className="max-w-2xl text-white lg:ml-0 sm:ml-4 ml-2">
                                 <div
-                                    className="text-4xl md:text-4xl font-normal md:font-medium leading-tight hanging-quote mb-0">
+                                    className="text-4xl md:text-4xl font-normal md:font-normal leading-tight hanging-quote mb-0">
                                     Gesundheit ist nicht alles,<br className="hidden md:block"/> aber ohne Gesundheit ist
                                     alles nichts
                                 </div>
                                 {/*text-gray-600*/}
                                 <p className="text-normal mb-6 leading-relaxed mt-2">
-                                    - Arthur Schopenhauer (1788-1860) -
+                                    —  Arthur Schopenhauer (1788–1860)
                                 </p>
 
                             </div>

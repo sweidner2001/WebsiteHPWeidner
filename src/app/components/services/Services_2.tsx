@@ -181,6 +181,7 @@ const themeClasses: Record<IService['theme'], { card: string; icon: string; titl
 const Services_2 = () => {
     return (
         <section id="leistungen" className="py-24 bg-stone-100">
+            {/*<section id="leistungen" className="py-24" style={{ background: 'linear-gradient(to bottom, #e7e5e4 0px, #f5f4f2 40px, #f5f4f2 100%)' }}>*/}
             <div className="container mx-auto px-16 max-w-6xl">
 
                 {/* Heading */}

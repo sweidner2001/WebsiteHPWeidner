@@ -27,7 +27,7 @@ const Philosophie = () => {
                         </div>
                         <h3 className="text-xl font-light text-gray-800 mb-3">Ganzheitlicher Ansatz</h3>
                         <p className="text-gray-600 font-light">
-                            Wir betrachten Körper, Geist und Seele als Einheit und behandeln den Menschen in seiner
+                            Ich betrachte Körper, Geist und Seele als Einheit und behandle den Menschen in seiner
                             Gesamtheit.
                         </p>
                     </div>
@@ -43,7 +43,7 @@ const Philosophie = () => {
                         </div>
                         <h3 className="text-xl font-light text-gray-800 mb-3">Ursachenorientiert</h3>
                         <p className="text-gray-600 font-light">
-                            Statt Symptome zu unterdrücken, suchen wir nach den tieferliegenden Ursachen von
+                            Statt Symptome zu unterdrücken, suche Ich nach den tieferliegenden Ursachen von
                             Beschwerden.
                         </p>
                     </div>

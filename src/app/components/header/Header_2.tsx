@@ -18,7 +18,7 @@ export default function Header2({ activeSection, isMenuOpen, onMenuToggle, onSec
                     <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
                         <span className="text-green-600 font-semibold">NH</span>
                     </div>
-                    <span className="text-xl font-light text-gray-700">Naturheilpraxis</span>
+                    <span className="text-xl font-light text-gray-700">Naturheilpraxis Carola Weidner</span>
                 </div>
 
                 {/* Desktop Navigation */}

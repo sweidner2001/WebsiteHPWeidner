@@ -9,6 +9,7 @@ import {AboutMe, IAboutProps} from '@/app/components/aboutMe/AboutMe';
 import GoogleMap, {IGoogleMapProps} from '@/app/components/map/GoogleMap';
 import TerminForm from '../../components/termin/TerminForm';
 import Philosophie from '../../components/philosophie/Philosophie';
+import Philosophie_2 from '../../components/philosophie/Philosophie_2';
 import Services from '../../components/services/Services';
 import Services_2 from '../../components/services/Services_2';
 import Services_3 from '../../components/services/Services_3';
@@ -65,7 +66,7 @@ const NaturheilpraxisWebsite = () => {
 
     const googleMapProps: IGoogleMapProps = {
         src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35671.625057047895!2d12.153830278827233!3d49.794229273857394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0473dec3bbf67%3A0x30a75ff91af09795!2sNaturheilpraxis%20Carola%20Weidner!5e0!3m2!1sde!2sde!4v1771507812972!5m2!1sde!2sde",
-        minHeight: "400px"
+        minHeight: "380px"
     };
 
 
@@ -119,7 +120,8 @@ const NaturheilpraxisWebsite = () => {
             <HeroSection_2 onSectionClick={scrollToSection}/>
 
             {/* Philosophie Section */}
-            <Philosophie />
+            {/*<Philosophie />*/}
+            <Philosophie_2 />
 
             {/* Leistungen Section */}
             {/*<Services />*/}
@@ -290,7 +292,18 @@ const NaturheilpraxisWebsite = () => {
                             </div>
 
                             {/* Rechte Spalte: Google Maps */}
-                            <GoogleMap {...googleMapProps} />
+                            {/*    <div className={`h-100% min-h-[400px]`}>*/}
+                            {/*    <iframe*/}
+                            {/*        src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35671.625057047895!2d12.153830278827233!3d49.794229273857394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0473dec3bbf67%3A0x30a75ff91af09795!2sNaturheilpraxis%20Carola%20Weidner!5e0!3m2!1sde!2sde!4v1771507812972!5m2!1sde!2sde"}*/}
+                            {/*        width="100%"*/}
+                            {/*        height="100%"*/}
+                            {/*        style={{border: 0}}*/}
+                            {/*        allowFullScreen={true}*/}
+                            {/*        loading="lazy"*/}
+                            {/*        referrerPolicy="no-referrer-when-downgrade"*/}
+                            {/*    ></iframe>*/}
+                            {/*    </div>*/}
+                                <GoogleMap {...googleMapProps} />
                         </div>
                     </div>
                 </div>
