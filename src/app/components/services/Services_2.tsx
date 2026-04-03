@@ -1,5 +1,6 @@
 import React from 'react';
 import {SectionHeader, ISectionHeaderProps} from '@/app/components/ui/SectionHeader';
+import {useLazy} from "@/app/hooks/useLazy";
 
 interface IService {
     title: string;
@@ -191,6 +192,7 @@ const sectionHeaderProbs: ISectionHeaderProps = {
 
 
 const Services_2 = () => {
+    useLazy();
     return (
         <section id="leistungen" className="py-24 bg-stone-100">
             {/*<section id="leistungen" className="py-24" style={{ background: 'linear-gradient(to bottom, #e7e5e4 0px, #f5f4f2 40px, #f5f4f2 100%)' }}>*/}

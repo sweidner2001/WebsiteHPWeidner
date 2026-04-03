@@ -160,6 +160,8 @@ const Symptoms_2: React.FC<ISymptomConfig> = ({...symptomsProbs}) => {
                         return (
                             <div
                                 key={index}
+                                data-aos="fade-up"
+                                data-aos-delay={index * 80}
                                 className="text-center pt-3 lg:pb-6 pb-3 group transition-all duration-300 hover:transform hover:scale-105"
                             >
                                 {/* Runder Icon-Container */}
