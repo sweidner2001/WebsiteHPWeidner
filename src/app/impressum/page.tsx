@@ -55,6 +55,7 @@ export default function Impressum() {
                         <p className="text-gray-600 font-light leading-relaxed">
                             <span className="font-normal">Berufsbezeichnung:</span> Heilpraktikerin<br />
                             <span className="font-normal">Verliehen in:</span> Deutschland<br />
+                            <span className="font-normal">Heilpraktikererlaubnis:</span> In Deutschland erteilt am 00.00.0000 durch das Gesundheitsamt A-Stadt<br />
                             <span className="font-normal">Zuständige Aufsichtsbehörde: </span>
                             Gesundheitsamt im Landkreis Neustadt a.d.Waldnaab <br />
                             <p className="font-normal">Kontaktdaten Gesundheitsamt:</p>
@@ -183,6 +184,19 @@ export default function Impressum() {
                             gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden,
                             bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen
                             werden wir derartige Inhalte umgehend entfernen.
+                        </p>
+                    </section>
+
+                    {/* Haftung für fremde Inhalte */}
+                    <section className="mb-8">
+                        <h2 className="text-lg font-medium text-gray-800 mb-3">Haftung für fremde Inhalte</h2>
+                        <p className="text-gray-600 font-light leading-relaxed">
+                            Soweit diese Seiten direkte oder indirekte Verweise auf fremde Inhalte enthalten, macht sich
+                            der Anbieter diese Inhalte nicht zu eigen. Grundsätzlich ist der Fremdanbieter für illegale
+                            oder fehlerhafte Inhalte selbst verantwortlich. Gleichwohl werden Fremdinhalte, auf die
+                            verwiesen wird, durch den Anbieter sorgfältig überprüft und regelmäßig kontrolliert. Erhält
+                            der Anbieter Kenntnis, dass Fremdinhalte illegal oder fehlerhaft sind, werden entsprechende
+                            Verweise sofort entfernt.
                         </p>
                     </section>
                 </div>
