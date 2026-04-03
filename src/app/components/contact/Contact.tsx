@@ -124,7 +124,11 @@ const Contact: React.FC<IContactProps> = ({ propsText, propsIcons, className, di
                         </div>
                         <div className="flex items-center text-lg text-gray-600 font-light">
                             {icons.emailIcon}
-                            {text.email}
+                            {/*{text.email}*/}
+                            <a href={`mailto:${text.email}`}
+                               className="text-green-600 hover:text-green-700">
+                                {text.email}
+                            </a>
                         </div>
                     </div>
                 </div>

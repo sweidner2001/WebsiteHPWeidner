@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, {useState, useEffect, type ReactNode} from 'react';
 import Header2 from '@/app/components/header/Header_2';
 import HeroSection from '@/app/components/hero/HeroSection';
@@ -43,7 +44,7 @@ const NaturheilpraxisWebsite = () => {
       "In meiner Praxis lege ich großen Wert auf eine vertrauensvolle Beziehung zu meinen Patienten und eine ganzheitliche Behandlung, die individuell auf Ihre persönlichen Bedürfnisse abgestimmt ist.",
       "Durch regelmäßige Fortbildungen erweitere ich mein umfängliches Fachwissen fortlaufend um Ihnen stets die bestmögliche Behandlung bieten zu können."],
     // imageSrc:"/img/Carola_2_zg.jpg",
-    imageSrc:"/img/Carola_4_zg.jpg",
+    imageSrc:"/img/Carola_5_zg.jpg",
     imageAlt: 'Naturheilpraxis',
     onlyRoundImage: true,
     showHeading: true,
@@ -390,10 +391,10 @@ const NaturheilpraxisWebsite = () => {
               [Name].
               Alle Rechte vorbehalten.</p>
             <div className="mt-2">
-              <a href="#"
-                 className="text-white hover:text-green-600 text-sm font-light mx-2">Datenschutz</a>
-              <a href="#"
-                 className="text-white hover:text-green-600 text-sm font-light mx-2">Impressum</a>
+              <Link href="/datenschutz"
+                 className="text-white hover:text-green-200 text-sm font-light mx-2">Datenschutz</Link>
+              <Link href="/impressum"
+                 className="text-white hover:text-green-200 text-sm font-light mx-2">Impressum</Link>
             </div>
           </div>
         </footer>

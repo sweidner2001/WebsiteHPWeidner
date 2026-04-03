@@ -129,7 +129,7 @@ const AboutMe: React.FC<IAboutProps> = ({...aboutProbs}) => {
                                 src={aboutProbs.imageSrc}
                                 alt={aboutProbs.imageAlt}
                                 fill
-                                className="object-cover object-[35%_70%]"
+                                className="object-cover object-[35%_50%]"
                                 quality={100}
                             />
                         </div>
