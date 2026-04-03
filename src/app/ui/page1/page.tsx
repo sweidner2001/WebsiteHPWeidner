@@ -80,7 +80,7 @@ const NaturheilpraxisWebsite = () => {
 
     const googleMapProps: IGoogleMapProps = {
         src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35671.625057047895!2d12.153830278827233!3d49.794229273857394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0473dec3bbf67%3A0x30a75ff91af09795!2sNaturheilpraxis%20Carola%20Weidner!5e0!3m2!1sde!2sde!4v1771507812972!5m2!1sde!2sde",
-        minHeight: "380px"
+        // minHeight: "380px"
     };
 
 
@@ -303,8 +303,8 @@ const NaturheilpraxisWebsite = () => {
             {/*<div className='bg-green-50'>*/}
             <section id="kontakt" className="pt-20 pb-12 md:pb-0">
                 <SectionHeading title="Kontakt & Anfahrt" />
-                <div className='md:bg-stone-50 container md:max-w-none mx-auto px-6 md:px-0'>
-                    <div className="bg-stone-50 overflow-hidden mt-12 md:rounded-none rounded-2xl md:shadow-none shadow-sm">
+                <div className='md:bg-stone-50 container max-w-none px-0'>
+                    <div className="bg-stone-50 overflow-hidden mt-12">
 
                 {/*    <div className="overflow-hidden mt-12 md:pb-0 pb-6">*/}
                         <div className="grid md:grid-cols-2">
@@ -325,7 +325,9 @@ const NaturheilpraxisWebsite = () => {
                             {/*        referrerPolicy="no-referrer-when-downgrade"*/}
                             {/*    ></iframe>*/}
                             {/*    </div>*/}
-                                <GoogleMap {...googleMapProps} />
+                            <div className='md:mx-0 sm:mx-10 mx-4 sm:min-h-96 min-h-72'>
+                                <GoogleMap {...googleMapProps} className="md:rounded-none rounded-2xl overflow-hidden" />
+                            </div>
                         </div>
                     </div>
                 </div>

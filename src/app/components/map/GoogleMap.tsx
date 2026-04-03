@@ -14,8 +14,9 @@ const GoogleMap: React.FC<IGoogleMapProps> = ({
     minHeight = '380px'
 }) => {
 
+    // minHeight: wird nicht mehr benutzt
     return (
-        <div className={`w-full ${className}`} style={{ height, minHeight }}>
+        <div className={`w-full ${className}`} style={{ height }}>
             <iframe
                 src={src}
                 width="100%"
