@@ -53,28 +53,28 @@ export default function Impressum() {
                     {/* Berufsbezeichnung */}
                     <section className="mb-8">
                         <h2 className="text-lg font-medium text-gray-800 mb-3">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
-                        <p className="text-gray-600 font-light leading-relaxed">
-                            <span className="font-normal">Berufsbezeichnung:</span> Heilpraktikerin<br />
-                            <span className="font-normal">Verliehen in:</span> Deutschland<br />
-                            <span className="font-normal">Heilpraktikererlaubnis:</span> In Deutschland erteilt am 00.00.0000 durch das Gesundheitsamt A-Stadt<br />
-                            <span className="font-normal">Zuständige Aufsichtsbehörde: </span>
-                            Gesundheitsamt im Landkreis Neustadt a.d.Waldnaab <br />
-                            <p className="font-normal">Kontaktdaten Gesundheitsamt:</p>
+                        <div className="text-gray-600 font-light leading-relaxed">
+                            <p>
+                                <span className="font-normal">Berufsbezeichnung:</span> Heilpraktikerin<br />
+                                <span className="font-normal">Verliehen in:</span> Deutschland<br />
+                                <span className="font-normal">Heilpraktikererlaubnis:</span> In Deutschland erteilt am 00.00.0000 durch das Gesundheitsamt A-Stadt<br />
+                                <span className="font-normal">Zuständige Aufsichtsbehörde: </span>
+                                Gesundheitsamt im Landkreis Neustadt a.d.Waldnaab
+                            </p>
+                            <p className="font-normal mt-2">Kontaktdaten Gesundheitsamt:</p>
                             <p className='pb-2'>
-                            Maistraße 7 – 9<br />
-                            92637 Weiden i.d.OPf.<br />
+                                Maistraße 7 – 9<br />
+                                92637 Weiden i.d.OPf.
                             </p>
                             <p className='pb-4'>
-                            Telefon: 09602 / 79-6210<br />
-                            Fax: 09602 / 796055<br />
-                            E-Mail:{' '}
-                            <a href="mailto:gesundheitsamt@neustadt.de" className="text-green-600 hover:text-green-700 underline">
-                                gesundheitsamt@neustadt.de
-                            </a><br />
+                                Telefon: 09602 / 79-6210<br />
+                                Fax: 09602 / 796055<br />
+                                E-Mail:{' '}
+                                <a href="mailto:gesundheitsamt@neustadt.de" className="text-green-600 hover:text-green-700 underline">
+                                    gesundheitsamt@neustadt.de
+                                </a>
                             </p>
-
-
-                        </p>
+                        </div>
                         <p className="text-gray-600 font-light leading-relaxed mt-2">
                             <span className="font-normal">Es gelten folgende berufsrechtliche Regelungen:</span><br />
                             Gesetz über die berufsmäßige Ausübung der Heilkunde ohne Bestallung (Heilpraktikergesetz)<br />
