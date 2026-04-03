@@ -21,6 +21,7 @@ interface IAboutProps {
 
 const sectionHeaderProbs: ISectionHeaderProps = {
     title: "Über mich",
+    className: 'mb-8',
 }
 
 

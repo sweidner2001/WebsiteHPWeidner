@@ -312,11 +312,11 @@ const NaturheilpraxisWebsite = () => {
             {/*</section>*/}
 
             {/*<div className='bg-green-50'>*/}
-            <section id="kontakt" className="pt-20 pb-12 md:pb-0">
+            <section id="kontakt" className="pt-20 md:pb-0">
                 <SectionHeader {...sectionHeaderProbsKontakt} />
 
-                <div className='md:bg-stone-50 container max-w-none px-0'>
-                    <div className="bg-stone-50 overflow-hidden mt-12">
+                <div className='container bg-stone-50 pb-12 md:pb-0 max-w-none px-0'>
+                    <div className="overflow-hidden mt-12">
 
                 {/*    <div className="overflow-hidden mt-12 md:pb-0 pb-6">*/}
                         <div className="grid md:grid-cols-2">
@@ -383,16 +383,16 @@ const NaturheilpraxisWebsite = () => {
 
 
             {/* Footer */}
-            <footer className="bg-green-700/40 py-8 border-t border-gray-200">
+            <footer className="bg-[#0d9c42] py-8 border-t border-green-600 mt-[1px]">
                 <div className="container mx-auto px-6 text-center">
-                    <p className="text-gray-600 font-light">&copy; {new Date().getFullYear()} Naturheilpraxis
+                    <p className="text-white font-light">&copy; {new Date().getFullYear()} Naturheilpraxis
                         [Name].
                         Alle Rechte vorbehalten.</p>
                     <div className="mt-2">
                         <a href="#"
-                           className="text-gray-500 hover:text-green-600 text-sm font-light mx-2">Datenschutz</a>
+                           className="text-white hover:text-green-600 text-sm font-light mx-2">Datenschutz</a>
                         <a href="#"
-                           className="text-gray-500 hover:text-green-600 text-sm font-light mx-2">Impressum</a>
+                           className="text-white hover:text-green-600 text-sm font-light mx-2">Impressum</a>
                     </div>
                 </div>
             </footer>

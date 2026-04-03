@@ -137,6 +137,8 @@ const symptoms: ISymptom[] = [
 
 const sectionHeaderProbs: ISectionHeaderProps = {
     title: "Ich behandle und unterstütze bei …",
+    // description: 'Mit einem ganzheitlichen Blick auf Ihren Körper finden wir gemeinsam den Weg zu mehr Wohlbefinden und nachhaltiger Gesundheit.',
+    // classNameDescription: 'text-sm text-gray-500 font-light max-w-xl mx-auto'
 }
 
 
@@ -151,24 +153,14 @@ const Symptoms_2: React.FC<ISymptomConfig> = ({...symptomsProbs}) => {
 
                 {/* Heading */}
                 <SectionHeader {...sectionHeaderProbs} />
-                {/*<div className="text-center mb-16">*/}
-                {/*    <h2 className="text-3xl font-light text-gray-800 mb-5 tracking-wide">*/}
-                {/*        Ich behandle und unterstütze bei …*/}
-                {/*    </h2>*/}
-                {/*    <div className="w-12 h-0.5 bg-green-600 mx-auto mb-6"></div>*/}
-                {/*    /!*<p className="text-gray-500 font-light max-w-2xl mx-auto text-sm leading-relaxed">*!/*/}
-                {/*    /!*    Mit einem ganzheitlichen Blick auf Ihren Körper finden wir gemeinsam den Weg zu mehr*!/*/}
-                {/*    /!*    Wohlbefinden und nachhaltiger Gesundheit.*!/*/}
-                {/*    /!*</p>*!/*/}
-                {/*</div>*/}
 
                 {/* Symptom Grid – Zentriertes Design */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 max-w-6xl mx-auto">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 lg:gap-5 gap-4 max-w-6xl lg:mx-auto md:mx-16 sm:mx-4 mx-0">
                     {symptoms.map((symptom, index) => {
                         return (
                             <div
                                 key={index}
-                                className="text-center pt-3 pb-6 group transition-all duration-300 hover:transform hover:scale-105"
+                                className="text-center pt-3 lg:pb-6 pb-3 group transition-all duration-300 hover:transform hover:scale-105"
                             >
                                 {/* Runder Icon-Container */}
                                 {/*bg-green-400/10  bg-green-300/20  */}
