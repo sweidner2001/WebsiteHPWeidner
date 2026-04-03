@@ -1,359 +1,403 @@
-import Image from "next/image";
-import Header_1 from "./components/header/Header_1";
+'use client';
+import Image from 'next/image';
+import React, {useState, useEffect, type ReactNode} from 'react';
+import Header2 from '@/app/components/header/Header_2';
+import HeroSection from '@/app/components/hero/HeroSection';
+import HeroSection_2 from '@/app/components/hero/HeroSection_2';
+import {Contact, IContactTextProps, IContactIconProps} from '@/app/components/contact/Contact';
+import {AboutMe, IAboutProps} from '@/app/components/aboutMe/AboutMe';
+import GoogleMap, {IGoogleMapProps} from '@/app/components/map/GoogleMap';
+import TerminForm from '@/app/components/termin/TerminForm';
+import Philosophie from '@/app/components/philosophie/Philosophie';
+import Philosophie_2 from '@/app/components/philosophie/Philosophie_2';
+import Services from '@/app/components/services/Services';
+import Services_2 from '@/app/components/services/Services_2';
+import Services_3 from '@/app/components/services/Services_3';
+import Symptoms from '@/app/components/symptoms/Symptoms';
+import {Symptoms_2, ISymptomConfig}  from '@/app/components/symptoms/Symptoms_2';
+import { Telephone, TelephoneFill, Phone, PhoneFill, PhoneVibrate, PhoneVibrateFill, Clock, ClockFill, Envelope, EnvelopeFill, EnvelopeAt, EnvelopeAtFill, Geo, GeoFill, GeoAlt, GeoAltFill } from 'react-bootstrap-icons';
+import './page.css';
+import {SectionHeader, ISectionHeaderProps} from '@/app/components/ui/SectionHeader';
 
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
-      <Header_1 />
 
-      {/* Hero Section */}
-      <section id="start" className="pt-24 pb-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                Natürlich gesund werden
-              </h2>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Willkommen in unserer Naturheilpraxis. Mit ganzheitlichen Therapieansätzen 
-                unterstützen wir Sie dabei, Ihre natürlichen Selbstheilungskräfte zu aktivieren 
-                und nachhaltig gesund zu werden.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors">
-                  Termin vereinbaren
-                </button>
-                <button className="border border-green-600 text-green-600 px-8 py-3 rounded-lg hover:bg-green-50 transition-colors">
-                  Mehr erfahren
-                </button>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center">
-                <span className="text-green-600 text-lg">Praxisbild / Foto</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Über mich */}
-      <section id="uber-mich" className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Über mich</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Lernen Sie mich und meine Philosophie kennen
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center">
-                <span className="text-blue-600 text-lg">Dr. Weidner Foto</span>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">Dr. med. Maria Weidner</h3>
-              <div className="space-y-4 text-gray-600">
-                <p>
-                  <strong>Ausbildung & Qualifikationen:</strong><br/>
-                  • Studium der Humanmedizin an der Universität München<br/>
-                  • Facharzt für Allgemeinmedizin<br/>
-                  • Zusatzausbildung in Naturheilverfahren<br/>
-                  • Zertifiziert in Homöopathie und Akupunktur
-                </p>
-                <p>
-                  <strong>Erfahrung:</strong><br/>
-                  Über 15 Jahre Erfahrung in der ganzheitlichen Medizin
-                </p>
-                <p>
-                  <strong>Meine Philosophie:</strong><br/>
-                  &quot;Ich glaube an die Kraft der Natur und die Selbstheilungskräfte des Körpers.
-                  Mein Ziel ist es, gemeinsam mit Ihnen die Ursachen Ihrer Beschwerden zu finden
-                  und nachhaltige Heilung zu ermöglichen.&quot;
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Behandlungsmethoden */}
-      <section id="behandlung" className="py-16 bg-green-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Behandlungsmethoden</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Bewährte naturheilkundliche Verfahren für Ihre Gesundheit
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl">🌿</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Homöopathie</h3>
-              <p className="text-gray-600">
-                Sanfte Heilung durch individuell abgestimmte homöopathische Mittel, 
-                die Ihre Selbstheilungskräfte aktivieren.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl">🪡</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Akupunktur</h3>
-              <p className="text-gray-600">
-                Traditionelle chinesische Medizin zur Harmonisierung des Energieflusses 
-                und Linderung verschiedener Beschwerden.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-sm">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl">🌱</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Phytotherapie</h3>
-              <p className="text-gray-600">
-                Heilpflanzen und deren natürliche Wirkstoffe zur schonenden 
-                Behandlung verschiedener Beschwerden.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Leistungsspektrum */}
-      <section id="leistungen" className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Leistungsspektrum</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Unsere Schwerpunkte für Ihre Gesundheit
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-6">
-              <div className="text-3xl mb-3">💆‍♀️</div>
-              <h3 className="font-bold text-gray-800 mb-2">Stressbewältigung</h3>
-              <p className="text-gray-600 text-sm">Burnout-Prävention und Entspannungstherapie</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-3xl mb-3">🤧</div>
-              <h3 className="font-bold text-gray-800 mb-2">Allergien</h3>
-              <p className="text-gray-600 text-sm">Natürliche Allergie-Behandlung</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-3xl mb-3">🩺</div>
-              <h3 className="font-bold text-gray-800 mb-2">Chronische Beschwerden</h3>
-              <p className="text-gray-600 text-sm">Ganzheitliche Therapie bei chronischen Leiden</p>
-            </div>
-            <div className="text-center p-6">
-              <div className="text-3xl mb-3">💪</div>
-              <h3 className="font-bold text-gray-800 mb-2">Immunsystem</h3>
-              <p className="text-gray-600 text-sm">Stärkung der körpereigenen Abwehr</p>
-            </div>
-          </div>
-          <div className="mt-12 bg-green-50 p-8 rounded-xl">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">Behandlungsablauf</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">1</div>
-                <h4 className="font-bold text-gray-800 mb-2">Erstgespräch</h4>
-                <p className="text-gray-600 text-sm">Ausführliche Anamnese und Befunderhebung</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">2</div>
-                <h4 className="font-bold text-gray-800 mb-2">Diagnose</h4>
-                <p className="text-gray-600 text-sm">Ganzheitliche Diagnostik und Therapieplanung</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">3</div>
-                <h4 className="font-bold text-gray-800 mb-2">Therapie</h4>
-                <p className="text-gray-600 text-sm">Individuelle Behandlung und Nachsorge</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Praxis & Impressionen */}
-      <section id="praxis" className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Unsere Praxis</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Eine Wohlfühlatmosphäre für Ihre Gesundheit
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <div className="bg-gradient-to-br from-blue-100 to-blue-200 h-48 rounded-xl flex items-center justify-center">
-              <span className="text-blue-600">Wartezimmer</span>
-            </div>
-            <div className="bg-gradient-to-br from-green-100 to-green-200 h-48 rounded-xl flex items-center justify-center">
-              <span className="text-green-600">Behandlungsraum</span>
-            </div>
-            <div className="bg-gradient-to-br from-purple-100 to-purple-200 h-48 rounded-xl flex items-center justify-center">
-              <span className="text-purple-600">Entspannungsbereich</span>
-            </div>
-          </div>
-          <div className="text-center">
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Unsere Praxis bietet eine ruhige, entspannte Atmosphäre, in der Sie sich wohlfühlen können. 
-              Hygienische Standards und modernste Ausstattung sorgen für eine optimale Behandlungsumgebung.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Kontakt & Öffnungszeiten */}
-      <section id="kontakt" className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Kontakt & Anfahrt</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Vereinbaren Sie Ihren Termin
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">Kontaktdaten</h3>
-                  <div className="space-y-3">
-                    <p className="flex items-center text-gray-600">
-                      <span className="w-6">📍</span>
-                      Musterstraße 123, 12345 Musterstadt
-                    </p>
-                    <p className="flex items-center text-gray-600">
-                      <span className="w-6">📞</span>
-                      +49 (0) 123 456789
-                    </p>
-                    <p className="flex items-center text-gray-600">
-                      <span className="w-6">✉️</span>
-                      praxis@dr-weidner.de
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">Öffnungszeiten</h3>
-                  <div className="space-y-2 text-gray-600">
-                    <div className="flex justify-between">
-                      <span>Montag - Donnerstag:</span>
-                      <span>8:00 - 18:00 Uhr</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Freitag:</span>
-                      <span>8:00 - 16:00 Uhr</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Samstag:</span>
-                      <span>Nach Vereinbarung</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Terminanfrage</h3>
-              <form className="space-y-4">
-                <input 
-                  type="text" 
-                  placeholder="Ihr Name" 
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                />
-                <input 
-                  type="email" 
-                  placeholder="Ihre E-Mail" 
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                />
-                <input 
-                  type="tel" 
-                  placeholder="Ihre Telefonnummer" 
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                />
-                <textarea 
-                  placeholder="Ihre Nachricht" 
-                  rows={4}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                ></textarea>
-                <button className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors">
-                  Nachricht senden
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ & Zusatzinfos */}
-      <section className="py-16 bg-green-50">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">💰 Kosten & Abrechnung</h3>
-              <p className="text-gray-600 text-sm mb-3">
-                Wir rechnen als Privatpraxis ab. Viele Krankenkassen übernehmen anteilig die Kosten.
-              </p>
-              <p className="text-gray-600 text-sm">
-                Erstberatung: 120€<br/>
-                Folgebehandlung: 80€
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-xl">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">⏱️ Behandlungsdauer</h3>
-              <p className="text-gray-600 text-sm mb-3">
-                Ersttermin: ca. 90 Minuten<br/>
-                Folgetermine: ca. 60 Minuten
-              </p>
-              <p className="text-gray-600 text-sm">
-                Wir nehmen uns ausreichend Zeit für Sie.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-xl">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">📋 Mitbringen</h3>
-              <p className="text-gray-600 text-sm">
-                • Vorhandene Befunde<br/>
-                • Medikamentenliste<br/>
-                • Versichertenkarte<br/>
-                • Bequeme Kleidung
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4">Naturheilpraxis Dr. Weidner</h3>
-              <p className="text-gray-300 text-sm">
-                Ihr Partner für ganzheitliche Gesundheit und natürliche Heilung.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Quick Links</h4>
-              <div className="space-y-2 text-sm">
-                <a href="#start" className="block text-gray-300 hover:text-white transition-colors">Start</a>
-                <a href="#uber-mich" className="block text-gray-300 hover:text-white transition-colors">Über mich</a>
-                <a href="#behandlung" className="block text-gray-300 hover:text-white transition-colors">Behandlung</a>
-                <a href="#kontakt" className="block text-gray-300 hover:text-white transition-colors">Kontakt</a>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold mb-4">Rechtliches</h4>
-              <div className="space-y-2 text-sm">
-                <a href="#impressum" className="block text-gray-300 hover:text-white transition-colors">Impressum</a>
-                <a href="#datenschutz" className="block text-gray-300 hover:text-white transition-colors">Datenschutz</a>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
-            <p>&copy; 2025 Naturheilpraxis Dr. Weidner. Alle Rechte vorbehalten.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
+const sectionHeaderProbsKontakt: ISectionHeaderProps = {
+  title: "Kontakt & Anfahrt",
+  className: 'mb-8 lg:mb-12'
 }
+
+
+
+
+const NaturheilpraxisWebsite = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+
+  const aboutText: IAboutProps = {
+    title: 'Über mich',
+    name: "Carola Weidner",
+    // subtitle="Test wie geht es dir",
+    description: ["Mein Name ist Carola Weidner und ich bin seit dem Jahr 2017 als Heilpraktikerin in eigener Praxis tätig. Meine Leidenschaft für die Naturheilkunde begann, als ich die heilende Kraft der Natur in der eigenen Familie erfahren durfte.",
+      "In meiner Praxis lege ich großen Wert auf eine vertrauensvolle Beziehung zu meinen Patienten und eine ganzheitliche Behandlung, die individuell auf Ihre persönlichen Bedürfnisse abgestimmt ist.",
+      "Durch regelmäßige Fortbildungen erweitere ich mein umfängliches Fachwissen fortlaufend um Ihnen stets die bestmögliche Behandlung bieten zu können."],
+    imageSrc:"/img/Carola_2_zg.jpg",
+    imageAlt: 'Naturheilpraxis',
+    onlyRoundImage: true,
+    showHeading: true,
+    buttonText: 'Mehr erfahren',
+    // onButtonClick:() => scrollToSection('kontakt')
+  };
+
+  const symptomProbs: ISymptomConfig = {
+    iconBgColor: 'bg-stone-100',
+    iconBgColorHover: 'group-hover:bg-[#00a63e]/10'
+  }
+  const symptomProbs1: ISymptomConfig = {
+    iconBgColor: 'bg-stone-50',
+    iconBgColorHover: 'group-hover:bg-green-300/30'
+  }
+  const symptomProbs2: ISymptomConfig = {
+    iconBgColor: '',
+    iconBgColorHover: ''
+  }
+
+  // Kontakt-Daten
+  const contactText: IContactTextProps = {
+    title: 'Praxisinformationen',
+    addressHeading: 'Adresse',
+    lst_address: ['Naturheilpraxis Calendula', 'Pfaffenreuth 22', '92715 Püchersreuth'],
+    contactHeading: 'Kontakt',
+    phone: '01234 / 567890',
+    email: 'info@naturheilpraxis-beispiel.de',
+    openingHeading: 'Öffnungszeiten',
+    openingHours1: ['Termine nach Vereinbarung'],
+    openingHours1_asBulletPoints: false,
+    openingHours2Heading: 'Reguläre Öffnungszeiten:',
+    openingHours2: ['Montag - Freitag: 9:00 - 18:00 Uhr', 'Samstag: Nach Vereinbarung'],
+    openingHours2_asBulletPoints: false
+  };
+
+  const contactIcons: IContactIconProps = {
+    addressIconHeading: <GeoAltFill className="w-5 h-5 mt-0.5"/>,
+    // addressIconContent: <Geo className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />,
+    // contactIconHeading: <Telephone className="w-5 h-5 mt-0.5" />,
+    phoneIcon: <TelephoneFill className="w-5 h-5 text-green-600 mr-3"/>,
+    emailIcon: <EnvelopeFill className="w-5 h-5 text-green-600 mr-3"/>,
+    hoursIconHeading: <ClockFill className="w-5 h-5 mt-0.5"/>,
+    // hoursIconContent: <Clock className="w-5 h-5 text-green-600 flex-shrink-0 mt-1.5" />
+  };
+
+  const googleMapProps: IGoogleMapProps = {
+    src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35671.625057047895!2d12.153830278827233!3d49.794229273857394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0473dec3bbf67%3A0x30a75ff91af09795!2sNaturheilpraxis%20Carola%20Weidner!5e0!3m2!1sde!2sde!4v1771507812972!5m2!1sde!2sde",
+    // minHeight: "380px"
+  };
+
+
+
+
+
+
+  // Scroll-Funktionalität
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'philosophie', 'leistungen', 'ueber-mich', 'kontakt'];
+      const current = sections.find(section => {
+        const element = document.getElementById(section);
+        // Check if we are within the section (100px from top of viewport)
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+      if (current) setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(sectionId);
+      setIsMenuOpen(false);
+    }
+  };
+
+
+  return (
+      <div className="min-h-screen bg-white font-sans text-gray-800">
+
+
+        <Header2
+            activeSection={activeSection}
+            isMenuOpen={isMenuOpen}
+            onMenuToggle={setIsMenuOpen}
+            onSectionClick={scrollToSection}
+        />
+
+        {/* Hero Section Komponente */}
+        {/*<HeroSection onSectionClick={scrollToSection}/>*/}
+        <HeroSection_2 onSectionClick={scrollToSection}/>
+
+        {/* Philosophie Section */}
+        {/*<Philosophie />*/}
+        <Philosophie_2 />
+
+
+        {/* Beschwerden Section */}
+        {/*<Symptoms />*/}
+        {/*<Symptoms_2 {...symptomProbs} />*/}
+        {/*<Symptoms_2 {...symptomProbs1} />*/}
+        <Symptoms_2 {...symptomProbs2} />
+
+        {/* Leistungen Section */}
+        {/*<Services />*/}
+        <Services_2 />
+        {/*<Services_3 />*/}
+
+
+
+
+
+
+        {/* Über mich Section */}
+        <section id="ueber-mich" className="py-20 bg-white">
+          <AboutMe {...aboutText}/>
+        </section>
+
+
+        {/* Über mich Section */}
+        {/*<section id="ueber-mich"*/}
+        {/*         className="relative flex flex-col md:flex-row items-center bg-white md:overflow-visible overflow-hidden py-20">*/}
+        {/*    /!* Bild-Container mit clipPath - ganz links am Rand *!/*/}
+        {/*    <div className="hidden md:block md:absolute md:left-0 md:top-1/2 md:transform md:-translate-y-1/2 md:h-96 md:w-auto lg:h-[500px] relative image-container-extended">*/}
+        {/*        <div className="absolute left-0 top-0 h-96 lg:h-[500px] w-96 lg:w-[500px] bg-green-50 image-clip-aboutMe">*/}
+        {/*            <Image*/}
+        {/*                src="/img/Carola_2_zg.jpg"*/}
+        {/*                alt="Carola Weidner"*/}
+        {/*                fill*/}
+        {/*                className="object-cover object-[35%_70%]"*/}
+        {/*                quality={100}*/}
+        {/*            />*/}
+        {/*        </div>*/}
+        {/*    </div>*/}
+
+        {/*    /!* Text-Inhalt - rechts positioniert *!/*/}
+        {/*    <div className="relative flex items-center justify-end w-full md:w-2/3 md:ml-auto px-6 lg:px-12 py-12 md:py-0 z-10">*/}
+        {/*        <div className="max-w-2xl">*/}
+        {/*            <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">*/}
+        {/*                Über <span className="text-green-600">mich</span>*/}
+        {/*            </h2>*/}
+        {/*            <p className="text-base text-gray-600 mb-6 font-light leading-relaxed">*/}
+        {/*                Mein Name ist [Name] und ich bin seit [Jahren] als Heilpraktiker tätig. Meine*/}
+        {/*                Leidenschaft für die Naturheilkunde begann, als ich die heilende Kraft der Natur am*/}
+        {/*                eigenen Leib erfahren durfte.*/}
+        {/*            </p>*/}
+        {/*            <p className="text-base text-gray-600 mb-8 font-light leading-relaxed">*/}
+        {/*                In meiner Praxis lege ich großen Wert auf eine vertrauensvolle Beziehung zu meinen*/}
+        {/*                Patienten und eine individuelle, ganzheitliche Behandlung, die auf Ihre persönlichen*/}
+        {/*                Bedürfnisse abgestimmt ist.*/}
+        {/*            </p>*/}
+        {/*            <button className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer">*/}
+        {/*                Mehr erfahren*/}
+        {/*            </button>*/}
+        {/*        </div>*/}
+        {/*    </div>*/}
+
+        {/*    /!* Mobile Bild-Anzeige *!/*/}
+        {/*    <div className="md:hidden w-full px-6 py-8">*/}
+        {/*        <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-green-100 flex items-center justify-center overflow-hidden mx-auto">*/}
+        {/*            <Image*/}
+        {/*                src="/img/Carola_2_zg.jpg"*/}
+        {/*                alt="Carola Weidner"*/}
+        {/*                fill*/}
+        {/*                className="object-cover object-[35%_70%]"*/}
+        {/*                quality={100}*/}
+        {/*            />*/}
+        {/*        </div>*/}
+        {/*    </div>*/}
+        {/*</section>*/}
+
+
+        {/* Kontakt Section */}
+        {/*<section id="kontakt" className="py-20 bg-white">*/}
+        {/*    <div className="container mx-auto px-6">*/}
+        {/*        <div className="max-w-5xl mx-auto">*/}
+        {/*            <div className="text-center mb-16">*/}
+        {/*                <h2 className="text-3xl font-light text-gray-800 mb-4">Kontakt & Anfahrt</h2>*/}
+        {/*                <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>*/}
+        {/*            </div>*/}
+
+
+        {/* Contact + Google Maps - In einem gemeinsamen Container */}
+        {/*<div className="bg-white rounded-2xl p-6 pl-8 pr-8 shadow-sm">*/}
+        {/*    /!*<h3 className="text-2xl font-light text-gray-800 mb-6 text-center">Praxisinformationen</h3>*!/*/}
+        {/*    <div className="grid md:grid-cols-2 gap-8 items-start">*/}
+        {/*        /!* Linke Spalte: Praxisinformationen *!/*/}
+        {/*        <Contact propsText={contactText} propsIcons={contactIcons}/>*/}
+
+        {/*        /!* Rechte Spalte: Google Maps *!/*/}
+        {/*        <div className="rounded-xl overflow-hidden shadow-lg h-full">*/}
+        {/*            <iframe*/}
+        {/*                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.147456789!2d11.6398!3d49.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1d8c8c8c8c8c9%3A0xaabbccddee!2sPfaffenreuth%2022%2C%2092715%20P%C3%BCchersreuth!5e0!3m2!1sde!2sde!4v1234567890"*/}
+        {/*                width="100%"*/}
+        {/*                height="100%"*/}
+        {/*                style={{border: 0, minHeight: '300px'}}*/}
+        {/*                allowFullScreen={true}*/}
+        {/*                loading="lazy"*/}
+        {/*                referrerPolicy="no-referrer-when-downgrade"*/}
+        {/*            ></iframe>*/}
+        {/*        </div>*/}
+        {/*    </div>*/}
+        {/*</div>*/}
+
+        {/*<div className="rounded-2xl overflow-hidden shadow-sm mt-12">*/}
+        {/*    <div className="grid md:grid-cols-2">*/}
+        {/*        /!* Linke Spalte: Praxisinformationen *!/*/}
+        {/*        <div className="bg-white p-8">*/}
+        {/*            <Contact propsText={contactText} propsIcons={contactIcons}/>*/}
+        {/*        </div>*/}
+
+        {/*        /!* Rechte Spalte: Google Maps *!/*/}
+        {/*        <GoogleMap {...googleMapProps} />*/}
+        {/*    </div>*/}
+        {/*</div>*/}
+
+        {/* Terminformular - Zentriert oben */}
+        {/*            <div className="flex justify-center mt-12 ">*/}
+        {/*                <TerminForm/>*/}
+        {/*            </div>*/}
+        {/*        </div>*/}
+        {/*    </div>*/}
+        {/*</section>*/}
+        {/*<section id="kontakt" className="py-20 bg-white">*/}
+        {/*    <div className="container mx-auto px-6">*/}
+        {/*        <div className="max-w-5xl mx-auto">*/}
+        {/*            <div className="text-center mb-16">*/}
+        {/*                <h2 className="text-3xl font-light text-gray-800 mb-4">Kontakt & Anfahrt</h2>*/}
+        {/*                <div className="w-20 h-0.5 bg-green-600 mx-auto"></div>*/}
+        {/*            </div>*/}
+
+        {/*            /!* Grid Layout: Info + Formular oben, Karte unten *!/*/}
+        {/*            <div className="grid md:grid-cols-2 gap-12 mb-12">*/}
+        {/*                /!* Linke Spalte: Praxisinformationen *!/*/}
+        {/*                <Contact propsText={contactText} propsIcons={contactIcons}/>*/}
+
+        {/*                /!* Rechte Spalte: Terminformular *!/*/}
+        {/*                <TerminForm/>*/}
+        {/*            </div>*/}
+
+        {/*            /!* Google Maps - Zentriert *!/*/}
+        {/*            <div className="flex flex-col items-center">*/}
+        {/*                <h3 className="text-2xl font-light text-gray-800 mb-6">Standort</h3>*/}
+        {/*                <div className="rounded-xl overflow-hidden shadow-lg">*/}
+        {/*                    <iframe*/}
+        {/*                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2619.147456789!2d11.6398!3d49.7469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a1d8c8c8c8c8c9%3A0xaabbccddee!2sPfaffenreuth%2022%2C%2092715%20P%C3%BCchersreuth!5e0!3m2!1sde!2sde!4v1234567890"*/}
+        {/*                        width="600"*/}
+        {/*                        height="380"*/}
+        {/*                        style={{border: 0}}*/}
+        {/*                        allowFullScreen={true}*/}
+        {/*                        loading="lazy"*/}
+        {/*                        referrerPolicy="no-referrer-when-downgrade"*/}
+        {/*                    ></iframe>*/}
+        {/*                </div>*/}
+        {/*            </div>*/}
+        {/*        </div>*/}
+        {/*    </div>*/}
+        {/*</section>*/}
+
+        {/*<div className='bg-green-50'>*/}
+        <section id="kontakt" className="pt-20 md:pb-0">
+          <SectionHeader {...sectionHeaderProbsKontakt} />
+
+          <div className='container bg-stone-50 pb-6 md:pb-0 max-w-none px-0'>
+            <div className="overflow-hidden mt-12">
+
+              {/*    <div className="overflow-hidden mt-12 md:pb-0 pb-6">*/}
+              <div className="grid md:grid-cols-2">
+                {/* Linke Spalte: Praxisinformationen */}
+                <div className="p-8 justify-self-center">
+                  <Contact propsText={contactText} propsIcons={contactIcons}/>
+                </div>
+
+                {/* Rechte Spalte: Google Maps */}
+                {/*    <div className={`h-100% min-h-[400px]`}>*/}
+                {/*    <iframe*/}
+                {/*        src={"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35671.625057047895!2d12.153830278827233!3d49.794229273857394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0473dec3bbf67%3A0x30a75ff91af09795!2sNaturheilpraxis%20Carola%20Weidner!5e0!3m2!1sde!2sde!4v1771507812972!5m2!1sde!2sde"}*/}
+                {/*        width="100%"*/}
+                {/*        height="100%"*/}
+                {/*        style={{border: 0}}*/}
+                {/*        allowFullScreen={true}*/}
+                {/*        loading="lazy"*/}
+                {/*        referrerPolicy="no-referrer-when-downgrade"*/}
+                {/*    ></iframe>*/}
+                {/*    </div>*/}
+                <div className='md:mx-0 sm:mx-10 mx-4 sm:min-h-96 min-h-72'>
+                  <GoogleMap {...googleMapProps} className="md:rounded-none rounded-2xl overflow-hidden" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          {/*<div className='bg-green-50'>*/}
+          {/*    <div className="overflow-hidden mt-12 md:pb-0 pb-6">*/}
+          {/*        <div className="grid md:grid-cols-2">*/}
+          {/*            /!* Linke Spalte: Praxisinformationen *!/*/}
+          {/*            <div className="p-8 justify-self-center">*/}
+          {/*                <Contact propsText={contactText} propsIcons={contactIcons}/>*/}
+          {/*            </div>*/}
+
+          {/*            /!* Rechte Spalte: Google Maps *!/*/}
+          {/*            <GoogleMap {...googleMapProps}*/}
+          {/*                       className="rounded-2xl md:rounded-none md:mx-0 mx-8 overflow-hidden"/>*/}
+          {/*        </div>*/}
+          {/*    </div>*/}
+          {/*</div>*/}
+          {/*<div className="flex justify-center pt-2 my-16 ">*/}
+          {/*    <TerminForm/>*/}
+          {/*</div>*/}
+
+        </section>
+
+
+        {/*<section id="kontakt" className="py-10 bg-green-50  border-t border-gray-200">*/}
+        {/*    <div className="container mx-auto">*/}
+        {/*        <div className="w-full max-w-6xl mx-auto">*/}
+        {/*            <div className=" border-gray-200">*/}
+        {/*                <Contact*/}
+        {/*                    propsText={contactText}*/}
+        {/*                    propsIcons={contactIcons}*/}
+        {/*                    className='grid md:grid-cols-3 gap-12'*/}
+        {/*                    distributeEvenly={true}*/}
+        {/*                />*/}
+        {/*            </div>*/}
+        {/*        </div>*/}
+        {/*    </div>*/}
+        {/*</section>*/}
+
+
+        {/* Footer */}
+        <footer className="bg-[#0d9c42] py-8 border-t border-green-600 mt-[1px]">
+          <div className="container mx-auto px-6 text-center">
+            <p className="text-white font-light">&copy; {new Date().getFullYear()} Naturheilpraxis
+              [Name].
+              Alle Rechte vorbehalten.</p>
+            <div className="mt-2">
+              <a href="#"
+                 className="text-white hover:text-green-600 text-sm font-light mx-2">Datenschutz</a>
+              <a href="#"
+                 className="text-white hover:text-green-600 text-sm font-light mx-2">Impressum</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+  );
+};
+
+export default NaturheilpraxisWebsite;

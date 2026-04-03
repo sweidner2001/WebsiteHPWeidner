@@ -138,6 +138,7 @@ const symptoms: ISymptom[] = [
 
 const sectionHeaderProbs: ISectionHeaderProps = {
     title: "Ich behandle und unterstütze bei …",
+    className: 'md:mb-12 mb-10',
     // description: 'Mit einem ganzheitlichen Blick auf Ihren Körper finden wir gemeinsam den Weg zu mehr Wohlbefinden und nachhaltiger Gesundheit.',
     // classNameDescription: 'text-sm text-gray-500 font-light max-w-xl mx-auto'
 }

@@ -32,7 +32,7 @@ const defaultSectionHeaderProps2: Partial<ISectionHeaderProps> = {
     description: '',
     lineColor: 'bg-green-600',
     classNameLine: 'w-20 h-0.5',
-    className: 'mb-16',
+    className: 'mb-10',
     titleSize: 'text-3xl',
     classNameTitle: 'font-light text-gray-800',
     classNameSubTitle: 'text-xs font-light text-[#2d6a4f]',
