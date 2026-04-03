@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import Footer from '@/app/components/footer/Footer';
 
 export default function Datenschutz() {
     return (
@@ -45,7 +46,7 @@ export default function Datenschutz() {
                         <p className="text-gray-600 font-light leading-relaxed">
                             <span className="font-normal">Wer ist verantwortlich für die Datenerfassung auf dieser Website?</span><br />
                             Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten
-                            können Sie dem Abschnitt „Hinweis zur verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen.
+                            können Sie dem Abschnitt &bdquo;Hinweis zur verantwortlichen Stelle&ldquo; in dieser Datenschutzerklärung entnehmen.
                         </p>
 
                         <p className="text-gray-600 font-light leading-relaxed mt-2">
@@ -237,7 +238,7 @@ export default function Datenschutz() {
                             Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte,
                             wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine
                             SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die
-                            Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in
+                            Adresszeile des Browsers von &bdquo;http://&ldquo; auf &bdquo;https://&ldquo; wechselt und an dem Schloss-Symbol in
                             Ihrer Browserzeile.
                         </p>
                         <p className="text-gray-600 font-light leading-relaxed mt-2">
@@ -323,7 +324,7 @@ export default function Datenschutz() {
                         <h3 className="text-base font-medium text-gray-800 mt-4 mb-2">Google Maps</h3>
                         <p className="text-gray-600 font-light leading-relaxed">
                             Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited
-                            („Google"), Gordon House, Barrow Street, Dublin 4, Irland.
+                            (&bdquo;Google&ldquo;), Gordon House, Barrow Street, Dublin 4, Irland.
                         </p>
                         <p className="text-gray-600 font-light leading-relaxed mt-2">
                             Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern.
@@ -384,17 +385,7 @@ export default function Datenschutz() {
                 </div>
             </main>
 
-            {/* Footer */}
-            <footer className="bg-[#0d9c42] py-8 border-t border-green-600">
-                <div className="container mx-auto px-6 text-center">
-                    <p className="text-white font-light">&copy; {new Date().getFullYear()} Naturheilpraxis Carola Weidner.
-                        Alle Rechte vorbehalten.</p>
-                    <div className="mt-2">
-                        <Link href="/datenschutz" className="text-white hover:text-green-200 text-sm font-light mx-2">Datenschutz</Link>
-                        <Link href="/impressum" className="text-white hover:text-green-200 text-sm font-light mx-2">Impressum</Link>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 }

@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import Footer from '@/app/components/footer/Footer';
 import React, {useState, useEffect, type ReactNode} from 'react';
 import Header2 from '@/app/components/header/Header_2';
 import HeroSection from '@/app/components/hero/HeroSection';
@@ -384,20 +385,7 @@ const NaturheilpraxisWebsite = () => {
         {/*</section>*/}
 
 
-        {/* Footer */}
-        <footer className="bg-[#0d9c42] py-8 border-t border-green-600 mt-[1px]">
-          <div className="container mx-auto px-6 text-center">
-            <p className="text-white font-light">&copy; {new Date().getFullYear()} Naturheilpraxis
-              [Name].
-              Alle Rechte vorbehalten.</p>
-            <div className="mt-2">
-              <Link href="/datenschutz"
-                 className="text-white hover:text-green-200 text-sm font-light mx-2">Datenschutz</Link>
-              <Link href="/impressum"
-                 className="text-white hover:text-green-200 text-sm font-light mx-2">Impressum</Link>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
   );
 };
