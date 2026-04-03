@@ -194,7 +194,7 @@ const sectionHeaderProbs: ISectionHeaderProps = {
 const Services_2 = () => {
     useLazy();
     return (
-        <section id="leistungen" className="py-24 bg-stone-100">
+        <section id="leistungen" className="py-24 bg-stone-100 lazy">
             {/*<section id="leistungen" className="py-24" style={{ background: 'linear-gradient(to bottom, #e7e5e4 0px, #f5f4f2 40px, #f5f4f2 100%)' }}>*/}
             <div className="container mx-auto md:px-16 sm:px-20 px-5 max-w-6xl">
 

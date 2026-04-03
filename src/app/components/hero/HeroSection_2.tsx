@@ -9,7 +9,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
-    // useLazy();
+    useLazy();
     return (
         <>
 
@@ -57,10 +57,10 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
             {/* Trenn-Abschnitt mit Hintergrundbild */}
             {/*<section id="home" className="">*/}
             {/*    <div className="relative h-80 md:h-130 w-full overflow-visible">*/}
-            <section id="home" className="md:flex md:flex-col">
+            <section id="home" className="md:flex md:flex-col lazy">
                 <div className="relative h-80 md:h-[calc(100vh-150px)] max-h-[650px] w-full overflow-visible">
                     {/* Bild-Container mit clip-path für abgerundete Kanten */}
-                    <div className="absolute inset-0 image-clip-horizontal bg-green-50" data-aos="fade-up">
+                    <div className="absolute inset-0 image-clip-horizontal bg-green-50" >
                         <Image
                             src="/img/Blumenwiese_1_zg.jpg"
                             alt="Naturheilpraxis"
@@ -76,7 +76,7 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
                         {/*bg-black/20*/}
                         <div
                             className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex items-center pb-8 justify-center px-6 lg:px-10 bg-black/25 z-10"
-                            data-aos="fade-up" data-aos-delay="200">
+                            >
                             {/* text-center*/}
                             <div className="max-w-2xl text-white lg:ml-0 sm:ml-4 ml-2">
                                 <div
@@ -100,7 +100,7 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
                     {/*</div>*/}
                 </div>
 
-                <div className="mt-10 md:my-3 flex justify-center" data-aos="fade-up" data-aos-delay="400">
+                <div className="mt-10 md:my-3 flex justify-center" >
                     <button
                         className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer ring-1 ring-green-500"
                         onClick={() => onSectionClick('kontakt')}>

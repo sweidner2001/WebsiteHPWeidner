@@ -46,3 +46,72 @@ body {
 .lazy-delay-2 { transition-delay: 0.4s; }
 .lazy-delay-3 { transition-delay: 0.6s; }
 
+/* ============================================
+   Eigene AOS-Animationen (kurze Distanz)
+   Verwendung: data-aos="soft-up"
+   ============================================ */
+
+[data-aos="soft-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-aos="soft-down"] {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-aos="soft-left"] {
+  opacity: 0;
+  transform: translateX(15px);
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+[data-aos="soft-right"] {
+  opacity: 0;
+  transform: translateX(-15px);
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+[data-aos="soft-zoom"] {
+  opacity: 0;
+  transform: scale(0.97);
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+[data-aos="soft-fade"] {
+  opacity: 0;
+  transition-property: opacity;
+
+  &.aos-animate {
+    opacity: 1;
+  }
+}
+

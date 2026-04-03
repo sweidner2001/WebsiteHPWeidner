@@ -1,6 +1,7 @@
 import React from 'react';
 import {SectionHeading} from "@/app/components/ui/SectionHeading";
 import {SectionHeader, ISectionHeaderProps} from '@/app/components/ui/SectionHeader';
+import {useLazy} from "@/app/hooks/useLazy";
 
 
 interface ISymptom {
@@ -144,6 +145,7 @@ const sectionHeaderProbs: ISectionHeaderProps = {
 
 
 const Symptoms_2: React.FC<ISymptomConfig> = ({...symptomsProbs}) => {
+    useLazy();
     return (
         <section
             id="beschwerden"
@@ -160,8 +162,8 @@ const Symptoms_2: React.FC<ISymptomConfig> = ({...symptomsProbs}) => {
                         return (
                             <div
                                 key={index}
-                                data-aos="fade-up"
-                                data-aos-delay={index * 80}
+                                // data-aos="soft-up"
+                                // data-aos-delay={index * 50}
                                 className="text-center pt-3 lg:pb-6 pb-3 group transition-all duration-300 hover:transform hover:scale-105"
                             >
                                 {/* Runder Icon-Container */}
