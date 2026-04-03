@@ -1,26 +1,45 @@
 import React from 'react';
+import {SectionHeader, ISectionHeaderProps} from '@/app/components/ui/SectionHeader';
 
 
-const Philosophie_2 = () => {
+
+
+interface IPhilsophieProps {
+    paragraphTitle?: string;
+    paragraphText?: string;
+}
+
+
+const sectionHeaderProbs: ISectionHeaderProps = {
+    title: "Meine Philosophie",
+    subtitle: 'Naturheilkunde',
+    className: 'mb-8',
+}
+
+const philsophieProps: IPhilsophieProps = {
+    paragraphTitle: "Ganzheitliche Naturheilkunde für Ihre Gesundheit und Ihr Wohlbefinden:",
+    paragraphText: 'Ich behandle neben Symptomen auch die Ursachen Ihrer Beschwerden. Mit einem ganzheitlichen Blick auf Ihren Körper finden wir gemeinsam den Weg zu mehr Wohlbefinden und nachhaltiger Gesundheit.',
+}
+
+
+
+
+const Philosophie_2: React.FC = () => {
+
     return (
-        <section id="leistungen" className="py-20 ">
-            <div className="container mx-auto px-16 max-w-6xl">
+        <section id="leistungen" className="py-22 mt-2">
+            <div className="container mx-auto sm:px-16 px-6 max-w-6xl text-center">
 
                 {/* Heading */}
-                <div className="text-center mb-16">
-                    <p className="text-xs tracking-[0.3em] uppercase text-[#2d6a4f] mb-4 font-light">Naturheilkunde</p>
-                    <h2 className="text-3xl font-light text-gray-800 mb-5 tracking-wide">Meine Philosophie</h2>
-                    <div className="w-12 h-px bg-[#2d6a4f] mx-auto mb-6"></div>
+                <SectionHeader {...sectionHeaderProbs} />
+                <div>
                     <p className="text-gray-500 font-light max-w-2xl mx-auto text-sm leading-relaxed font-mono">
-                        Ganzheitliche Naturheilkunde für Ihre Gesundheit und Ihr Wohlbefinden:
+                        {philsophieProps.paragraphTitle}
                     </p>
                     <p className="text-gray-500 font-light max-w-2xl mx-auto text-sm leading-relaxed">
-                        Ich behandle neben Symptomen auch die Ursachen Ihrer Beschwerden. Mit einem ganzheitlichen Blick auf Ihren Körper finden wir gemeinsam den Weg zu mehr
-                        Wohlbefinden und nachhaltiger Gesundheit.
+                        {philsophieProps.paragraphText}
                     </p>
                 </div>
-
-
 
 
                 {/*<div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">*/}

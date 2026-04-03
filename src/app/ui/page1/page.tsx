@@ -17,7 +17,18 @@ import Symptoms from '../../components/symptoms/Symptoms';
 import {Symptoms_2, ISymptomConfig}  from '../../components/symptoms/Symptoms_2';
 import { Telephone, TelephoneFill, Phone, PhoneFill, PhoneVibrate, PhoneVibrateFill, Clock, ClockFill, Envelope, EnvelopeFill, EnvelopeAt, EnvelopeAtFill, Geo, GeoFill, GeoAlt, GeoAltFill } from 'react-bootstrap-icons';
 import './page.css';
-import {SectionHeading} from "@/app/components/ui/SectionHeading";
+import {SectionHeader, ISectionHeaderProps} from '@/app/components/ui/SectionHeader';
+
+
+
+
+const sectionHeaderProbsKontakt: ISectionHeaderProps = {
+    title: "Kontakt & Anfahrt",
+}
+
+
+
+
 
 const NaturheilpraxisWebsite = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -302,7 +313,8 @@ const NaturheilpraxisWebsite = () => {
 
             {/*<div className='bg-green-50'>*/}
             <section id="kontakt" className="pt-20 pb-12 md:pb-0">
-                <SectionHeading title="Kontakt & Anfahrt" />
+                <SectionHeader {...sectionHeaderProbsKontakt} />
+
                 <div className='md:bg-stone-50 container max-w-none px-0'>
                     <div className="bg-stone-50 overflow-hidden mt-12">
 

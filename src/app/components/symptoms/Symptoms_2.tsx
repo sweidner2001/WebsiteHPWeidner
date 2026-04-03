@@ -1,5 +1,7 @@
 import React from 'react';
 import {SectionHeading} from "@/app/components/ui/SectionHeading";
+import {SectionHeader, ISectionHeaderProps} from '@/app/components/ui/SectionHeader';
+
 
 interface ISymptom {
     title: string;
@@ -10,6 +12,8 @@ interface ISymptomConfig {
     iconBgColor: string;
     iconBgColorHover: string;
 }
+
+
 
 const symptoms: ISymptom[] = [
     {
@@ -130,6 +134,13 @@ const symptoms: ISymptom[] = [
     },
 ];
 
+
+const sectionHeaderProbs: ISectionHeaderProps = {
+    title: "Ich behandle und unterstütze bei …",
+}
+
+
+
 const Symptoms_2: React.FC<ISymptomConfig> = ({...symptomsProbs}) => {
     return (
         <section
@@ -139,17 +150,17 @@ const Symptoms_2: React.FC<ISymptomConfig> = ({...symptomsProbs}) => {
             <div className="container mx-auto px-6 max-w-6xl">
 
                 {/* Heading */}
-                {/*<SectionHeading title='Ich behandle und unterstütze bei …' />*/}
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl font-light text-gray-800 mb-5 tracking-wide">
-                        Ich behandle und unterstütze bei …
-                    </h2>
-                    <div className="w-12 h-0.5 bg-green-600 mx-auto mb-6"></div>
-                    {/*<p className="text-gray-500 font-light max-w-2xl mx-auto text-sm leading-relaxed">*/}
-                    {/*    Mit einem ganzheitlichen Blick auf Ihren Körper finden wir gemeinsam den Weg zu mehr*/}
-                    {/*    Wohlbefinden und nachhaltiger Gesundheit.*/}
-                    {/*</p>*/}
-                </div>
+                <SectionHeader {...sectionHeaderProbs} />
+                {/*<div className="text-center mb-16">*/}
+                {/*    <h2 className="text-3xl font-light text-gray-800 mb-5 tracking-wide">*/}
+                {/*        Ich behandle und unterstütze bei …*/}
+                {/*    </h2>*/}
+                {/*    <div className="w-12 h-0.5 bg-green-600 mx-auto mb-6"></div>*/}
+                {/*    /!*<p className="text-gray-500 font-light max-w-2xl mx-auto text-sm leading-relaxed">*!/*/}
+                {/*    /!*    Mit einem ganzheitlichen Blick auf Ihren Körper finden wir gemeinsam den Weg zu mehr*!/*/}
+                {/*    /!*    Wohlbefinden und nachhaltiger Gesundheit.*!/*/}
+                {/*    /!*</p>*!/*/}
+                {/*</div>*/}
 
                 {/* Symptom Grid – Zentriertes Design */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 max-w-6xl mx-auto">

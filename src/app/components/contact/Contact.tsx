@@ -51,6 +51,9 @@ const defaultText: IContactTextProps = {
     openingHours2_asBulletPoints: false
 };
 
+
+
+
 // Hilfsfunktion für List-Rendering mit <br /> zwischen den Einträgen oder als Stichpunkte
 const renderList = (list?: string[], asBulletPoints: boolean = false) => {
     if (asBulletPoints) {

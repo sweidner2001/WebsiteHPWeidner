@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import React from 'react';
-import { SectionHeading } from '@/app/components/ui/SectionHeading';
+import {SectionHeader, ISectionHeaderProps} from '@/app/components/ui/SectionHeader';
 
 interface IAboutProps {
     title?: string;
@@ -15,6 +15,14 @@ interface IAboutProps {
     buttonText?: string;
     onButtonClick?: () => void;
 }
+
+
+
+
+const sectionHeaderProbs: ISectionHeaderProps = {
+    title: "Über mich",
+}
+
 
 
 // Hilfsfunktion für List-Rendering mit <br /> zwischen den Einträgen oder als Stichpunkte
@@ -102,9 +110,13 @@ const AboutMe: React.FC<IAboutProps> = ({...aboutProbs}) => {
 
 
             {/* Header */}
-            {aboutProbs.showHeading && aboutProbs.title &&
-                <SectionHeading title={aboutProbs.title} />
+            {/*{aboutProbs.showHeading && aboutProbs.title &&*/}
+            {/*    <SectionHeading title={aboutProbs.title} />*/}
+            {/*}*/}
+            {aboutProbs.showHeading &&
+                <SectionHeader {...sectionHeaderProbs} />
             }
+
 
             {/* Content */}
             <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:gap-14 gap-4">

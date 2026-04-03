@@ -1,4 +1,5 @@
 import React from 'react';
+import {SectionHeader, ISectionHeaderProps} from '@/app/components/ui/SectionHeader';
 
 interface IService {
     title: string;
@@ -182,6 +183,13 @@ const themeClasses: Record<IService['theme'], { card: string; icon: string; titl
     },
 };
 
+const sectionHeaderProbs: ISectionHeaderProps = {
+    title: "Meine Leistungen",
+    titleSize: 'text-4xl',
+    description: "Jede Behandlung ist individuell auf Sie abgestimmt – für nachhaltige Gesundheit auf natürlichem Weg.",
+}
+
+
 const Services_2 = () => {
     return (
         <section id="leistungen" className="py-24 bg-stone-100">
@@ -189,14 +197,7 @@ const Services_2 = () => {
             <div className="container mx-auto md:px-16 sm:px-20 px-5 max-w-6xl">
 
                 {/* Heading */}
-                <div className="text-center mb-16">
-                    {/*<p className="text-xs tracking-[0.3em] uppercase text-[#2d6a4f] mb-4 font-light">Naturheilkunde</p>*/}
-                    <h2 className="text-4xl font-light text-gray-800 mb-5 tracking-wide">Meine Leistungen</h2>
-                    <div className="w-12 h-px bg-[#2d6a4f] mx-auto mb-6"></div>
-                    <p className="text-gray-500 font-light max-w-3xl mx-auto text-normal leading-relaxed">
-                        Jede Behandlung ist individuell auf Sie abgestimmt – für nachhaltige Gesundheit auf natürlichem Weg.
-                    </p>
-                </div>
+                <SectionHeader {...sectionHeaderProbs} />
 
                 {/* Mosaic Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
