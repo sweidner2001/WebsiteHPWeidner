@@ -2,7 +2,7 @@ import React from 'react';
 
 interface IService {
     title: string;
-    description: string;
+    description: string[];
     icon: React.ReactNode;
     theme: 'dark-green' | 'earth' | 'light' | 'dark' | 'light_2' | 'rose' | 'rose_2';
     span: string; // tailwind col/row span classes
@@ -11,102 +11,105 @@ interface IService {
 const services: IService[] = [
     {
         title: 'Akkupunktur',
-        description: 'Traditionelle chinesische Medizin zur Harmonisierung des Energieflusses. Schmerz ist der Schrei nach fließender Energie. Akkupunktur trägt damit zur und Linderung verschiedener Beschwerden bei.',
+        description: ['Traditionelle chinesische Medizin zur Harmonisierung des Energieflusses. Schmerz ist der Schrei nach fließender Energie. Akkupunktur trägt damit zur und Linderung verschiedener Beschwerden bei.'],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
         ),
         theme: 'dark',
-        span: 'md:col-span-1 md:row-span-1',
+        span: 'lg:col-span-2 md:col-span-3 md:row-span-1 lg:order-1 md:order-1 order-1',
     },
     {
         title: 'Cranio-Sakrale-Osteopathie',
-        description: 'Die Cranio-Sakrale-Osteopathie ist ein Teilgebiet der Osteopathie. Diese sanfte Behandlungsform wirkt sehr tief auf Körper und Seele, Sie eignet sich folglich zur Behandlung einer Vielzahl an Beschwerden wie beispielsweise Schlafstörungen, Kopfschmerzen, Bandscheibenproblemen, Gelenkbeschwerden und Konzentrationsschwierigkeiten. Es wird eine tiefe Entspannung gefördert. -—> Wenn die Gelenke frei sind-macht der Körper den Rest!',
+        description: [  //Alternativer Pfeil: \u2794
+            'Die Cranio-Sakrale-Osteopathie ist ein Teilgebiet der Osteopathie. Diese sanfte Behandlungsform wirkt sehr tief auf Körper und Seele, Sie eignet sich folglich zur Behandlung einer Vielzahl an Beschwerden wie beispielsweise Schlafstörungen, Kopfschmerzen, Bandscheibenproblemen, Gelenkbeschwerden und Konzentrationsschwierigkeiten. Es wird eine tiefe Entspannung gefördert.',
+            '\u27A4 Wenn die Gelenke frei sind, macht der Körper den Rest!'
+        ],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
             </svg>
         ),
         theme: 'light',
-        span: 'md:col-span-2 md:row-span-1',
+        span: 'lg:col-span-4 md:col-span-6 md:row-span-1 lg:order-2 md:order-3 order-2',
     },
     {
         title: 'Dorn-und Breusstherapie',
-        description: 'Eine schonende Wirbelsäulen- und Gelenkbehandlung zur Korrektur von Fehlstellungen und Entlastung des Bewegungsapparates nach ihrem Begründer Dieter Dorn.',
+        description: ['Eine schonende Wirbelsäulen- und Gelenkbehandlung zur Korrektur von Fehlstellungen und Entlastung des Bewegungsapparates nach ihrem Begründer Dieter Dorn.'],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
         ),
         theme: 'light',
-        span: 'md:col-span-1 md:row-span-1',
+        span: 'lg:col-span-2 md:col-span-3 md:row-span-1 lg:order-3 md:order-2 order-3',
     },
     {
         title: 'Schröpfkopfbehandlung',
-        description: 'Schröpfen zählt zu den traditionellen Ausleitungsverfahren in der Naturheilkunde. Durch Unterdruck lösen sich Muskelverspannungen und Verklebungen der Faszien. Die Durchblutung des Körpers wird gefördert und damit der Abtransport von Schlacken begünstigt.',
+        description: ['Schröpfen zählt zu den traditionellen Ausleitungsverfahren in der Naturheilkunde. Durch Unterdruck lösen sich Muskelverspannungen und Verklebungen der Faszien. Die Durchblutung des Körpers wird gefördert und damit der Abtransport von Schlacken begünstigt.'],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M12 3v18M9 6l3-3 3 3M9 18l3 3 3-3" />
             </svg>
         ),
         theme: 'dark-green',
-        span: 'md:col-span-2 md:row-span-1',
+        span: 'lg:col-span-4 md:col-span-6 md:row-span-1 lg:order-4 md:order-4 order-4',
     },
     {
         title: 'Phytotherapie',
-        description: 'Die Pflanzenheilkunde ist so alt wie die Menschheit und hat einen hohen Stellenwert in der Medizin. Der Einsatz von Heilpflanzen bewirkt eine natürliche Unterstützung von körperlichen und seelischen Prozessen.',
+        description: ['Die Pflanzenheilkunde ist so alt wie die Menschheit und hat einen hohen Stellenwert in der Medizin. Der Einsatz von Heilpflanzen bewirkt eine natürliche Unterstützung von körperlichen und seelischen Prozessen.'],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
             </svg>
         ),
         theme: 'earth',
-        span: 'md:col-span-1 md:row-span-1',
+        span: 'lg:col-span-2 md:col-span-3 md:row-span-1 lg:order-5 md:order-5 order-5',
     },
     {
         title: 'Homöopathie',
-        description: 'Durch natürliche Wirkstoffe in homöopathischen Verdünnungen - den sogenannten Potenzen - wird neben Symptomen und akuten Beschwerden auch der Mensch als Ganzes behandelt. Durch Individuell abgestimmte homöopathische Mittel werden dabei die körpereigenen Selbstheilungskräfte aktiviert.',
+        description: ['Durch natürliche Wirkstoffe in homöopathischen Verdünnungen - den sogenannten Potenzen - wird neben Symptomen und akuten Beschwerden auch der Mensch als Ganzes behandelt. Durch Individuell abgestimmte homöopathische Mittel werden dabei die körpereigenen Selbstheilungskräfte aktiviert.'],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
         ),
         theme: 'light',
-        span: 'md:col-span-2 md:row-span-1',
+        span: 'lg:col-span-4 md:col-span-6 md:row-span-1 lg:order-6 md:order-7 order-6',
     },
     {
         title: 'Spagyrik',
-        description: 'Speziell aufbereitete Essenzen aus Pflanzen, die Körper, Geist und Seele ansprechen und das natürliche Gleichgewicht wieder herstellen.',
+        description: ['Speziell aufbereitete Essenzen aus Pflanzen, die Körper, Geist und Seele ansprechen und das natürliche Gleichgewicht wieder herstellen.'],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
         ),
         theme: 'light',
-        span: 'md:col-span-1 md:row-span-1',
+        span: 'lg:col-span-2 md:col-span-3 md:row-span-1 lg:order-7 md:order-5 order-7',
     },
     {
         title: 'Kinderheilkunde',
-        description: 'Sanfte naturheilkundliche Begleitung von Kindern zur Förderung einer gesunden Entwicklung.',
+        description: ['Sanfte naturheilkundliche Begleitung von Kindern zur Förderung einer gesunden Entwicklung.'],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
         ),
         theme: 'dark',
-        span: 'md:col-span-1 md:row-span-1',
+        span: 'lg:col-span-2 md:col-span-3 md:row-span-1 lg:order-8 md:order-8 order-8',
     },
     {
         title: 'Frauenheilkunde',
-        description: 'Natürliche Unterstützung für hormonelle Balance und Wohlbefinden in allen Lebensphasen der Frau.',
+        description: ['Natürliche Unterstützung für hormonelle Balance und Wohlbefinden in allen Lebensphasen der Frau.'],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
             </svg>
         ),
         theme: 'rose',
-        span: 'md:col-span-1 md:row-span-1',
+        span: 'lg:col-span-2 md:col-span-3 md:row-span-1 lg:order-9 md:order-9 order-9',
     },
 ];
 
@@ -183,26 +186,26 @@ const Services_2 = () => {
     return (
         <section id="leistungen" className="py-24 bg-stone-100">
             {/*<section id="leistungen" className="py-24" style={{ background: 'linear-gradient(to bottom, #e7e5e4 0px, #f5f4f2 40px, #f5f4f2 100%)' }}>*/}
-            <div className="container mx-auto px-16 max-w-6xl">
+            <div className="container mx-auto md:px-16 sm:px-20 px-5 max-w-6xl">
 
                 {/* Heading */}
                 <div className="text-center mb-16">
                     {/*<p className="text-xs tracking-[0.3em] uppercase text-[#2d6a4f] mb-4 font-light">Naturheilkunde</p>*/}
                     <h2 className="text-4xl font-light text-gray-800 mb-5 tracking-wide">Meine Leistungen</h2>
                     <div className="w-12 h-px bg-[#2d6a4f] mx-auto mb-6"></div>
-                    <p className="text-gray-500 font-light max-w-2xl mx-auto text-sm leading-relaxed">
+                    <p className="text-gray-500 font-light max-w-3xl mx-auto text-normal leading-relaxed">
                         Jede Behandlung ist individuell auf Sie abgestimmt – für nachhaltige Gesundheit auf natürlichem Weg.
                     </p>
                 </div>
 
                 {/* Mosaic Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[220px] gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
                     {services.map((service, index) => {
                         const t = themeClasses[service.theme];
                         return (
                             <div
                                 key={index}
-                                className={`group rounded-2xl p-7 flex flex-col justify-between transition-colors duration-500 cursor-default ${service.span} ${t.card}`}
+                                className={`group rounded-2xl p-7 flex flex-col justify-between transition-colors md:min-h-[220px] min-h-[200px] duration-500 cursor-default ${service.span} ${t.card}`}
                             >
                                 {/* Top row: icon + number */}
                                 {/*<div className="flex items-start justify-between">*/}
@@ -220,9 +223,13 @@ const Services_2 = () => {
                                         {service.title}
                                     </h3>
                                     <div className={`w-8 h-px mb-4 group-hover:w-14 transition-all duration-500 ${t.line}`}></div>
-                                    <p className={`text-sm font-[350] leading-relaxed line-clamp-8 ${t.text}`}>
-                                        {service.description}
-                                    </p>
+                                    <div className="space-y-2">
+                                        {service.description.map((paragraph, idx) => (
+                                            <p key={idx} className={`text-sm font-[350] leading-relaxed ${t.text}`}>
+                                                {paragraph}
+                                            </p>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         );
