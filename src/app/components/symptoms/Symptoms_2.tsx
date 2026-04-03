@@ -1,8 +1,14 @@
 import React from 'react';
+import {SectionHeading} from "@/app/components/ui/SectionHeading";
 
 interface ISymptom {
     title: string;
     icon: React.ReactNode;
+}
+
+interface ISymptomConfig {
+    iconBgColor: string;
+    iconBgColorHover: string;
 }
 
 const symptoms: ISymptom[] = [
@@ -124,7 +130,7 @@ const symptoms: ISymptom[] = [
     },
 ];
 
-const Symptoms_2 = () => {
+const Symptoms_2: React.FC<ISymptomConfig> = ({...symptomsProbs}) => {
     return (
         <section
             id="beschwerden"
@@ -133,15 +139,16 @@ const Symptoms_2 = () => {
             <div className="container mx-auto px-6 max-w-6xl">
 
                 {/* Heading */}
+                {/*<SectionHeading title='Ich behandle und unterstütze bei …' />*/}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-light text-gray-800 mb-5 tracking-wide">
+                    <h2 className="text-3xl font-light text-gray-800 mb-5 tracking-wide">
                         Ich behandle und unterstütze bei …
                     </h2>
-                    <div className="w-12 h-px bg-[#2d6a4f] mx-auto mb-6"></div>
-                    <p className="text-gray-500 font-light max-w-2xl mx-auto text-sm leading-relaxed">
-                        Mit einem ganzheitlichen Blick auf Ihren Körper finden wir gemeinsam den Weg zu mehr
-                        Wohlbefinden und nachhaltiger Gesundheit.
-                    </p>
+                    <div className="w-12 h-0.5 bg-green-600 mx-auto mb-6"></div>
+                    {/*<p className="text-gray-500 font-light max-w-2xl mx-auto text-sm leading-relaxed">*/}
+                    {/*    Mit einem ganzheitlichen Blick auf Ihren Körper finden wir gemeinsam den Weg zu mehr*/}
+                    {/*    Wohlbefinden und nachhaltiger Gesundheit.*/}
+                    {/*</p>*/}
                 </div>
 
                 {/* Symptom Grid – Zentriertes Design */}
@@ -154,7 +161,8 @@ const Symptoms_2 = () => {
                             >
                                 {/* Runder Icon-Container */}
                                 {/*bg-green-400/10  bg-green-300/20  */}
-                                <div className="w-20 h-20 rounded-full bg-stone-100 mx-auto mb-5 flex items-center justify-center group-hover:bg-[#00a63e]/10 transition-all duration-300">
+                                <div className={`w-20 h-20 rounded-full ${symptomsProbs.iconBgColor} mx-auto mb-5 flex items-center justify-center ${symptomsProbs.iconBgColorHover} transition-all duration-300`}>
+                                {/*<div className="w-20 h-20 rounded-full bg-stone-100 mx-auto mb-5 flex items-center justify-center group-hover:bg-[#00a63e]/10 transition-all duration-300">*/}
                                     <div className="text-[#00a63e]">
                                         {symptom.icon}
                                     </div>
@@ -173,4 +181,9 @@ const Symptoms_2 = () => {
     );
 };
 
-export default Symptoms_2;
+export {
+    Symptoms_2
+}
+export type {
+    ISymptomConfig
+}

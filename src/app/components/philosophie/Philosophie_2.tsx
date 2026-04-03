@@ -12,11 +12,11 @@ const Philosophie_2 = () => {
                     <h2 className="text-3xl font-light text-gray-800 mb-5 tracking-wide">Meine Philosophie</h2>
                     <div className="w-12 h-px bg-[#2d6a4f] mx-auto mb-6"></div>
                     <p className="text-gray-500 font-light max-w-2xl mx-auto text-sm leading-relaxed font-mono">
-                        Ganzheitliche Naturheilkunde für nachhaltige Gesundheit:
+                        Ganzheitliche Naturheilkunde für Ihre Gesundheit und Ihr Wohlbefinden:
                     </p>
                     <p className="text-gray-500 font-light max-w-2xl mx-auto text-sm leading-relaxed">
-                        Ich behandle neben Symptomen auch die Ursachen Ihrer Beschwerden. Mit natürlichen Verfahren
-                        aktiviere ich Ihre Selbstheilungskräfte für langfristige Gesundheit.
+                        Ich behandle neben Symptomen auch die Ursachen Ihrer Beschwerden. Mit einem ganzheitlichen Blick auf Ihren Körper finden wir gemeinsam den Weg zu mehr
+                        Wohlbefinden und nachhaltiger Gesundheit.
                     </p>
                 </div>
 

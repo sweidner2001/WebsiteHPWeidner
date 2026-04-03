@@ -14,7 +14,7 @@ import Services from '../../components/services/Services';
 import Services_2 from '../../components/services/Services_2';
 import Services_3 from '../../components/services/Services_3';
 import Symptoms from '../../components/symptoms/Symptoms';
-import Symptoms_2 from '../../components/symptoms/Symptoms_2';
+import {Symptoms_2, ISymptomConfig}  from '../../components/symptoms/Symptoms_2';
 import { Telephone, TelephoneFill, Phone, PhoneFill, PhoneVibrate, PhoneVibrateFill, Clock, ClockFill, Envelope, EnvelopeFill, EnvelopeAt, EnvelopeAtFill, Geo, GeoFill, GeoAlt, GeoAltFill } from 'react-bootstrap-icons';
 import './page.css';
 import {SectionHeading} from "@/app/components/ui/SectionHeading";
@@ -39,6 +39,18 @@ const NaturheilpraxisWebsite = () => {
         // onButtonClick:() => scrollToSection('kontakt')
     };
 
+    const symptomProbs: ISymptomConfig = {
+        iconBgColor: 'bg-stone-100',
+        iconBgColorHover: 'group-hover:bg-[#00a63e]/10'
+    }
+    const symptomProbs1: ISymptomConfig = {
+        iconBgColor: 'bg-stone-50',
+        iconBgColorHover: 'group-hover:bg-green-300/30'
+    }
+    const symptomProbs2: ISymptomConfig = {
+        iconBgColor: '',
+        iconBgColorHover: ''
+    }
 
     // Kontakt-Daten
     const contactText: IContactTextProps = {
@@ -128,12 +140,14 @@ const NaturheilpraxisWebsite = () => {
 
             {/* Beschwerden Section */}
             {/*<Symptoms />*/}
-            <Symptoms_2 />
+            {/*<Symptoms_2 {...symptomProbs} />*/}
+            {/*<Symptoms_2 {...symptomProbs1} />*/}
+            <Symptoms_2 {...symptomProbs2} />
 
             {/* Leistungen Section */}
             {/*<Services />*/}
             <Services_2 />
-            <Services_3 />
+            {/*<Services_3 />*/}
 
 
 

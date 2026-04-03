@@ -112,7 +112,8 @@ const services: IService[] = [
 
 const themeClasses: Record<IService['theme'], { card: string; icon: string; title: string; text: string; line: string; num: string }> = {
     'dark-green': {
-        card: 'bg-[#1a3a2e] hover:bg-[#1f4535]',
+        // #1f4535
+        card: 'bg-[#255340] hover:bg-[#214b39]',
         icon: 'border-[#2d6a4f] text-emerald-200',
         title: 'text-white',
         text: 'text-emerald-100/70',
@@ -128,7 +129,7 @@ const themeClasses: Record<IService['theme'], { card: string; icon: string; titl
         num: 'text-amber-200/50',
     },
     'light': {
-        card: 'bg-stone-100 hover:bg-white',
+        card: 'bg-white hover:bg-white',
         icon: 'border-stone-300 text-[#1a3a2e]',
         title: 'text-gray-800',
         text: 'text-gray-500',
@@ -139,7 +140,7 @@ const themeClasses: Record<IService['theme'], { card: string; icon: string; titl
         card: 'bg-[#1c1c1b] hover:bg-[#252523]',
         icon: 'border-stone-600 text-stone-300',
         title: 'text-white',
-        text: 'text-stone-400',
+        text: 'text-stone-300/80',
         line: 'bg-stone-500',
         num: 'text-stone-600',
     },
@@ -186,7 +187,7 @@ const Services_2 = () => {
 
                 {/* Heading */}
                 <div className="text-center mb-16">
-                    <p className="text-xs tracking-[0.3em] uppercase text-[#2d6a4f] mb-4 font-light">Naturheilkunde</p>
+                    {/*<p className="text-xs tracking-[0.3em] uppercase text-[#2d6a4f] mb-4 font-light">Naturheilkunde</p>*/}
                     <h2 className="text-4xl font-light text-gray-800 mb-5 tracking-wide">Meine Leistungen</h2>
                     <div className="w-12 h-px bg-[#2d6a4f] mx-auto mb-6"></div>
                     <p className="text-gray-500 font-light max-w-2xl mx-auto text-sm leading-relaxed">
@@ -195,7 +196,7 @@ const Services_2 = () => {
                 </div>
 
                 {/* Mosaic Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[220px] gap-3.5">
+                <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[220px] gap-6">
                     {services.map((service, index) => {
                         const t = themeClasses[service.theme];
                         return (
@@ -219,7 +220,7 @@ const Services_2 = () => {
                                         {service.title}
                                     </h3>
                                     <div className={`w-8 h-px mb-4 group-hover:w-14 transition-all duration-500 ${t.line}`}></div>
-                                    <p className={`text-sm font-light leading-relaxed line-clamp-8 ${t.text}`}>
+                                    <p className={`text-sm font-[350] leading-relaxed line-clamp-8 ${t.text}`}>
                                         {service.description}
                                     </p>
                                 </div>
