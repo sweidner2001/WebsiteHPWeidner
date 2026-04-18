@@ -41,7 +41,7 @@ const defaultText: IContactTextProps = {
     addressHeading: 'Adresse',
     lst_address: ['Naturheilpraxis Calendula', 'Pfaffenreuth 22', '92715 Püchersreuth'],
     contactHeading: 'Kontakt',
-    phone: '01234 / 567890',
+    phone: '01234 / 34234',
     email: 'info@naturheilpraxis-beispiel.de',
     openingHeading: 'Öffnungszeiten',
     openingHours1: ['Termine nach Vereinbarung'],
