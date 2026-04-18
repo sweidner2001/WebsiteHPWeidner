@@ -28,11 +28,17 @@ const klaroConfig = {
             purposes: {
                 maps: 'Karten',
                 functional: 'Funktional',
+                analytics: 'Analyse & Statistik',
             },
             googleMaps: {
                 title: 'Google Maps',
                 description:
                     'Google Maps ist ein Kartendienst von Google LLC. Wenn Sie Google Maps aktivieren, werden Daten an Google übertragen.',
+            },
+            googleAnalytics: {
+                title: 'Google Analytics',
+                description:
+                    'Google Analytics hilft uns zu verstehen, wie Besucher unsere Website nutzen.',
             },
         },
     },
@@ -51,7 +57,29 @@ const klaroConfig = {
                 },
             },
         },
+        {
+            name: 'google-analytics',
+            title: 'Google Analytics',
+            purposes: ['analytics'],
+            default: false,
+            required: false,
+            // Klaro löscht diese Cookies automatisch bei Widerruf
+            cookies: [
+                /^_ga(_.*)?$/,
+                '_gid',
+                '_gat',
+                /^_gat_.*$/,
+            ],
+            translations: {
+                de: {
+                    description:
+                        'Google Analytics erfasst anonymisierte Nutzungsdaten, um die Website zu verbessern. Daten werden an Google LLC (USA) übertragen.',
+                },
+            },
+        },
     ],
 };
 
 export default klaroConfig;
+
+

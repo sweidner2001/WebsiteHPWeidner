@@ -2,8 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 
-import type { KlaroConfig } from 'klaro';
-
 export interface IGoogleMapProps {
     src: string;
     className?: string;
@@ -11,12 +9,6 @@ export interface IGoogleMapProps {
     minHeight?: string;
 }
 
-declare global {
-    interface Window {
-        klaro: typeof import('klaro');
-        klaroConfig: KlaroConfig;
-    }
-}
 
 const GoogleMap: React.FC<IGoogleMapProps> = ({
     src,
