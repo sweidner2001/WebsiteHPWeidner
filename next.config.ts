@@ -5,14 +5,17 @@
 
 import type { NextConfig } from "next";
 
-const isExport = process.env.NEXT_EXPORT === 'true';
+// const isExport = process.env.NEXT_EXPORT === 'true';
 
 const nextConfig: NextConfig = {
   /* config options here */
+    output: 'export',
     images: {
         unoptimized: true,
     },
-    ...(isExport ? { output: 'export' as const } : {}),
+    // ...(isExport ? { output: 'export' as const } : {}),
 };
-
+// module.exports = nextConfig;
 export default nextConfig;
+
+// import('@opennextjs/cloudflare').then(m => m.initOpenNextCloudflareForDev());
