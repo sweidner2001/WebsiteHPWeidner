@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "klaro/dist/klaro.min.css";
 import AosProvider from "./components/AosProvider";
+import KlaroProvider from "./components/KlaroProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <KlaroProvider />
         <AosProvider>
           {children}
         </AosProvider>
