@@ -1,6 +1,7 @@
 import React from 'react';
 import InputLabel from './InputLabel'
 import ErrorField from "./ErrorField";
+import type { UseFormRegisterReturn } from 'react-hook-form';
 
 /**
  * @interface TextareaProps Datentyp
@@ -24,7 +25,7 @@ interface TextareaProps {
     placeholder:string;
     defaultValue?:string;
     textboxRows:number;
-    register: any;
+    register: UseFormRegisterReturn;
     error?: string;
 }
 

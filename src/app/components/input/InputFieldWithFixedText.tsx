@@ -1,6 +1,7 @@
 import React from 'react';
 import InputLabel from './InputLabel'
 import ErrorField from "./ErrorField";
+import type { UseFormRegisterReturn } from 'react-hook-form';
 
 
 /**
@@ -22,7 +23,7 @@ interface InputFieldProps {
     id: string;
     label: string;
     type: string;
-    register: any;
+    register: UseFormRegisterReturn;
     autoComplete?: string;
     error?: string;
 }

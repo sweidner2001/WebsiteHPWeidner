@@ -1,6 +1,7 @@
 import React from 'react';
 import InputLabel from './InputLabel'
 import ErrorField from "./ErrorField";
+import type { UseFormRegisterReturn } from 'react-hook-form';
 
 
 /**
@@ -21,7 +22,7 @@ interface InputFieldProps {
     id: string;
     label: string;
     type: string;
-    register: any;
+    register: UseFormRegisterReturn;
     autoComplete?: string;
     error?: string;
 }
@@ -41,7 +42,7 @@ const InputField: React.FC<InputFieldProps> = ({...probs}) => {
 
     // Variablen
     // let classNameWidth= probs.fieldWidth ? 'sm:col-span-' + probs.fieldWidth : 'col-span-full';
-    let classNameWidth = "sm:col-span-4";
+    const classNameWidth = "sm:col-span-4";
     // HTML
     return (
         <div className={classNameWidth}>

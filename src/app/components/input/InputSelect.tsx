@@ -1,6 +1,7 @@
 import React from 'react';
 import InputLabel from './InputLabel'
 import ErrorField from "./ErrorField";
+import type { UseFormRegisterReturn } from 'react-hook-form';
 
 
 /**
@@ -21,11 +22,12 @@ interface InputSelectProps {
     fieldWidth: number;
     id: string;
     label: string;
-    register: any;
+    register: UseFormRegisterReturn;
     selectOptions: Array<string>
     autoComplete?: string;
     error?: string;
 }
+
 
 
 /**
@@ -39,7 +41,7 @@ interface InputSelectProps {
 const InputSelect: React.FC<InputSelectProps> = ({...probs}) => {
 
     // Variablen:
-    let classNameWidth = probs.fieldWidth ? 'sm:col-span-' + probs.fieldWidth : 'col-span-full';
+    const classNameWidth = probs.fieldWidth ? 'sm:col-span-' + probs.fieldWidth : 'col-span-full';
 
     // HTML:
     return (
