@@ -57,8 +57,8 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
             {/* Trenn-Abschnitt mit Hintergrundbild */}
             {/*<section id="home" className="">*/}
             {/*    <div className="relative h-80 md:h-130 w-full overflow-visible">*/}
-            <section id="home" className="md:flex md:flex-col lazy">
-                <div className="relative h-80 md:h-[calc(100vh-150px)] max-h-[650px] w-full overflow-visible">
+            <section id="home" className="md:flex md:flex-col lazy overflow-hidden">
+                <div className="relative h-80 md:h-[calc(100vh-150px)] max-h-[650px] w-full overflow-hidden">
                     {/* Bild-Container mit clip-path für abgerundete Kanten */}
                     <div className="absolute inset-0 image-clip-horizontal bg-green-50" >
                         <Image
