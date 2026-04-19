@@ -113,7 +113,7 @@ const symptoms: ISymptom[] = [
         ),
     },
     {
-        title: 'Erschöpfungssyndrome',
+        title: 'Erschöpfungs\u00ADsyndrome',
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.3"
@@ -152,7 +152,7 @@ const Symptoms_2: React.FC<ISymptomConfig> = ({...symptomsProbs}) => {
             id="beschwerden"
             className="py-20 bg-gradient-to-b from-white to-stone-50"
         >
-            <div className="container mx-auto px-6 max-w-6xl">
+            <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
 
                 {/* Heading */}
                 <SectionHeader {...sectionHeaderProbs} />
@@ -177,7 +177,7 @@ const Symptoms_2: React.FC<ISymptomConfig> = ({...symptomsProbs}) => {
                                 </div>
 
                                 {/* Titel */}
-                                <h3 className="text-base font-light text-gray-800 leading-snug px-2">
+                                <h3 className="text-base font-light text-gray-800 leading-snug px-1 sm:px-2">
                                     {symptom.title}
                                 </h3>
                             </div>
