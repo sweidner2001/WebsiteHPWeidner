@@ -46,6 +46,8 @@ const NaturheilpraxisWebsite = () => {
       "Durch regelmäßige Fortbildungen erweitere ich mein umfängliches Fachwissen fortlaufend um Ihnen stets die bestmögliche Behandlung bieten zu können."],
     // imageSrc:"/img/Carola_2_zg.jpg",
     imageSrc:"/img/Carola_5_zg.jpg",
+    // imageSrc:"/img/Carola_6_zg.jpg",
+    // imageSrc:"/img/Carola_7_zg.jpg",
     imageAlt: 'Naturheilpraxis',
     onlyRoundImage: true,
     showHeading: true,

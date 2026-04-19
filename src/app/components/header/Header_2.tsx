@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 interface Header2Props {
     activeSection: string;
@@ -15,8 +16,16 @@ export default function Header2({ activeSection, isMenuOpen, onMenuToggle, onSec
             <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-sm">
                 <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                 <div className="flex items-center space-x-2">
-                    <div className="w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] shrink-0 rounded-full bg-green-100 flex items-center justify-center">
-                        <span className="text-green-600 font-semibold">NH</span>
+                    <div className="h-1 shrink-0 flex items-center justify-center">
+                        <Image
+                            src="/img/Logo 1_blume.png"
+                            alt="NH"
+                            height={100}
+                            width={0}
+                            sizes="100vw"
+                            className="h-12 w-auto"
+                            priority
+                        />
                     </div>
                     <span className="text-xl font-light text-gray-700">Naturheilpraxis Carola Weidner</span>
                 </div>
