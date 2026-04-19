@@ -61,7 +61,7 @@ export default function Header2({ activeSection, isMenuOpen, onMenuToggle, onSec
             </div>
 
             {/* Mobile Navigation */}
-            <div className={`md:hidden bg-white transition-all duration-300 ${isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+            <div className={`md:hidden bg-white/40 transition-all duration-300 ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                 <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
                     {['home', 'philosophie', 'leistungen', 'ueber-mich', 'kontakt'].map((item) => (
                         <button
