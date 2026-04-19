@@ -71,7 +71,7 @@ export default function Header2({ activeSection, isMenuOpen, onMenuToggle, onSec
                             }`}
                             onClick={() => onSectionClick(item)}
                         >
-                            {item.replace('-', ' ')}
+                            {item.replace('-', ' ').replace('ueber', 'über')}
                         </button>
                     ))}
                 </div>
