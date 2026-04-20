@@ -12,32 +12,38 @@ export default function GoogleAnalytics() {
 
     useEffect(() => {
         const checkConsent = () => {
-            if (typeof window !== 'undefined' && window.klaro) {
-                const manager = window.klaro.getManager(window.klaroConfig);
-                const hasConsent = manager.getConsent('google-analytics');
-                setConsented(hasConsent);
+            // Direkt den Klaro-Cookie lesen – nur wenn er existiert, hat der User bestätigt
+            const match = document.cookie.match(/(?:^|;\s*)klaro=([^;]*)/);
+            if (match) {
+                try {
+                    const consents = JSON.parse(decodeURIComponent(match[1]));
+                    const hasConsent = !!consents['google-analytics'];
+                    setConsented(hasConsent);
 
-                if (!hasConsent) {
-                    // GA-Cookies bei Widerruf löschen
-                    document.cookie.split(';').forEach((c) => {
-                        const cookieName = c.trim().split('=')[0];
-                        if (/^_ga/.test(cookieName) || cookieName === '_gid' || cookieName === '_gat') {
-                            document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${window.location.hostname}`;
-                        }
-                    });
+                    if (!hasConsent) {
+                        // GA-Cookies bei Widerruf löschen
+                        document.cookie.split(';').forEach((c) => {
+                            const cookieName = c.trim().split('=')[0];
+                            if (/^_ga/.test(cookieName) || cookieName === '_gid' || cookieName === '_gat') {
+                                document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${window.location.hostname}`;
+                            }
+                        });
+                    }
+                } catch {
+                    setConsented(false);
                 }
+            } else {
+                // Kein Cookie vorhanden → User hat noch nicht bestätigt
+                setConsented(false);
             }
         };
 
         checkConsent();
 
-        window.addEventListener('klaro:consent-updated', checkConsent);
+        // Polling alle 500ms, um Cookie-Änderungen mitzubekommen
         const interval = setInterval(checkConsent, 500);
 
-        return () => {
-            window.removeEventListener('klaro:consent-updated', checkConsent);
-            clearInterval(interval);
-        };
+        return () => clearInterval(interval);
     }, []);
 
     if (!consented) return null;
