@@ -48,7 +48,7 @@ const klaroConfig = {
             name: 'google-maps',
             title: 'Google Maps',
             purposes: ['maps'],
-            default: false,
+            default: true,
             required: false,
             translations: {
                 de: {
@@ -61,7 +61,7 @@ const klaroConfig = {
             name: 'google-analytics',
             title: 'Google Analytics',
             purposes: ['analytics'],
-            default: false,
+            default: true,
             required: false,
             // Klaro löscht diese Cookies automatisch bei Widerruf
             cookies: [
