@@ -3,6 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 import Footer from '@/app/components/footer/Footer';
 
+// Metadaten werden über src/app/datenschutz/layout.tsx gesetzt (siehe separate Datei)
+
 export default function Datenschutz() {
     return (
         <div className="min-h-screen bg-white font-sans text-gray-800">
