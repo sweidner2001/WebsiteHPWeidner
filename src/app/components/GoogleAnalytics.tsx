@@ -5,7 +5,19 @@ import Script from 'next/script';
 
 // ⚠️ HIER Ihre Google Analytics Measurement ID eintragen:
 // Format: G-XXXXXXXXXX  (zu finden unter analytics.google.com → Verwaltung → Datenstreams)
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+const GA_MEASUREMENT_ID = 'G-JDZNQ7S6SX';
+
+
+// <!-- Google tag (gtag.js) -->
+{/*<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDZNQ7S6SX"></script>*/}
+{/*<script>*/}
+{/*    window.dataLayer = window.dataLayer || [];*/}
+{/*    function gtag(){dataLayer.push(arguments);}*/}
+{/*    gtag('js', new Date());*/}
+
+{/*    gtag('config', 'G-JDZNQ7S6SX');*/}
+{/*</script>*/}
+
 
 export default function GoogleAnalytics() {
     const [consented, setConsented] = useState(false);
