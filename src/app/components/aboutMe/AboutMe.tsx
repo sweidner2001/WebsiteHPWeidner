@@ -38,7 +38,7 @@ const renderList = (list?: (string | string[])[], asBulletPoints: boolean = fals
                             <li key={index}>
                                 <ul className="ml-5 space-y-2">
                                     {line.map((subItem, subIndex) => (
-                                        <li key={`${index}-${subIndex}`} className="flex items-center">
+                                        <li key={`${index}-${subIndex}`} className="flex items-center text-justify text-pretty">
                                             <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
                                             {subItem}
                                         </li>
@@ -50,7 +50,7 @@ const renderList = (list?: (string | string[])[], asBulletPoints: boolean = fals
 
                     // Normales Rendering für strings
                     return (
-                        <li key={index} className="flex items-center">
+                        <li key={index} className="flex items-center text-justify text-pretty">
                             <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
                             {line}
                         </li>
@@ -67,7 +67,7 @@ const renderList = (list?: (string | string[])[], asBulletPoints: boolean = fals
                 <div key={index} className="mb-4">
                     <ul className="ml-5 space-y-1">
                         {line.map((subItem, subIndex) => (
-                            <li key={`${index}-${subIndex}`} className="flex items-center text-gray-600 font-light">
+                            <li key={`${index}-${subIndex}`} className="flex items-center text-gray-600 font-light text-justify text-pretty">
                                 <span className="w-2 h-2 bg-green-600 rounded-full mr-3"></span>
                                 {subItem}
                             </li>
@@ -79,7 +79,7 @@ const renderList = (list?: (string | string[])[], asBulletPoints: boolean = fals
 
         // Normales Rendering für strings
         return (
-            <p key={index} className="text-gray-600 mt-4 mb-1 font-light">
+            <p key={index} lang='de' className="text-gray-600 mt-4 mb-1 font-light text-justify text-pretty">
                 {line}
             </p>
         );

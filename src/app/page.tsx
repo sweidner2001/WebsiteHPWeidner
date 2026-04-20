@@ -46,6 +46,8 @@ const NaturheilpraxisWebsite = () => {
       "Durch regelmäßige Fortbildungen erweitere ich mein umfängliches Fachwissen fortlaufend um Ihnen stets die bestmögliche Behandlung bieten zu können."],
     // imageSrc:"/img/Carola_2_zg.jpg",
     imageSrc:"/img/Carola_5_zg.jpg",
+    // imageSrc:"/img/Carola_6_zg.jpg",
+    // imageSrc:"/img/Carola_7_zg.jpg",
     imageAlt: 'Naturheilpraxis',
     onlyRoundImage: true,
     showHeading: true,
@@ -70,10 +72,10 @@ const NaturheilpraxisWebsite = () => {
   const contactText: IContactTextProps = {
     title: 'Praxisinformationen',
     addressHeading: 'Adresse',
-    lst_address: ['Naturheilpraxis Calendula', 'Pfaffenreuth 22', '92715 Püchersreuth'],
+    lst_address: ['Naturheilpraxis Carola Weidner', 'Pfaffenreuth 22', '92715 Püchersreuth'],
     contactHeading: 'Kontakt',
-    phone: '01234 / 567890',
-    email: 'info@naturheilpraxis-beispiel.de',
+    phone: '09681 / 9189483',
+    email: 'info@naturheilpraxis-weidner.de',
     openingHeading: 'Öffnungszeiten',
     openingHours1: ['Termine nach Vereinbarung'],
     openingHours1_asBulletPoints: false,
@@ -105,7 +107,7 @@ const NaturheilpraxisWebsite = () => {
   // Scroll-Funktionalität
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'philosophie', 'leistungen', 'ueber-mich', 'kontakt'];
+      const sections = ['home', 'philosophie', 'symptome', 'leistungen', 'ueber-mich', 'kontakt'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
         // Check if we are within the section (100px from top of viewport)

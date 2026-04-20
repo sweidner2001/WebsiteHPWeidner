@@ -12,7 +12,7 @@ interface IService {
 
 const services: IService[] = [
     {
-        title: 'Akkupunktur',
+        title: 'Akupunktur',
         description: ['Traditionelle chinesische Medizin zur Harmonisierung des Energieflusses. Schmerz ist der Schrei nach fließender Energie. Akkupunktur trägt damit zur und Linderung verschiedener Beschwerden bei.'],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -228,7 +228,7 @@ const Services_2 = () => {
                                     <div className={`w-8 h-px mb-4 group-hover:w-14 transition-all duration-500 ${t.line}`}></div>
                                     <div className="space-y-2">
                                         {service.description.map((paragraph, idx) => (
-                                            <p key={idx} className={`text-sm font-[350] leading-relaxed ${t.text}`}>
+                                            <p key={idx} lang="de" className={`text-base font-[350] text-justify hyphens-auto leading-relaxed ${t.text}`}>
                                                 {paragraph}
                                             </p>
                                         ))}

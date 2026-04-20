@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 interface Header2Props {
     activeSection: string;
@@ -15,15 +16,23 @@ export default function Header2({ activeSection, isMenuOpen, onMenuToggle, onSec
             <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-sm">
                 <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                 <div className="flex items-center space-x-2">
-                    <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-                        <span className="text-green-600 font-semibold">NH</span>
+                    <div className="h-1 shrink-0 flex items-center justify-center">
+                        <Image
+                            src="/img/Logo 1_blume.png"
+                            alt="NH"
+                            height={100}
+                            width={0}
+                            sizes="100vw"
+                            className="h-12 w-auto"
+                            priority
+                        />
                     </div>
-                    <span className="text-xl font-light text-gray-700">Naturheilpraxis Carola Weidner</span>
+                    <span className="text-xl font-light text-gray-700 text-balance">Naturheilpraxis Carola Weidner</span>
                 </div>
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex space-x-8">
-                    {['home', 'philosophie', 'leistungen', 'ueber-mich', 'kontakt'].map((item) => (
+                    {['home', 'philosophie', 'symptome', 'leistungen', 'ueber-mich', 'kontakt'].map((item) => (
                         <button
                             key={item}
                             className={`capitalize transition-all duration-0 cursor-pointer ${
@@ -52,7 +61,7 @@ export default function Header2({ activeSection, isMenuOpen, onMenuToggle, onSec
             </div>
 
             {/* Mobile Navigation */}
-            <div className={`md:hidden bg-white transition-all duration-300 ${isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+            <div className={`md:hidden bg-white/40 transition-all duration-300 ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                 <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
                     {['home', 'philosophie', 'leistungen', 'ueber-mich', 'kontakt'].map((item) => (
                         <button
@@ -62,7 +71,7 @@ export default function Header2({ activeSection, isMenuOpen, onMenuToggle, onSec
                             }`}
                             onClick={() => onSectionClick(item)}
                         >
-                            {item.replace('-', ' ')}
+                            {item.replace('-', ' ').replace('ueber', 'über')}
                         </button>
                     ))}
                 </div>

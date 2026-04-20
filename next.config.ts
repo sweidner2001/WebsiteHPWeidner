@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
     output: 'export',
     images: {
         unoptimized: true,
+        qualities: [75, 85, 100],
     },
     // ...(isExport ? { output: 'export' as const } : {}),
 };

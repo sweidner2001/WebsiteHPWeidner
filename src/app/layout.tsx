@@ -4,6 +4,7 @@ import "./globals.css";
 import "klaro/dist/klaro.min.css";
 import AosProvider from "./components/AosProvider";
 import KlaroProvider from "./components/KlaroProvider";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <KlaroProvider />
+        <GoogleAnalytics />
         <AosProvider>
           {children}
         </AosProvider>

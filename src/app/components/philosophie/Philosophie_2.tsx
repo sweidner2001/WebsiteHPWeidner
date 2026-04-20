@@ -27,7 +27,7 @@ const philsophieProps: IPhilsophieProps = {
 const Philosophie_2: React.FC = () => {
 
     return (
-        <section id="leistungen" className="py-22 mt-2">
+        <section id="philosophie" className="py-22 mt-2">
             <div className="container mx-auto sm:px-16 px-6 max-w-6xl text-center">
 
                 {/* Heading */}

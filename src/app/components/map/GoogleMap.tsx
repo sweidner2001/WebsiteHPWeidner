@@ -2,8 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 
-import type { KlaroConfig } from 'klaro';
-
 export interface IGoogleMapProps {
     src: string;
     className?: string;
@@ -11,12 +9,6 @@ export interface IGoogleMapProps {
     minHeight?: string;
 }
 
-declare global {
-    interface Window {
-        klaro: typeof import('klaro');
-        klaroConfig: KlaroConfig;
-    }
-}
 
 const GoogleMap: React.FC<IGoogleMapProps> = ({
     src,
@@ -27,24 +19,27 @@ const GoogleMap: React.FC<IGoogleMapProps> = ({
 
     useEffect(() => {
         const checkConsent = () => {
-            if (typeof window !== 'undefined' && window.klaro) {
-                const manager = window.klaro.getManager(window.klaroConfig);
-                setConsented(manager.getConsent('google-maps'));
+            // Direkt den Klaro-Cookie lesen – nur wenn er existiert, hat der User bestätigt
+            const match = document.cookie.match(/(?:^|;\s*)klaro=([^;]*)/);
+            if (match) {
+                try {
+                    const consents = JSON.parse(decodeURIComponent(match[1]));
+                    setConsented(!!consents['google-maps']);
+                } catch {
+                    setConsented(false);
+                }
+            } else {
+                // Kein Cookie vorhanden → User hat noch nicht bestätigt
+                setConsented(false);
             }
         };
 
         checkConsent();
 
-        // Auf Änderungen reagieren (z.B. nach Bestätigung im Banner)
-        const handler = () => checkConsent();
-        window.addEventListener('klaro:consent-updated', handler);
-        // Klaro feuert auch ein custom event – polling als Fallback
+        // Polling alle 500ms, um Cookie-Änderungen mitzubekommen
         const interval = setInterval(checkConsent, 500);
 
-        return () => {
-            window.removeEventListener('klaro:consent-updated', handler);
-            clearInterval(interval);
-        };
+        return () => clearInterval(interval);
     }, []);
 
     const handleAccept = () => {

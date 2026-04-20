@@ -127,7 +127,7 @@ const symptoms: ISymptom[] = [
 const Symptoms = () => {
     return (
         <section
-            id="beschwerden"
+            id="symptome"
             className="py-24 bg-stone-50"
         >
             <div className="container mx-auto px-6 max-w-6xl">
