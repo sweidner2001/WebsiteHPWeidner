@@ -1,67 +1,50 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Script from 'next/script';
 
-// ⚠️ HIER Ihre Google Analytics Measurement ID eintragen:
-// Format: G-XXXXXXXXXX  (zu finden unter analytics.google.com → Verwaltung → Datenstreams)
 const GA_MEASUREMENT_ID = 'G-JDZNQ7S6SX';
 
-
-// <!-- Google tag (gtag.js) -->
-{/*<script async src="https://www.googletagmanager.com/gtag/js?id=G-JDZNQ7S6SX"></script>*/}
-{/*<script>*/}
-{/*    window.dataLayer = window.dataLayer || [];*/}
-{/*    function gtag(){dataLayer.push(arguments);}*/}
-{/*    gtag('js', new Date());*/}
-
-{/*    gtag('config', 'G-JDZNQ7S6SX');*/}
-{/*</script>*/}
-
-
 export default function GoogleAnalytics() {
-    const [consented, setConsented] = useState(false);
 
     useEffect(() => {
-        const checkConsent = () => {
-            // Direkt den Klaro-Cookie lesen – nur wenn er existiert, hat der User bestätigt
+        const updateConsent = () => {
             const match = document.cookie.match(/(?:^|;\s*)klaro=([^;]*)/);
+            let hasConsent = false;
+
             if (match) {
                 try {
                     const consents = JSON.parse(decodeURIComponent(match[1]));
-                    const hasConsent = !!consents['google-analytics'];
-                    setConsented(hasConsent);
-
-                    if (!hasConsent) {
-                        // GA-Cookies bei Widerruf löschen
-                        document.cookie.split(';').forEach((c) => {
-                            const cookieName = c.trim().split('=')[0];
-                            if (/^_ga/.test(cookieName) || cookieName === '_gid' || cookieName === '_gat') {
-                                document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${window.location.hostname}`;
-                            }
-                        });
-                    }
+                    hasConsent = !!consents['google-analytics'];
                 } catch {
-                    setConsented(false);
+                    hasConsent = false;
                 }
-            } else {
-                // Kein Cookie vorhanden → User hat noch nicht bestätigt
-                setConsented(false);
+            }
+
+            if (typeof window.gtag === 'function') {
+                if (hasConsent) {
+                    window.gtag('consent', 'update', { analytics_storage: 'granted' });
+                } else {
+                    window.gtag('consent', 'update', { analytics_storage: 'denied' });
+                    // GA-Cookies löschen
+                    document.cookie.split(';').forEach((c) => {
+                        const cookieName = c.trim().split('=')[0];
+                        if (/^_ga/.test(cookieName) || cookieName === '_gid' || cookieName === '_gat') {
+                            document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${window.location.hostname}`;
+                        }
+                    });
+                }
             }
         };
 
-        checkConsent();
-
-        // Polling alle 500ms, um Cookie-Änderungen mitzubekommen
-        const interval = setInterval(checkConsent, 500);
-
+        updateConsent();
+        const interval = setInterval(updateConsent, 500);
         return () => clearInterval(interval);
     }, []);
 
-    if (!consented) return null;
-
     return (
         <>
+            {/* Google Tag – immer geladen, damit Google das Tag erkennt */}
             <Script
                 src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
                 strategy="afterInteractive"
@@ -70,6 +53,8 @@ export default function GoogleAnalytics() {
                 {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
+                    // Consent-Modus: standardmäßig verweigert, bis Klaro-Einwilligung
+                    gtag('consent', 'default', { analytics_storage: 'denied' });
                     gtag('js', new Date());
                     gtag('config', '${GA_MEASUREMENT_ID}', {
                         anonymize_ip: true,
