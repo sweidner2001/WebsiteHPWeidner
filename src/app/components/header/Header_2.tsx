@@ -32,7 +32,7 @@ export default function Header2({ activeSection, isMenuOpen, onMenuToggle, onSec
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex space-x-8">
-                    {['home', 'philosophie', 'leistungen', 'ueber-mich', 'kontakt'].map((item) => (
+                    {['home', 'philosophie', 'symptome', 'leistungen', 'ueber-mich', 'kontakt'].map((item) => (
                         <button
                             key={item}
                             className={`capitalize transition-all duration-0 cursor-pointer ${

@@ -12,7 +12,7 @@ interface IService {
 
 const services: IService[] = [
     {
-        title: 'Akkupunktur',
+        title: 'Akupunktur',
         description: ['Traditionelle chinesische Medizin zur Harmonisierung des Energieflusses. Schmerz ist der Schrei nach fließender Energie. Akkupunktur trägt damit zur und Linderung verschiedener Beschwerden bei.'],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">

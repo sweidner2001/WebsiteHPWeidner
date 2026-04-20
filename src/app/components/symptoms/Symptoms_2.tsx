@@ -149,7 +149,7 @@ const Symptoms_2: React.FC<ISymptomConfig> = ({...symptomsProbs}) => {
     useLazy();
     return (
         <section
-            id="beschwerden"
+            id="symptome"
             className="py-20 bg-gradient-to-b from-white to-stone-50"
         >
             <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
