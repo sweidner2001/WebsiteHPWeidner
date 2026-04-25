@@ -23,9 +23,9 @@ const services: IService[] = [
         span: 'lg:col-span-2 md:col-span-3 md:row-span-1 lg:order-1 md:order-1 order-1',
     },
     {
-        title: 'Cranio-Sakrale-Osteopathie',
+        title: 'Osteopathie (Cranio-Sacral)',
         description: [  //Alternativer Pfeil: \u2794
-            'Die Cranio-Sakrale-Osteopathie ist ein Teilgebiet der Osteopathie. Diese sanfte Behandlungsform wirkt sehr tief auf Körper und Seele. Sie eignet sich folglich zur Behandlung einer Vielzahl an Beschwerden wie beispielsweise Schlafstörungen, Kopfschmerzen, Bandscheibenproblemen, Gelenkbeschwerden, Konzentrationsschwierigkeiten, Stress und Erschöpfungszuständen. Es wird eine tiefe Entspannung gefördert.',
+            'Die Cranio-Sacrale-Osteopathie ist ein Teilgebiet der Osteopathie. Diese sanfte Behandlungsform wirkt sehr tief auf Körper und Seele. Sie eignet sich folglich zur Behandlung einer Vielzahl an Beschwerden wie beispielsweise Schlafstörungen, Kopfschmerzen, Bandscheibenproblemen, Gelenkbeschwerden, Konzentrationsschwierigkeiten, Stress und Erschöpfungszuständen. Es wird eine tiefe Entspannung gefördert.',
             '\u27A4 Wenn die Gelenke frei sind, macht der Körper den Rest!'
         ],
         icon: (
@@ -37,7 +37,7 @@ const services: IService[] = [
         span: 'lg:col-span-4 md:col-span-6 md:row-span-1 lg:order-2 md:order-3 order-2',
     },
     {
-        title: 'Dorn-und Breusstherapie',
+        title: 'Dorn- und Breusstherapie',
         description: ['Eine schonende Wirbelsäulen- und Gelenkbehandlung zur Korrektur von Fehlstellungen und Entlastung des Bewegungsapparates nach ihrem Begründer Dieter Dorn.'],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">

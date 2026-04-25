@@ -18,11 +18,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Naturheilpraxis Carola Weidner | Heilpraktikerin in Püchersreuth",
+    default: "Naturheilpraxis Carola Weidner | Heilpraktikerin im Landkreis Neustadt a.d. Waldnaab",
     template: "%s | Naturheilpraxis Carola Weidner",
   },
   description:
-    "Naturheilpraxis Carola Weidner in Püchersreuth – Heilpraktikerin mit ganzheitlichem Ansatz. Naturheilkunde, Homöopathie, Akupunktur & mehr. Jetzt Termin vereinbaren!",
+    "Naturheilpraxis Carola Weidner im Landkreis Neustadt a.d. Waldnaab – Heilpraktikerin mit ganzheitlichem Ansatz. Naturheilkunde, Osteopathie, Akupunktur, Dorn-und Breusstherapie & mehr.",
   keywords: [
     "Naturheilpraxis",
     "Heilpraktikerin",
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Naturheilpraxis Carola Weidner | Heilpraktikerin in Püchersreuth",
+    title: "Naturheilpraxis Carola Weidner | Heilpraktikerin im Landkreis Neustadt a.d. Waldnaab",
     description:
-      "Ganzheitliche Naturheilkunde in Püchersreuth. Heilpraktikerin Carola Weidner bietet individuelle Therapien – Homöopathie, Akupunktur und mehr.",
+        "Naturheilpraxis Carola Weidner im Landkreis Neustadt a.d. Waldnaab – Heilpraktikerin mit ganzheitlichem Ansatz. Naturheilkunde, Osteopathie, Akupunktur, Dorn-und Breusstherapie & mehr.",
     url: "https://www.naturheilpraxis-weidner.de",
     siteName: "Naturheilpraxis Carola Weidner",
     locale: "de_DE",
