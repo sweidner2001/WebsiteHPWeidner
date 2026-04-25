@@ -9,7 +9,7 @@
     /*border-radius: 0.375rem;*/
 }
 
-@media (max-width: 767px) {
+@media (max-width: 639px) {
     .image-clip {
         clip-path: none !important;
     }
@@ -19,7 +19,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
     .image-clip {
         clip-path: url(#curve-clip) !important;
     }

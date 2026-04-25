@@ -1,38 +1,38 @@
-.image-clip img {
-    object-position: center center;
-    object-fit: cover;
-}
+/*.image-clip img {*/
+/*    object-position: center center;*/
+/*    object-fit: cover;*/
+/*}*/
 
-.image-clip {
-    overflow: hidden;
-}
+/*.image-clip {*/
+/*    overflow: hidden;*/
+/*}*/
 
-@media (max-width: 767px) {
-    .image-clip {
-        clip-path: none !important;
-    }
+/*@media (max-width: 767px) {*/
+/*    .image-clip {*/
+/*        clip-path: none !important;*/
+/*    }*/
 
-    .image-clip img {
-        object-position: center 10%;
-    }
-}
+/*    .image-clip img {*/
+/*        object-position: center 10%;*/
+/*    }*/
+/*}*/
 
-@media (min-width: 768px) {
-    .image-clip {
-        /*clip-path: ellipse(80% 100% at 15% 55%) !important;*/
-        clip-path: url(#curve-clip) !important;
-    }
+/*@media (min-width: 768px) {*/
+/*    .image-clip {*/
+/*        !*clip-path: ellipse(80% 100% at 15% 55%) !important;*!*/
+/*        clip-path: url(#curve-clip) !important;*/
+/*    }*/
 
-    .image-clip img {
-        object-position: center center;
-    }
+/*    .image-clip img {*/
+/*        object-position: center center;*/
+/*    }*/
 
-    /* Bild-Container größer machen für Auslauf */
-    .image-container-extended {
-        /*min-height: calc(100vh + 5vh) !important;*/
-        min-height: calc(100vh + 1vh) !important;
-    }
-}
+/*    !* Bild-Container größer machen für Auslauf *!*/
+/*    .image-container-extended {*/
+/*        !*min-height: calc(100vh + 5vh) !important;*!*/
+/*        min-height: calc(100vh + 1vh) !important;*/
+/*    }*/
+/*}*/
 
 
 
@@ -45,45 +45,45 @@
 /*    overflow: hidden;*/
 /*}*/
 
-@media (min-width: 768px) {
-    /*.image-clip-horizontal {*/
-    /*    clip-path: url(#curve-clip-horizontal) !important;*/
-    /*}*/
+/*@media (min-width: 768px) {*/
+/*    !*.image-clip-horizontal {*!*/
+/*    !*    clip-path: url(#curve-clip-horizontal) !important;*!*/
+/*    !*}*!*/
 
-    /*.image-clip-horizontal img {*/
-    /*    object-position: center center;*/
-    /*}*/
+/*    !*.image-clip-horizontal img {*!*/
+/*    !*    object-position: center center;*!*/
+/*    !*}*!*/
 
-    /* Bild-Container größer machen für Auslauf */
-    .image-container-extended {
-        /*min-height: calc(100vh + 5vh) !important;*/
-        min-height: calc(100vh + 1vh) !important;
-    }
-}
+/*    !* Bild-Container größer machen für Auslauf *!*/
+/*    .image-container-extended {*/
+/*        !*min-height: calc(100vh + 5vh) !important;*!*/
+/*        min-height: calc(100vh + 1vh) !important;*/
+/*    }*/
+/*}*/
 
 /* Styles für "Über mich" Section mit clipPath */
-.image-clip-about img {
-    object-fit: cover;
-}
+/*.image-clip-about img {*/
+/*    object-fit: cover;*/
+/*}*/
 
-.image-clip-about {
-    overflow: hidden;
-}
+/*.image-clip-about {*/
+/*    overflow: hidden;*/
+/*}*/
 
-@media (min-width: 768px) {
-    .image-clip-about {
-        clip-path: url(#curve-clip-about) !important;
-    }
+/*@media (min-width: 768px) {*/
+/*    .image-clip-about {*/
+/*        clip-path: url(#curve-clip-about) !important;*/
+/*    }*/
 
-    .image-clip-about img {
-        object-position: center center;
-    }
+/*    .image-clip-about img {*/
+/*        object-position: center center;*/
+/*    }*/
 
-    /* Bild-Container größer machen für Auslauf */
-    .image-container-extended {
-        min-height: calc(100vh + 1vh) !important;
-    }
-}
+/*    !* Bild-Container größer machen für Auslauf *!*/
+/*    .image-container-extended {*/
+/*        min-height: calc(100vh + 1vh) !important;*/
+/*    }*/
+/*}*/
 
 
 

@@ -6,9 +6,10 @@ import {useLazy} from "@/app/hooks/useLazy";
 
 interface HeroSectionProps {
     onSectionClick: (sectionId: string) => void;
+    imagePath: string;
 }
 
-const HeroSection_2 = ({ onSectionClick }: HeroSectionProps) => {
+const HeroSection_2 = ({ onSectionClick, imagePath}: HeroSectionProps) => {
     useLazy();
     return (
         <>
@@ -62,7 +63,7 @@ const HeroSection_2 = ({ onSectionClick }: HeroSectionProps) => {
                     {/* Bild-Container mit clip-path für abgerundete Kanten */}
                     <div className="absolute inset-0 image-clip-horizontal bg-green-50" >
                         <Image
-                            src="/img/Blumenwiese_1_zg.jpg"
+                            src={imagePath}
                             alt="Naturheilpraxis"
                             fill
                             priority

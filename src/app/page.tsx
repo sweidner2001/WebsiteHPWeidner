@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Footer from '@/app/components/footer/Footer';
 import React, {useState, useEffect, type ReactNode} from 'react';
 import Header from '@/app/components/header/Header';
+import { Header_2 } from '@/app/components/header/Header_2';
 import HeroSection from '@/app/components/hero/HeroSection';
 import SeperatorSection from '@/app/components/seperator/SeperatorSection';
 import HeroSection_2 from '@/app/components/hero/HeroSection_2';
@@ -138,6 +139,7 @@ const NaturheilpraxisWebsite = () => {
   return (
       <div className="min-h-screen bg-white font-sans text-gray-800">
 
+
         {/*<Header*/}
         {/*    activeSection={activeSection}*/}
         {/*    isMenuOpen={isMenuOpen}*/}
@@ -145,17 +147,32 @@ const NaturheilpraxisWebsite = () => {
         {/*    onSectionClick={scrollToSection}*/}
         {/*    restPlaceForNavbar={true}*/}
         {/*/>*/}
-        {/*<HeroSection_2 onSectionClick={scrollToSection}/>*/}
+        {/*<HeroSection_2 onSectionClick={scrollToSection} imagePath="/img/Blumenwiese_1_zg.jpg"/>*/}
 
-        {/* Hero Section Komponente */}
-        <Header
-            activeSection={activeSection}
-            isMenuOpen={isMenuOpen}
-            onMenuToggle={setIsMenuOpen}
-            onSectionClick={scrollToSection}
-            restPlaceForNavbar={false}
-        />
-        <HeroSection onSectionClick={scrollToSection}/>
+
+        {/* Mobile (< md): Header + HeroSection */}
+        <div className="hidden sm:block">
+          {/*<Header*/}
+          {/*    activeSection={activeSection}*/}
+          {/*    isMenuOpen={isMenuOpen}*/}
+          {/*    onMenuToggle={setIsMenuOpen}*/}
+          {/*    onSectionClick={scrollToSection}*/}
+          {/*    restPlaceForNavbar={false}*/}
+          {/*/>*/}
+          <HeroSection onSectionClick={scrollToSection} />
+        </div>
+
+        {/* Desktop (>= md): Header_2 + HeroSection_2 */}
+        <div className="block sm:hidden">
+          <Header
+              activeSection={activeSection}
+              isMenuOpen={isMenuOpen}
+              onMenuToggle={setIsMenuOpen}
+              onSectionClick={scrollToSection}
+              restPlaceForNavbar={true}
+          />
+          <HeroSection_2 onSectionClick={scrollToSection} imagePath="/img/Zierkirsche_1_gespiegelt.jpg"/>
+        </div>
 
         {/* Philosophie Section */}
         {/*<Philosophie />*/}
