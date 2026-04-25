@@ -37,7 +37,7 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
             <section id="home" className="lazy min-h-screen flex flex-col md:flex-row items-center relative md:overflow-visible overflow-hidden pt-16">
                 {/* Organischer Bildcontainer mit Bogen-Form - nur auf md+ sichtbar */}
                 <div
-                    className="w-full md:absolute md:left-0 md:top-0 md:h-full md:w-1/3 lg:w-1/2 hidden sm:block sm:h-48 md:overflow-visible relative image-container-extended">
+                    className="w-full md:absolute md:left-0 md:top-0 md:h-full md:w-1/3 lg:w-1/2 block h-36 sm:block sm:h-48 md:overflow-visible relative image-container-extended">
                     <div className="absolute left-0 top-0 h-full w-full bg-green-50 image-clip">
                         <Image
                             src="/img/Zierkirsche_1_gespiegelt.jpg"
@@ -54,7 +54,7 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
                 <div
                     className="relative flex items-center justify-end w-full md:w-3/5 lg:w-1/2 md:ml-auto px-6 lg:px-2 py-12 md:py-0 z-10">
                     <div className="max-w-2xl pr-12">
-                        <h1 className="text-4xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-gray-800 mb-6 leading-tight">
                             Ganzheitliche <span className="text-green-600">Naturheilkunde</span> für nachhaltige
                             Gesundheit
                         </h1>
