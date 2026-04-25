@@ -383,7 +383,8 @@ const symptoms: ISymptom[] = [
     },
     {
         title: 'Magen-Darm-Erkrankungen',
-        icon: <Image src="/IconSymptoms/diarrhea.svg" alt="Bild" width={iconSize} height={iconSize}/>,
+        // icon: <Image src="/IconSymptoms/diarrhea.svg" alt="Bild" width={iconSize} height={iconSize}/>,
+        icon: <Image src="/IconSymptoms/intestine.svg" alt="Bild" width={iconSize} height={iconSize}/>,
     },
     {
         title: 'Allergien',
@@ -400,19 +401,26 @@ const symptoms: ISymptom[] = [
     },
     {
         title: 'Hauterkrankungen',
-        icon: <Image src="/IconSymptoms/allergy.svg" alt="Bild" width={iconSize} height={iconSize}/>,
+        // icon: <Image src="/IconSymptoms/allergy.svg" alt="Bild" width={iconSize} height={iconSize}/>,
+        icon: <Image src="/IconSymptoms/skinDisease.svg" alt="Bild" width={iconSize} height={iconSize}/>,
+        // icon: <Image src="/IconSymptoms/skinDisease_2.svg" alt="Bild" width={iconSize} height={iconSize}/>,
     },
     {
         title: 'Frauenbeschwerden',
-        icon: <Image src="/IconSymptoms/stress.svg" alt="Bild" width={iconSize} height={iconSize}/>,
+        // icon: <Image src="/IconSymptoms/stress.svg" alt="Bild" width={iconSize} height={iconSize}/>,
+        // icon: <Image src="/IconSymptoms/menstrual-cycle_1.svg" alt="Bild" width={iconSize} height={iconSize}/>,
+        icon: <Image src="/IconSymptoms/menstrual-cycle_2.svg" alt="Bild" width={iconSize} height={iconSize}/>,
     },
     {
         title: 'Erschöpfungs\u00ADsyndrome',
-        icon: <Image src="/IconSymptoms/tiredness.svg" alt="Bild" width={iconSize} height={iconSize}/>,
+        // icon: <Image src="/IconSymptoms/tiredness.svg" alt="Bild" width={iconSize} height={iconSize}/>,
+        icon: <Image src="/IconSymptoms/exhaustion.svg" alt="Bild" width={iconSize} height={iconSize}/>,
     },
     {
         title: 'Schlafstörungen',
-        icon: <Image src="/IconSymptoms/sleep-disorder.svg" alt="Bild" width={iconSize} height={iconSize}/>,
+        // icon: <Image src="/IconSymptoms/sleep-disorder.svg" alt="Bild" width={iconSize} height={iconSize}/>,
+        // icon: <Image src="/IconSymptoms/sleep-disorder_1.svg" alt="Bild" width={iconSize} height={iconSize}/>,
+        icon: <Image src="/IconSymptoms/sleep.svg" alt="Bild" width={iconSize} height={iconSize}/>,
     },
 ];
 
@@ -440,8 +448,8 @@ const Symptoms_2: React.FC<ISymptomConfig> = ({...symptomsProbs}) => {
                 {/* Symptom Grid – Zentriertes Design */}
                 <div
                     className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 lg:gap-5 gap-4 max-w-6xl lg:mx-auto md:mx-16 sm:mx-4 mx-0">
-                    {symptomsWithModernIcons.map((symptom, index) => {
-                    // {symptoms.map((symptom, index) => {
+                    {/*{symptomsWithModernIcons.map((symptom, index) => {*/}
+                    {symptoms.map((symptom, index) => {
                         return (
                             <div
                                 key={index}
