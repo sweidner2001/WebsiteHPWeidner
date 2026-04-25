@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
-import Link from 'next/link';
 import Footer from '@/app/components/footer/Footer';
-import HeaderHeadingNP from "@/app/components/header/HeaderHeadingNP";
 import {Header_2} from "@/app/components/header/Header_2";
 
 export default function Impressum() {
@@ -12,7 +10,7 @@ export default function Impressum() {
             <Header_2 />
 
             {/* Inhalt */}
-            <main className="pt-28 pb-20 px-6">
+            <main className="pt-28 pb-20 px-6 " lang="de" >
                 <div className="container mx-auto max-w-3xl">
                     <h1 className="text-3xl font-light text-gray-800 mb-8">Impressum</h1>
                     <div className="w-12 h-px bg-[#2d6a4f] mb-10"></div>
@@ -55,16 +53,20 @@ export default function Impressum() {
                             </div>
                         </div>
 
-                        <p className="text-gray-600 font-light leading-relaxed mt-2">
-                            <span className="font-normal">Es gelten folgende berufsrechtliche Regelungen:</span><br />
-                            Gesetz über die berufsmäßige Ausübung der Heilkunde ohne Bestallung (Heilpraktikergesetz)<br />
-                            Einsehbar unter:{' '}
-                            <a href="https://www.gesetze-im-internet.de/heilprg/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-green-600 hover:text-green-700 underline">
-                                www.gesetze-im-internet.de/heilprg
-                            </a>
+                        <p className="text-gray-600 font-light leading-relaxed mt-2 ">
+                            <span className="font-normal">Es gelten folgende berufsrechtliche Regelungen:</span>
+                            <p className="text-justify hyphens-auto">
+                                Gesetz über die berufsmäßige Ausübung der Heilkunde ohne Bestallung (Heilpraktikergesetz)
+                            </p>
+                            <p>
+                                Einsehbar unter:{' '}
+                                <a href="https://www.gesetze-im-internet.de/heilprg/"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   className="text-green-600 hover:text-green-700 underline break-all">
+                                    www.gesetze-im-internet.de/heilprg
+                                </a>
+                            </p>
                         </p>
                     </section>
 
@@ -72,7 +74,8 @@ export default function Impressum() {
                     <section className="mb-8">
                         <h2 className="text-lg font-medium text-gray-800 mb-3">Ergänzende Angaben</h2>
                         <p className="text-gray-600 font-light leading-relaxed">
-                            <span className="font-normal">Berufsverbandsmitgliedschaft in:</span> Fachverband Deutscher Heilpraktiker e.V.<br />
+                            <span className="font-normal">Berufsverbandsmitgliedschaft in:</span> Fachverband Deutscher
+                            Heilpraktiker e.V.<br/>
                             {/*<span className="font-normal">Mitgliedsnummer Berufsverband:</span> xxxx*/}
                         </p>
                         <p className="text-gray-600 font-light leading-relaxed mt-2">
@@ -87,7 +90,7 @@ export default function Impressum() {
                             </a>
                         </p>
                         <p className="text-gray-600 font-light leading-relaxed mt-2">
-                            <span className="font-normal">Rechtsgrundlage der Heilpraktikertätigkeit, Heilpraktikergesetz und Durchführungsverordnung:</span> Nachzulesen im Internet unter{' '}
+                            <span className="font-normal text-justify hyphens-auto">Rechtsgrundlage der Heilpraktikertätigkeit, Heilpraktikergesetz und Durchführungsverordnung:</span> Nachzulesen im Internet unter{' '}
                             <a
                                 href="http://www.gesetze-im-internet.de/heilprg/index.html"
                                 target="_blank"
@@ -128,7 +131,7 @@ export default function Impressum() {
                     </section>
 
                     {/* Streitschlichtung */}
-                    <section className="mb-8">
+                    <section className="mb-8 text-justify hyphens-auto">
                         <h2 className="text-lg font-medium text-gray-800 mb-3">Streitschlichtung</h2>
                         <p className="text-gray-600 font-light leading-relaxed mt-2">
                             Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
@@ -139,7 +142,7 @@ export default function Impressum() {
 
 
                     {/* Urheberrecht */}
-                    <section className="mb-8">
+                    <section className="mb-8 text-justify hyphens-auto">
                         <h2 className="text-lg font-medium text-gray-800 mb-3">Urheberrecht</h2>
                         <p className="text-gray-600 font-light leading-relaxed">
                             Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen
@@ -158,7 +161,7 @@ export default function Impressum() {
                     </section>
 
                     {/* Haftung für fremde Inhalte */}
-                    <section className="mb-8">
+                    <section className="mb-8 text-justify hyphens-auto">
                         <h2 className="text-lg font-medium text-gray-800 mb-3">Haftung für fremde Inhalte</h2>
                         <p className="text-gray-600 font-light leading-relaxed">
                             Soweit diese Seiten direkte oder indirekte Verweise auf fremde Inhalte enthalten, macht sich

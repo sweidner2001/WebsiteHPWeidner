@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import Link from 'next/link';
 import Footer from '@/app/components/footer/Footer';
 import {Header_2} from "@/app/components/header/Header_2";
 
@@ -13,7 +12,7 @@ export default function Datenschutz() {
             <Header_2 />
 
             {/* Inhalt */}
-            <main className="pt-28 pb-20 px-6">
+            <main className="pt-28 pb-20 px-6 text-justify hyphens-auto" lang='de'>
                 <div className="container mx-auto max-w-3xl">
                     <h1 className="text-3xl font-light text-gray-800 mb-8">Datenschutz&shy;erklärung</h1>
                     <div className="w-12 h-px bg-[#2d6a4f] mb-10"></div>
@@ -390,7 +389,7 @@ export default function Datenschutz() {
                             Weitere Informationen zu Font Awesome finden Sie in der Datenschutzerklärung für Font
                             Awesome unter:{' '}
                             <a href="https://fontawesome.com/privacy" target="_blank" rel="noopener noreferrer"
-                               className="text-green-600 hover:text-green-700 underline">
+                               className="text-green-600 hover:text-green-700 underline break-all">
                                 https://fontawesome.com/privacy
                             </a>.
                         </p>
@@ -428,7 +427,7 @@ export default function Datenschutz() {
                             Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission
                             gestützt. Details finden Sie hier:{' '}
                             <a href="https://privacy.google.com/businesses/controllerterms/mccs/" target="_blank"
-                               rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">
+                               rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline break-all">
                                 https://privacy.google.com/businesses/controllerterms/mccs/
                             </a>.
                         </p>
@@ -438,7 +437,7 @@ export default function Datenschutz() {
                             den USA, der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in
                             den USA gewährleisten soll. Weitere Informationen finden Sie unter:{' '}
                             <a href="https://www.dataprivacyframework.gov/participant/5780" target="_blank"
-                               rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">
+                               rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline break-all">
                                 https://www.dataprivacyframework.gov/participant/5780
                             </a>.
                         </p>
@@ -488,11 +487,11 @@ export default function Datenschutz() {
                             Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission
                             gestützt. Details finden Sie hier:{' '}
                             <a href="https://privacy.google.com/businesses/gdprcontrollerterms/" target="_blank"
-                               rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">
+                               rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline break-all">
                                 https://privacy.google.com/businesses/gdprcontrollerterms/
                             </a>{' '}und{' '}
                             <a href="https://privacy.google.com/businesses/gdprcontrollerterms/sccs/" target="_blank"
-                               rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">
+                               rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline break-all">
                                 https://privacy.google.com/businesses/gdprcontrollerterms/sccs/
                             </a>.
                         </p>
@@ -500,7 +499,7 @@ export default function Datenschutz() {
                             Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von
                             Google:{' '}
                             <a href="https://policies.google.com/privacy?hl=de" target="_blank"
-                               rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">
+                               rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline break-all">
                                 https://policies.google.com/privacy?hl=de
                             </a>.
                         </p>
@@ -512,7 +511,7 @@ export default function Datenschutz() {
                             diese Datenschutzstandards einzuhalten. Weitere Informationen hierzu erhalten Sie vom
                             Anbieter unter folgendem Link:{' '}
                             <a href="https://www.dataprivacyframework.gov/participant/5780" target="_blank"
-                               rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline">
+                               rel="noopener noreferrer" className="text-green-600 hover:text-green-700 underline break-all">
                                 https://www.dataprivacyframework.gov/participant/5780
                             </a>.
                         </p>
@@ -523,7 +522,7 @@ export default function Datenschutz() {
                         <p className="text-gray-400 font-light text-sm leading-relaxed">
                             Quelle:{' '}
                             <a href="https://www.e-recht24.de" target="_blank" rel="noopener noreferrer"
-                               className="hover:text-gray-500 underline">
+                               className="hover:text-gray-500 underline break-all">
                                 https://www.e-recht24.de
                             </a>
                         </p>
