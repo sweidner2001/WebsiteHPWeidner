@@ -403,12 +403,10 @@ const symptoms: ISymptom[] = [
         title: 'Hauterkrankungen',
         // icon: <Image src="/IconSymptoms/allergy.svg" alt="Bild" width={iconSize} height={iconSize}/>,
         icon: <Image src="/IconSymptoms/skinDisease.svg" alt="Bild" width={iconSize} height={iconSize}/>,
-        // icon: <Image src="/IconSymptoms/skinDisease_2.svg" alt="Bild" width={iconSize} height={iconSize}/>,
     },
     {
         title: 'Frauenbeschwerden',
         // icon: <Image src="/IconSymptoms/stress.svg" alt="Bild" width={iconSize} height={iconSize}/>,
-        // icon: <Image src="/IconSymptoms/menstrual-cycle_1.svg" alt="Bild" width={iconSize} height={iconSize}/>,
         icon: <Image src="/IconSymptoms/menstrual-cycle_2.svg" alt="Bild" width={iconSize} height={iconSize}/>,
     },
     {
@@ -419,7 +417,6 @@ const symptoms: ISymptom[] = [
     {
         title: 'Schlafstörungen',
         // icon: <Image src="/IconSymptoms/sleep-disorder.svg" alt="Bild" width={iconSize} height={iconSize}/>,
-        // icon: <Image src="/IconSymptoms/sleep-disorder_1.svg" alt="Bild" width={iconSize} height={iconSize}/>,
         icon: <Image src="/IconSymptoms/sleep.svg" alt="Bild" width={iconSize} height={iconSize}/>,
     },
 ];
