@@ -81,8 +81,8 @@ const services: IService[] = [
         span: 'lg:col-span-4 md:col-span-6 md:row-span-1 lg:order-6 md:order-7 order-6',
     },
     {
-        title: 'Spagyrik',
-        description: ['Speziell aufbereitete Essenzen aus Pflanzen, die Körper, Geist und Seele ansprechen und das natürliche Gleichgewicht wieder herstellen.'],
+        title: 'Kinderheilkunde',
+        description: ['Sanfte naturheilkundliche Begleitung von Kindern zur Förderung einer gesunden Entwicklung.'],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -92,8 +92,8 @@ const services: IService[] = [
         span: 'lg:col-span-2 md:col-span-3 md:row-span-1 lg:order-7 md:order-5 order-7',
     },
     {
-        title: 'Kinderheilkunde',
-        description: ['Sanfte naturheilkundliche Begleitung von Kindern zur Förderung einer gesunden Entwicklung.'],
+        title: 'Spagyrik',
+        description: ['Speziell aufbereitete Essenzen aus Pflanzen, die Körper, Geist und Seele ansprechen und das natürliche Gleichgewicht wieder herstellen.'],
         icon: (
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
