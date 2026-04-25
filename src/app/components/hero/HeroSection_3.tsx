@@ -79,7 +79,7 @@ const HeroSection_3 = ({ onSectionClick, imagePath}: HeroSectionProps) => {
                             className="absolute top-0 right-0 bottom-0 w-full md:w-3/5 lg:w-1/2 flex items-center pb-8 justify-center px-6 lg:px-10 bg-black/45 z-10"
                             >
                             {/* text-center*/}
-                            <div className="max-w-2xl text-white lg:ml-0 sm:ml-4 ml-2">
+                            <div className="max-w-2xl text-white lg:ml-0 sm:ml-4 mt-4 ml-2">
                                 {/*<div lang="de"*/}
                                 {/*     className="text-3xl sm:text-4xl md:text-4xl font-normal md:font-normal leading-tight hanging-quote mb-0 ">*/}
                                 {/*    Gesundheit ist nicht alles, <br className="hidden sm:block"/> aber ohne*/}

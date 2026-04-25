@@ -422,7 +422,7 @@ const symptoms: ISymptom[] = [
 ];
 
 
-const sectionHeaderProbs: ISectionHeaderProps = {
+const symptomsSectionHeaderProbs: ISectionHeaderProps = {
     title: "Ich behandle und unterstütze bei …",
     className: 'md:mb-12 mb-10',
     // description: 'Mit einem ganzheitlichen Blick auf Ihren Körper finden wir gemeinsam den Weg zu mehr Wohlbefinden und nachhaltiger Gesundheit.',
@@ -440,7 +440,7 @@ const Symptoms_2: React.FC<ISymptomConfig> = ({...symptomsProbs}) => {
             <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
 
                 {/* Heading */}
-                <SectionHeader {...sectionHeaderProbs} />
+                <SectionHeader {...symptomsSectionHeaderProbs} />
 
                 {/* Symptom Grid – Zentriertes Design */}
                 <div
