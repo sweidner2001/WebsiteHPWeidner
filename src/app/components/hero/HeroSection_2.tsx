@@ -81,7 +81,7 @@ const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
                             <div className="max-w-2xl text-white lg:ml-0 sm:ml-4 ml-2">
                                 <div lang="de"
                                     className="text-3xl sm:text-4xl md:text-4xl font-normal md:font-normal leading-tight hanging-quote mb-0 ">
-                                    Gesundheit ist nicht alles,<br className="hidden sm:block"/> aber ohne Gesund&shy;heit ist
+                                    Gesundheit ist nicht alles, <br className="hidden sm:block"/> aber ohne Gesund&shy;heit ist
                                     alles nichts
                                 </div>
                                 {/*text-gray-600*/}
