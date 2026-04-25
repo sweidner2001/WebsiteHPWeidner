@@ -21,8 +21,8 @@ export default function Impressum() {
                     <section className="mb-8">
                         <h2 className="text-lg font-medium text-gray-800 mb-3">Angaben gemäß § 5 DDG</h2>
                         <p className="text-gray-600 font-light leading-relaxed">
-                            Naturheilpraxis Carola Weidner<br />
                             Carola Weidner<br />
+                            Heilpraktikerin<br />
                             Pfaffenreuth 22<br />
                             92715 Püchersreuth
                         </p>
@@ -32,8 +32,8 @@ export default function Impressum() {
                     <section className="mb-8">
                         <h2 className="text-lg font-medium text-gray-800 mb-3">Kontakt</h2>
                         <p className="text-gray-600 font-light leading-relaxed">
-                            <span className="font-normal">Telefon:</span> 09681 / 8170<br />
-                            <span className="font-normal">E-Mail:</span> CarolaWeidner@gmx.de
+                            <span className="font-normal">Telefon:</span> 09681 / 9189483<br />
+                            <span className="font-normal">E-Mail:</span> info@naturheilpraxis-weidner.de
                         </p>
                     </section>
 
@@ -41,27 +41,20 @@ export default function Impressum() {
                     <section className="mb-8">
                         <h2 className="text-lg font-medium text-gray-800 mb-3">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
                         <div className="text-gray-600 font-light leading-relaxed">
-                            <p>
-                                <span className="font-normal">Berufsbezeichnung:</span> Heilpraktikerin<br />
-                                <span className="font-normal">Verliehen in:</span> Deutschland<br />
-                                <span className="font-normal">Heilpraktikererlaubnis:</span> In Deutschland erteilt am 00.00.0000 durch das Gesundheitsamt A-Stadt<br />
+                            <div>
+                                <span className="font-normal">Gesetzliche Berufsbezeichnung:</span> Heilpraktikerin<br/>
+                                <span className="font-normal">Verliehen in:</span> Deutschland<br/>
+                                {/*<span className="font-normal">Heilpraktikererlaubnis:</span> In Deutschland erteilt am 00.00.0000 durch das Gesundheitsamt A-Stadt<br />*/}
                                 <span className="font-normal">Zuständige Aufsichtsbehörde: </span>
-                                Gesundheitsamt im Landkreis Neustadt a.d.Waldnaab
-                            </p>
-                            <p className="font-normal mt-2">Kontaktdaten Gesundheitsamt:</p>
-                            <p className='pb-2'>
-                                Maistraße 7 – 9<br />
-                                92637 Weiden i.d.OPf.
-                            </p>
-                            <p className='pb-4'>
-                                Telefon: 09602 / 79-6210<br />
-                                Fax: 09602 / 796055<br />
-                                E-Mail:{' '}
-                                <a href="mailto:gesundheitsamt@neustadt.de" className="text-green-600 hover:text-green-700 underline">
-                                    gesundheitsamt@neustadt.de
-                                </a>
-                            </p>
+                                <div className="ml-4">
+                                    <p>Landratsamt Neustadt/WN</p>
+                                    <p>Abteilung Gesundheitswesen</p>
+                                    <p>Maistraße 7 – 9</p>
+                                    <p>92637 Weiden</p>
+                                </div>
+                            </div>
                         </div>
+
                         <p className="text-gray-600 font-light leading-relaxed mt-2">
                             <span className="font-normal">Es gelten folgende berufsrechtliche Regelungen:</span><br />
                             Gesetz über die berufsmäßige Ausübung der Heilkunde ohne Bestallung (Heilpraktikergesetz)<br />
@@ -79,8 +72,8 @@ export default function Impressum() {
                     <section className="mb-8">
                         <h2 className="text-lg font-medium text-gray-800 mb-3">Ergänzende Angaben</h2>
                         <p className="text-gray-600 font-light leading-relaxed">
-                            <span className="font-normal">Berufsverbandsmitgliedschaft in:</span> Bund Deutscher Heilpraktiker BDH e.V.<br />
-                            <span className="font-normal">Mitgliedsnummer Berufsverband:</span> xxxx
+                            <span className="font-normal">Berufsverbandsmitgliedschaft in:</span> Fachverband Deutscher Heilpraktiker e.V.<br />
+                            {/*<span className="font-normal">Mitgliedsnummer Berufsverband:</span> xxxx*/}
                         </p>
                         <p className="text-gray-600 font-light leading-relaxed mt-2">
                             <span className="font-normal">Berufsordnung für Heilpraktiker (BOH):</span> Nachzulesen im Internet unter{' '}
@@ -117,12 +110,12 @@ export default function Impressum() {
 
                     {/* Berufshaftpflichtversicherung */}
                     <section className="mb-8">
-                        <h2 className="text-lg font-medium text-gray-800 mb-3">Berufshaftpflichtversicherung</h2>
+                        <h2 className="text-lg font-medium text-gray-800 mb-3">Angaben zur Berufshaftpflichtversicherung</h2>
                         <p className="text-gray-600 font-light leading-relaxed">
-                            xxxxxx
-                            Continentale Sachversicherung a.G.<br />
-                            Continentale-Allee 1, 44269 Dortmund, Deutschland<br />
-                            <span className="font-normal">Geltungsbereich der Versicherung:</span> Bundesweit (Deutschland)
+                            Continentale<br />
+                            Ruhrallee 92<br />
+                            44269 Dortmund2<br />
+                            {/*<span className="font-normal">Geltungsbereich der Versicherung:</span> Bundesweit (Deutschland)*/}
                         </p>
                     </section>
 
@@ -136,18 +129,7 @@ export default function Impressum() {
 
                     {/* Streitschlichtung */}
                     <section className="mb-8">
-                        <h2 className="text-lg font-medium text-gray-800 mb-3">EU-Streitschlichtung</h2>
-                        <p className="text-gray-600 font-light leading-relaxed">
-                            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{' '}
-                            <a
-                                href="https://ec.europa.eu/consumers/odr/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-green-600 hover:text-green-700 underline"
-                            >
-                                https://ec.europa.eu/consumers/odr/
-                            </a>
-                        </p>
+                        <h2 className="text-lg font-medium text-gray-800 mb-3">Streitschlichtung</h2>
                         <p className="text-gray-600 font-light leading-relaxed mt-2">
                             Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
                             Verbraucherschlichtungsstelle teilzunehmen.
