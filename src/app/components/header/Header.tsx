@@ -8,9 +8,10 @@ interface Header2Props {
     isMenuOpen: boolean;
     onMenuToggle: (open: boolean) => void;
     onSectionClick: (sectionId: string) => void;
+    restPlaceForNavbar: boolean;
 }
 
-export default function Header({ activeSection, isMenuOpen, onMenuToggle, onSectionClick }: Header2Props) {
+export default function Header({ activeSection, isMenuOpen, onMenuToggle, onSectionClick, restPlaceForNavbar}: Header2Props) {
     return (
         <>
             <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-sm">
@@ -69,7 +70,8 @@ export default function Header({ activeSection, isMenuOpen, onMenuToggle, onSect
         </nav>
 
         {/* Spacer-Element: Reserviert Platz für die fixed Navigation */}
-        <div className="py-9" aria-hidden="true"></div>
+
+            {restPlaceForNavbar && <div className="py-9" aria-hidden="true"></div>}
         </>
     );
 }

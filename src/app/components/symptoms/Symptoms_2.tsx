@@ -445,8 +445,8 @@ const Symptoms_2: React.FC<ISymptomConfig> = ({...symptomsProbs}) => {
                 {/* Symptom Grid – Zentriertes Design */}
                 <div
                     className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 lg:gap-5 gap-4 max-w-6xl lg:mx-auto md:mx-16 sm:mx-4 mx-0">
-                    {/*{symptomsWithModernIcons.map((symptom, index) => {*/}
-                    {symptoms.map((symptom, index) => {
+                    {symptomsWithModernIcons.map((symptom, index) => {
+                    // {symptoms.map((symptom, index) => {
                         return (
                             <div
                                 key={index}

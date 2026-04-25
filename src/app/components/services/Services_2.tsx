@@ -25,7 +25,7 @@ const services: IService[] = [
     {
         title: 'Cranio-Sakrale-Osteopathie',
         description: [  //Alternativer Pfeil: \u2794
-            'Die Cranio-Sakrale-Osteopathie ist ein Teilgebiet der Osteopathie. Diese sanfte Behandlungsform wirkt sehr tief auf Körper und Seele, Sie eignet sich folglich zur Behandlung einer Vielzahl an Beschwerden wie beispielsweise Schlafstörungen, Kopfschmerzen, Bandscheibenproblemen, Gelenkbeschwerden und Konzentrationsschwierigkeiten. Es wird eine tiefe Entspannung gefördert.',
+            'Die Cranio-Sakrale-Osteopathie ist ein Teilgebiet der Osteopathie. Diese sanfte Behandlungsform wirkt sehr tief auf Körper und Seele. Sie eignet sich folglich zur Behandlung einer Vielzahl an Beschwerden wie beispielsweise Schlafstörungen, Kopfschmerzen, Bandscheibenproblemen, Gelenkbeschwerden, Konzentrationsschwierigkeiten, Stress und Erschöpfungszuständen. Es wird eine tiefe Entspannung gefördert.',
             '\u27A4 Wenn die Gelenke frei sind, macht der Körper den Rest!'
         ],
         icon: (

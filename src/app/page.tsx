@@ -5,6 +5,7 @@ import Footer from '@/app/components/footer/Footer';
 import React, {useState, useEffect, type ReactNode} from 'react';
 import Header from '@/app/components/header/Header';
 import HeroSection from '@/app/components/hero/HeroSection';
+import SeperatorSection from '@/app/components/seperator/SeperatorSection';
 import HeroSection_2 from '@/app/components/hero/HeroSection_2';
 import {Contact, IContactTextProps, IContactIconProps} from '@/app/components/contact/Contact';
 import {AboutMe, IAboutProps} from '@/app/components/aboutMe/AboutMe';
@@ -137,16 +138,24 @@ const NaturheilpraxisWebsite = () => {
   return (
       <div className="min-h-screen bg-white font-sans text-gray-800">
 
+        {/*<Header*/}
+        {/*    activeSection={activeSection}*/}
+        {/*    isMenuOpen={isMenuOpen}*/}
+        {/*    onMenuToggle={setIsMenuOpen}*/}
+        {/*    onSectionClick={scrollToSection}*/}
+        {/*    restPlaceForNavbar={true}*/}
+        {/*/>*/}
+        {/*<HeroSection_2 onSectionClick={scrollToSection}/>*/}
+
+        {/* Hero Section Komponente */}
         <Header
             activeSection={activeSection}
             isMenuOpen={isMenuOpen}
             onMenuToggle={setIsMenuOpen}
             onSectionClick={scrollToSection}
+            restPlaceForNavbar={false}
         />
-
-        {/* Hero Section Komponente */}
-        {/*<HeroSection onSectionClick={scrollToSection}/>*/}
-        <HeroSection_2 onSectionClick={scrollToSection}/>
+        <HeroSection onSectionClick={scrollToSection}/>
 
         {/* Philosophie Section */}
         {/*<Philosophie />*/}
@@ -170,6 +179,7 @@ const NaturheilpraxisWebsite = () => {
 
 
         {/* Über mich Section */}
+        <SeperatorSection/>
         <section id="ueber-mich" className="py-20 bg-white">
           <AboutMe {...aboutText}/>
         </section>

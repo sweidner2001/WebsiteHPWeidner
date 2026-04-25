@@ -1,14 +1,12 @@
 'use client';
 import Image from 'next/image';
-import './hero_2.css';
+import './SeperatorSection.css';
 import React from "react";
 import {useLazy} from "@/app/hooks/useLazy";
 
-interface HeroSectionProps {
-    onSectionClick: (sectionId: string) => void;
-}
 
-const HeroSection_2 = ({ onSectionClick }: HeroSectionProps) => {
+
+const SeperatorSection = () => {
     useLazy();
     return (
         <>
@@ -57,8 +55,8 @@ const HeroSection_2 = ({ onSectionClick }: HeroSectionProps) => {
             {/* Trenn-Abschnitt mit Hintergrundbild */}
             {/*<section id="home" className="">*/}
             {/*    <div className="relative h-80 md:h-130 w-full overflow-visible">*/}
-            <section id="home" className="md:flex md:flex-col lazy overflow-hidden">
-                <div className="relative h-80 md:h-[calc(100vh-150px)] max-h-[650px] w-full overflow-hidden">
+            <section id="home" className="md:flex md:flex-col lazy overflow-hidden" style={{background: 'linear-gradient(to bottom, var(--color-stone-100, #f5f5f4) 0%, white 50%)' }}>
+                <div className="relative h-80 md:h-[calc(100vh-150px)] max-h-[450px] w-full overflow-hidden">
                     {/* Bild-Container mit clip-path für abgerundete Kanten */}
                     <div className="absolute inset-0 image-clip-horizontal bg-green-50" >
                         <Image
@@ -100,16 +98,9 @@ const HeroSection_2 = ({ onSectionClick }: HeroSectionProps) => {
                     {/*</div>*/}
                 </div>
 
-                <div className="mt-10 md:my-3 flex justify-center" >
-                    <button
-                        className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer ring-1 ring-green-500"
-                        onClick={() => onSectionClick('kontakt')}>
-                        Termin anfragen
-                    </button>
-                </div >
             </section>
         </>
     );
 };
 
-export default HeroSection_2;
+export default SeperatorSection;

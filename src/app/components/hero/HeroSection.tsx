@@ -2,12 +2,15 @@
 import Image from 'next/image';
 import './hero.css';
 import React from "react";
+import {useLazy} from "@/app/hooks/useLazy";
+
 
 interface HeroSectionProps {
     onSectionClick: (sectionId: string) => void;
 }
 
-const HeroSection_2 = ({ onSectionClick }: HeroSectionProps) => {
+const HeroSection = ({ onSectionClick }: HeroSectionProps) => {
+    useLazy();
     return (
         <>
 
@@ -31,11 +34,11 @@ const HeroSection_2 = ({ onSectionClick }: HeroSectionProps) => {
 
 
             {/* Hero Section mit organischem Bild-Container */}
-            <section id="home" className="min-h-screen flex flex-col md:flex-row items-center relative md:overflow-visible overflow-hidden pt-16">
+            <section id="home" className="lazy min-h-screen flex flex-col md:flex-row items-center relative md:overflow-visible overflow-hidden pt-16">
                 {/* Organischer Bildcontainer mit Bogen-Form - nur auf md+ sichtbar */}
                 <div
                     className="w-full md:absolute md:left-0 md:top-0 md:h-full md:w-1/3 lg:w-1/2 hidden sm:block sm:h-48 md:overflow-visible relative image-container-extended">
-                    <div className="absolute left-0 top-0 h-full w-full bg-green-50 image-clip rounded-r-md">
+                    <div className="absolute left-0 top-0 h-full w-full bg-green-50 image-clip">
                         <Image
                             src="/img/Zierkirsche_1_gespiegelt.jpg"
                             alt="Naturheilpraxis"
@@ -56,8 +59,8 @@ const HeroSection_2 = ({ onSectionClick }: HeroSectionProps) => {
                             Gesundheit
                         </h1>
                         <p className="text-base text-gray-600 mb-8 leading-relaxed">
-                            Wir behandeln Ursachen, nicht Symptome. Mit natürlichen Verfahren aktivieren wir Ihre
-                            Selbstheilungskräfte für langfristige Gesundheit.
+                            {/*Ich behandle Ursachen, nicht Symptome. */}
+                            Mit natürlichen Verfahren unterstütze ich Sie auf dem Weg zu nachhaltiger Gesundheit.
                         </p>
                         <button
                             className="text-base px-8 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors duration-300 font-light cursor-pointer"
@@ -71,4 +74,4 @@ const HeroSection_2 = ({ onSectionClick }: HeroSectionProps) => {
     );
 };
 
-export default HeroSection_2;
+export default HeroSection;
