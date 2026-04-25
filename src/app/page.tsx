@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/app/components/footer/Footer';
 import React, {useState, useEffect, type ReactNode} from 'react';
-import Header2 from '@/app/components/header/Header_2';
+import Header from '@/app/components/header/Header';
 import HeroSection from '@/app/components/hero/HeroSection';
 import HeroSection_2 from '@/app/components/hero/HeroSection_2';
 import {Contact, IContactTextProps, IContactIconProps} from '@/app/components/contact/Contact';
@@ -137,8 +137,7 @@ const NaturheilpraxisWebsite = () => {
   return (
       <div className="min-h-screen bg-white font-sans text-gray-800">
 
-
-        <Header2
+        <Header
             activeSection={activeSection}
             isMenuOpen={isMenuOpen}
             onMenuToggle={setIsMenuOpen}

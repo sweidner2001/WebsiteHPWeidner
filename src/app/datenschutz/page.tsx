@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Footer from '@/app/components/footer/Footer';
+import {Header_2} from "@/app/components/header/Header_2";
 
 // Metadaten werden über src/app/datenschutz/layout.tsx gesetzt (siehe separate Datei)
 
@@ -9,22 +10,7 @@ export default function Datenschutz() {
     return (
         <div className="min-h-screen bg-white font-sans text-gray-800">
             {/* Header */}
-            <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-sm">
-                <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                    <Link href="/" className="flex items-center space-x-2">
-                        <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-                            <span className="text-green-600 font-semibold">NH</span>
-                        </div>
-                        <span className="text-xl font-light text-gray-700">Naturheilpraxis Carola Weidner</span>
-                    </Link>
-                    <Link
-                        href="/"
-                        className="text-sm font-light text-green-600 hover:text-green-700 transition-colors"
-                    >
-                        ← Zurück zur Startseite
-                    </Link>
-                </div>
-            </nav>
+            <Header_2 />
 
             {/* Inhalt */}
             <main className="pt-28 pb-20 px-6">
