@@ -241,7 +241,7 @@ const symptomsWithModernIcons: ISymptom[] = [
         // ),
         icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                     className="w-13 h-13" fill="none" stroke="currentColor" strokeWidth="15"
+                     className={iconSizeClass} fill="none" stroke="currentColor" strokeWidth="15"
                      strokeLinecap="round" strokeLinejoin="round">
     <g>
         <path d="M262.638,87.625H311c33.137,0,60,26.863,60,60v56.015c0,10.946,3.454,21.614,9.871,30.482L381,234.3v55.828c0,26.119-11.669,50.873-31.816,67.495l-45.236,37.32c-8.957,7.39-20.207,11.431-31.819,11.431h-32.256c-11.612,0-22.862-4.042-31.819-11.431l-45.236-37.32C142.669,341.002,131,316.248,131,290.128V234.3l0.129-0.178c6.417-8.868,9.871-19.536,9.871-30.482v-56.015c0-33.137,26.863-60,60-60h26.638"/>
