@@ -8,6 +8,7 @@ import { Header_2 } from '@/app/components/header/Header_2';
 import HeroSection from '@/app/components/hero/HeroSection';
 import SeperatorSection from '@/app/components/seperator/SeperatorSection';
 import HeroSection_2 from '@/app/components/hero/HeroSection_2';
+import HeroSection_3 from '@/app/components/hero/HeroSection_3';
 import {Contact, IContactTextProps, IContactIconProps} from '@/app/components/contact/Contact';
 import {AboutMe, IAboutProps} from '@/app/components/aboutMe/AboutMe';
 import GoogleMap, {IGoogleMapProps} from '@/app/components/map/GoogleMap';
@@ -152,13 +153,13 @@ const NaturheilpraxisWebsite = () => {
 
         {/* Mobile (< md): Header + HeroSection */}
         <div className="hidden sm:block">
-          {/*<Header*/}
-          {/*    activeSection={activeSection}*/}
-          {/*    isMenuOpen={isMenuOpen}*/}
-          {/*    onMenuToggle={setIsMenuOpen}*/}
-          {/*    onSectionClick={scrollToSection}*/}
-          {/*    restPlaceForNavbar={false}*/}
-          {/*/>*/}
+          <Header
+              activeSection={activeSection}
+              isMenuOpen={isMenuOpen}
+              onMenuToggle={setIsMenuOpen}
+              onSectionClick={scrollToSection}
+              restPlaceForNavbar={false}
+          />
           <HeroSection onSectionClick={scrollToSection} />
         </div>
 
@@ -171,7 +172,7 @@ const NaturheilpraxisWebsite = () => {
               onSectionClick={scrollToSection}
               restPlaceForNavbar={true}
           />
-          <HeroSection_2 onSectionClick={scrollToSection} imagePath="/img/Zierkirsche_1_gespiegelt.jpg"/>
+          <HeroSection_3 onSectionClick={scrollToSection} imagePath="/img/Zierkirsche_1_gespiegelt.jpg"/>
         </div>
 
         {/* Philosophie Section */}
