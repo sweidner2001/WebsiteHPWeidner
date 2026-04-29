@@ -14,15 +14,7 @@ const SeperatorSection = () => {
             {/* SVG clip-path Definition für elegante Bögen oben und unten */}
             <svg width="0" height="0">
                 <defs>
-                    {/* Nur oben ein Bogen, unten gerade */}
-                    {/*
-                        M 0,0.06 - Start links oben bei 6% von oben
-                        Q 0.5,-0.02 1,0.06 - Bogen nach oben in der Mitte
-                        L 1,1 - Gerade Linie nach rechts unten (100%)
-                        L 0,1 - Gerade Linie nach links unten
-                        Z - Pfad schließen
-                    */}
-                    <clipPath id="curve-clip-horizontal" clipPathUnits="objectBoundingBox">
+                    <clipPath id="curve-clip-seperator" clipPathUnits="objectBoundingBox">
                         {/*<path d="M 0,0.06 Q 0.5,-0.02 1,0.06 L 1,1 L 0,1 Z"/>*/}
                         {/*<path d="M 0,0.06 Q 0.5,-0.02 1,0.06 L 1,0.94 Q 0.5,1.02 0,0.94 Z"/>*/}
                         <path d="M 0,0.06 Q 0.5,-0.0 1,0.0 L 1,0.94 Q 0.5,1.02 0,0.94 Z"/>
@@ -35,15 +27,7 @@ const SeperatorSection = () => {
             {/* SVG clip-path Definition für elegante Bögen oben und unten */}
             <svg width="0" height="0">
                 <defs>
-                    {/* Nur oben ein Bogen, unten gerade */}
-                    {/*
-                        M 0,0.06 - Start links oben bei 6% von oben
-                        Q 0.5,-0.02 1,0.06 - Bogen nach oben in der Mitte
-                        L 1,1 - Gerade Linie nach rechts unten (100%)
-                        L 0,1 - Gerade Linie nach links unten
-                        Z - Pfad schließen
-                    */}
-                    <clipPath id="curve-clip-horizontal-mobile" clipPathUnits="objectBoundingBox">
+                    <clipPath id="curve-clip-seperator-mobile" clipPathUnits="objectBoundingBox">
                         {/*<path d="M 0,0.06 Q 0.5,-0.02 1,0.06 L 1,1 L 0,1 Z"/>*/}
                         {/*<path d="M 0,0.06 Q 0.5,-0.02 1,0.06 L 1,0.94 Q 0.5,1.02 0,0.94 Z"/>*/}
                         <path d="M 0,0.03 Q 0.5,-0.0 1,0.0 L 1,0.96 Q 0.5,1.01 0,0.96 Z"/>
@@ -55,10 +39,10 @@ const SeperatorSection = () => {
             {/* Trenn-Abschnitt mit Hintergrundbild */}
             {/*<section id="home" className="">*/}
             {/*    <div className="relative h-80 md:h-130 w-full overflow-visible">*/}
-            <section id="home" className="md:flex md:flex-col lazy overflow-hidden" style={{background: 'linear-gradient(to bottom, var(--color-stone-100, #f5f5f4) 0%, white 50%)' }}>
-                <div className="relative h-80 md:h-[calc(100vh-150px)] max-h-[450px] w-full overflow-hidden">
+            <section id="home" className="md:flex md:flex-col  overflow-hidden pt-16 pb-20" style={{background: 'linear-gradient(to bottom, var(--color-stone-100, #f5f5f4) 0%, white 50%)' }}>
+                <div className="relative h-80 md:h-[calc(100vh-150px)] max-h-[430px] w-full overflow-hidden lazy">
                     {/* Bild-Container mit clip-path für abgerundete Kanten */}
-                    <div className="absolute inset-0 image-clip-horizontal bg-green-50" >
+                    <div className="absolute inset-0 [clip-path:url(#curve-clip-seperator-mobile)] md:[clip-path:url(#curve-clip-seperator)] bg-green-50" >
                         <Image
                             src="/img/Blumenwiese_1_zg.jpg"
                             alt="Naturheilpraxis"
@@ -90,12 +74,6 @@ const SeperatorSection = () => {
                             </div>
                         </div>
                     </div>
-                    {/* Optionaler Text-Overlay */}
-                    {/*<div className="absolute inset-0 flex items-center justify-center">*/}
-                    {/*    <h2 className="text-3xl md:text-4xl font-light text-white text-center px-6">*/}
-                    {/*        Ihr Zitat oder Text hier*/}
-                    {/*    </h2>*/}
-                    {/*</div>*/}
                 </div>
 
             </section>

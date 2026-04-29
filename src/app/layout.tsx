@@ -77,10 +77,14 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en">
+    <html lang="de">
+      <head>
+        {/* Google Analytics Skript für die Google-Verifizierung */}
+        <GoogleAnalytics />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <KlaroProvider />
-        <GoogleAnalytics />
+        {/* <GoogleAnalytics /> entfernt, da wir es im <head> einbinden sollen */}
         <AosProvider>
           {children}
         </AosProvider>
