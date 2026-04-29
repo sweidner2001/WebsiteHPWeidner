@@ -25,7 +25,7 @@ const HeroSection_3 = ({ onSectionClick, imagePath}: HeroSectionProps) => {
                         L 0,1 - Gerade Linie nach links unten
                         Z - Pfad schließen
                     */}
-                    <clipPath id="curve-clip-horizontal" clipPathUnits="objectBoundingBox">
+                    <clipPath id="curve-clip-horizontal3" clipPathUnits="objectBoundingBox">
                         {/*<path d="M 0,0.06 Q 0.5,-0.02 1,0.06 L 1,1 L 0,1 Z"/>*/}
                         {/*<path d="M 0,0.06 Q 0.5,-0.02 1,0.06 L 1,0.94 Q 0.5,1.02 0,0.94 Z"/>*/}
                         <path d="M 0,0.06 Q 0.5,-0.0 1,0.0 L 1,0.94 Q 0.5,1.02 0,0.94 Z"/>
@@ -46,7 +46,7 @@ const HeroSection_3 = ({ onSectionClick, imagePath}: HeroSectionProps) => {
                         L 0,1 - Gerade Linie nach links unten
                         Z - Pfad schließen
                     */}
-                    <clipPath id="curve-clip-horizontal-mobile" clipPathUnits="objectBoundingBox">
+                    <clipPath id="curve-clip-horizontal3-mobile" clipPathUnits="objectBoundingBox">
                         {/*<path d="M 0,0.06 Q 0.5,-0.02 1,0.06 L 1,1 L 0,1 Z"/>*/}
                         {/*<path d="M 0,0.06 Q 0.5,-0.02 1,0.06 L 1,0.94 Q 0.5,1.02 0,0.94 Z"/>*/}
                         <path d="M 0,0.03 Q 0.5,-0.0 1,0.0 L 1,0.96 Q 0.5,1.01 0,0.96 Z"/>
@@ -61,7 +61,7 @@ const HeroSection_3 = ({ onSectionClick, imagePath}: HeroSectionProps) => {
             <section id="home" className="md:flex md:flex-col lazy overflow-hidden">
                 <div className="relative h-80 md:h-[calc(100vh-150px)] max-h-[650px] w-full overflow-hidden">
                     {/* Bild-Container mit clip-path für abgerundete Kanten */}
-                    <div className="absolute inset-0 image-clip-horizontal bg-green-50" >
+                    <div className="absolute inset-0 [clip-path:url(#curve-clip-horizontal3-mobile)] md:[clip-path:url(#curve-clip-horizontal3)] bg-green-50" >
                         <Image
                             src={imagePath}
                             alt="Naturheilpraxis"
