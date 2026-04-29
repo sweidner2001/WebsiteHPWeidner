@@ -15,7 +15,7 @@ export default function Header({ activeSection, isMenuOpen, onMenuToggle, onSect
     return (
         <>
             <nav className="fixed w-full z-50 bg-white/90 backdrop-blur-sm">
-                <div className="container mx-auto lg:px-6 px-0 py-4 flex justify-between items-center">
+                <div className="container mx-auto lg:px-6 px-6 py-4 flex justify-between items-center">
                 <HeaderHeadingNP />
                 {/*<Link href="/" className="text-sm font-light text-green-600 hover:text-green-700 transition-colors">*/}
                 {/*    ← Zurück zur Startseite*/}
