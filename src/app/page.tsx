@@ -82,8 +82,10 @@ const NaturheilpraxisWebsite = () => {
     openingHeading: 'Öffnungszeiten',
     openingHours1: ['Termine nach Vereinbarung'],
     openingHours1_asBulletPoints: false,
-    openingHours2Heading: 'Reguläre Öffnungszeiten:',
-    openingHours2: ['Montag - Freitag: 9:00 - 18:00 Uhr', 'Samstag: Nach Vereinbarung'],
+    // openingHours2Heading: 'Reguläre Öffnungszeiten:',
+    openingHours2Heading: '',
+    openingHours2: [],
+    // openingHours2: ['Montag - Freitag: 9:00 - 18:00 Uhr', 'Samstag: Nach Vereinbarung'],
     openingHours2_asBulletPoints: false
   };
 
