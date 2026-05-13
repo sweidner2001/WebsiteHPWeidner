@@ -143,39 +143,39 @@ const NaturheilpraxisWebsite = () => {
       <div className="min-h-screen bg-white font-sans text-gray-800">
 
 
-        {/*<Header*/}
-        {/*    activeSection={activeSection}*/}
-        {/*    isMenuOpen={isMenuOpen}*/}
-        {/*    onMenuToggle={setIsMenuOpen}*/}
-        {/*    onSectionClick={scrollToSection}*/}
-        {/*    restPlaceForNavbar={true}*/}
-        {/*/>*/}
-        {/*<HeroSection_2 onSectionClick={scrollToSection} imagePath="/img/Blumenwiese_1_zg.jpg"/>*/}
+        <Header
+            activeSection={activeSection}
+            isMenuOpen={isMenuOpen}
+            onMenuToggle={setIsMenuOpen}
+            onSectionClick={scrollToSection}
+            restPlaceForNavbar={true}
+        />
+        <HeroSection_2 onSectionClick={scrollToSection} imagePath="/img/Blumenwiese_1_zg.jpg"/>
 
 
-        {/* Mobile (< md): Header + HeroSection */}
-        <div className="hidden sm:block">
-          <Header
-              activeSection={activeSection}
-              isMenuOpen={isMenuOpen}
-              onMenuToggle={setIsMenuOpen}
-              onSectionClick={scrollToSection}
-              restPlaceForNavbar={false}
-          />
-          <HeroSection onSectionClick={scrollToSection} />
-        </div>
+        {/*/!* Mobile (< md): Header + HeroSection *!/*/}
+        {/*<div className="hidden sm:block">*/}
+        {/*  <Header*/}
+        {/*      activeSection={activeSection}*/}
+        {/*      isMenuOpen={isMenuOpen}*/}
+        {/*      onMenuToggle={setIsMenuOpen}*/}
+        {/*      onSectionClick={scrollToSection}*/}
+        {/*      restPlaceForNavbar={false}*/}
+        {/*  />*/}
+        {/*  <HeroSection onSectionClick={scrollToSection} />*/}
+        {/*</div>*/}
 
-        {/* Desktop (>= md): Header_2 + HeroSection_2 */}
-        <div className="block sm:hidden">
-          <Header
-              activeSection={activeSection}
-              isMenuOpen={isMenuOpen}
-              onMenuToggle={setIsMenuOpen}
-              onSectionClick={scrollToSection}
-              restPlaceForNavbar={true}
-          />
-          <HeroSection_3 onSectionClick={scrollToSection} imagePath="/img/Zierkirsche_1_gespiegelt.jpg"/>
-        </div>
+        {/*/!* Desktop (>= md): Header_2 + HeroSection_2 *!/*/}
+        {/*<div className="block sm:hidden">*/}
+        {/*  <Header*/}
+        {/*      activeSection={activeSection}*/}
+        {/*      isMenuOpen={isMenuOpen}*/}
+        {/*      onMenuToggle={setIsMenuOpen}*/}
+        {/*      onSectionClick={scrollToSection}*/}
+        {/*      restPlaceForNavbar={true}*/}
+        {/*  />*/}
+        {/*  <HeroSection_3 onSectionClick={scrollToSection} imagePath="/img/Zierkirsche_1_gespiegelt.jpg"/>*/}
+        {/*</div>*/}
 
         {/* Philosophie Section */}
         {/*<Philosophie />*/}
@@ -199,7 +199,7 @@ const NaturheilpraxisWebsite = () => {
 
 
         {/* Über mich Section */}
-        <SeperatorSection/>
+        {/*<SeperatorSection/>*/}
         <section id="ueber-mich" className="py-20 bg-white">
           <AboutMe {...aboutText}/>
         </section>
